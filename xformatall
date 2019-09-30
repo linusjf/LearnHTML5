@@ -4,6 +4,8 @@ declare -r configFileName="tidy.config"
 configFilePath="$(find .. -maxdepth 2 \
 -type f -name "$configFileName" ! -path \
 "**/.git/**" | head -n 1)"
+prettier ./*.css --write
+SUCCESS=$SUCCESS+$?
 files=$(find . -maxdepth 2 -type f -name "*.html" \
   ! -path "**/.git/**")
 echo "$files" \
