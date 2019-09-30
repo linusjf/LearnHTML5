@@ -4,8 +4,13 @@ declare -r configFileName="tidy.config"
 configFilePath="$(find .. -maxdepth 2 \
 -type f -name "$configFileName" ! -path \
 "**/.git/**" | head -n 1)"
-prettier ./*.css --write
-SUCCESS=$SUCCESS+$?
+csslint --quiet --format=compact ./*.css
+CSS_SUCCESS=$?
+if [[ CSS_SUCCESS == 0 ]]
+then
+  prettier ./*.css --write
+  CSS_SUCCESS=$CSS_SUCCESS+$?
+fi
 files=$(find . -maxdepth 2 -type f -name "*.html" \
   ! -path "**/.git/**")
 echo "$files" \
@@ -19,4 +24,4 @@ then
     tidy -config "$configFilePath" -quiet -xml -m %
   SUCCESS=$SUCCESS+$?
 fi
-exit "$SUCCESS"
+exit "$(($SUCCESS + $CSS_SUCCESS))"
