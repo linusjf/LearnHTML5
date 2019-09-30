@@ -1,10 +1,17 @@
 #!/bin/bash
+declare -i SUCCESS=0
 declare -r configFileName="tidy.config"
 configFilePath="$(find .. -maxdepth 2 \
 -type f -name "$configFileName" ! -path \
 "**/.git/**" | head -n 1)"
-find . -maxdepth 2 -type f -name "*.html" \
-  ! -path "**/.git/**" \
+files=$(find . -maxdepth 2 -type f -name "*.html" \
+  ! -path "**/.git/**")
+echo "$files" \
+  | parallel -j 5 -I% \
+  htmlhint -f compact %
+SUCCESS=$?
+echo "$files" \
   | parallel -j 5 -I% \
   tidy -config "$configFilePath" -quiet -xml -m %
-exit $?
+SUCCESS=$SUCCESS+$?
+exit "$SUCCESS"
