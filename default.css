@@ -1,0 +1,26 @@
+hr {
+  background-color: green;
+  color: green;
+  height: 3px;
+}
+ul {
+  list-style-type: square;
+}
+ul ul {
+  list-style-type: disc;
+}
+ul ul ul {
+  list-style-type: circle;
+}
+a:link {
+  color: blue;
+}
+a:visited {
+  color: green;
+}
+a:hover {
+  color: lime;
+}
+a:active {
+  color: red;
+}
