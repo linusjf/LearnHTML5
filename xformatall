@@ -10,8 +10,11 @@ echo "$files" \
   | parallel -j 5 -I% \
   htmlhint -f compact %
 SUCCESS=$?
-echo "$files" \
-  | parallel -j 5 -I% \
-  tidy -config "$configFilePath" -quiet -xml -m %
-SUCCESS=$SUCCESS+$?
+if [[ SUCCESS == 0 ]]
+then 
+  echo "$files" \
+    | parallel -j 5 -I% \
+    tidy -config "$configFilePath" -quiet -xml -m %
+  SUCCESS=$SUCCESS+$?
+fi
 exit "$SUCCESS"
