@@ -1,26 +1,49 @@
 hr {
-  background-color: green;
-  color: green;
-  height: 3px;
+background-color: green; 
+color: green; 
+height: 3px;
 }
 ul {
-  list-style-type: square;
+list-style-type: square;
 }
 ul ul {
-  list-style-type: disc;
+list-style-type: disc;
 }
 ul ul ul {
-  list-style-type: circle;
+list-style-type: circle;
 }
 a:link {
-  color: blue;
+color: blue;
 }
 a:visited {
-  color: green;
+color: green;
 }
 a:hover {
-  color: lime;
+color: lime;
 }
 a:active {
+color: red;
+}
+ol {
+list-style-type: upper-roman;
+}
+p, li {
+font-family: "Verdana", "Arial", "Helvetica", sans-serif; 
+font-size: 13px;
+}
+.copyright {
+background-color: green;
+color: white; 
+font-family: "Times New Roman", "Times", serif; 
+}
+.company {
   color: red;
+  font-style: italic;
+  font-weight: bold;
+}
+.appleton {
+  color: green;
+}
+.sampson {
+  color: blue;
 }
