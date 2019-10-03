@@ -2,6 +2,15 @@ body {
 font-family: "Verdana", "Arial", "Helvetica", sans-serif; 
 font-size: 13px
 }
+h1 {
+font-size: 26px
+}
+h2 {
+font-size: 20px
+}
+dt {
+font-weight: bold
+}
 hr {
 background-color: green; 
 color: green; 
@@ -50,4 +59,23 @@ font-family: "Times New Roman", "Times", serif;
 }
 .sampson {
   color: blue;
+}
+.pagetitle {
+font-size: 30px; 
+margin: 0;
+}
+.tagline {
+margin: 2px
+}
+.logo {
+border: none; 
+float: left; 
+height: 55px;
+margin: 5px; 
+}
+.italics {
+font-style: italic;
+}
+.navbar {
+margin: 0;
 }
