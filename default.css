@@ -79,3 +79,19 @@ font-style: italic;
 .navbar {
 margin: 0;
 }
+nav {
+float: left; 
+padding-top: 15px;
+width: 150px; 
+}
+/* csslint ignore:start */
+#bottomnav {
+background-color: khaki; 
+clear: left;
+}
+#header {
+background-image: url(images/leaf-green.jpg); 
+color: white;
+padding: 10px; 
+}
+/* csslint ignore:end */
