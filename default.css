@@ -64,21 +64,6 @@ font-family: "Times New Roman", "Times", serif;
 font-size: 30px; 
 margin: 0;
 }
-.tagline {
-margin: 2px
-}
-.logo {
-border: none; 
-float: left; 
-height: 55px;
-margin: 5px; 
-}
-.italics {
-font-style: italic;
-}
-.navbar {
-margin: 0;
-}
 nav {
 float: left; 
 padding-top: 15px;
@@ -95,3 +80,12 @@ color: white;
 padding: 10px; 
 }
 /* csslint ignore:end */
+.tagline {margin: 2px}
+.logo {
+border: none; 
+float: left; 
+height: 55px;
+margin: 5px; 
+}
+.italics {font-style: italic}
+.navbar {margin: 0}
