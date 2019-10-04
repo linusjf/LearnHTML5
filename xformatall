@@ -9,7 +9,7 @@ csslint --quiet --format=compact ./*.css
 CSS_SUCCESS=$?
 if [[ CSS_SUCCESS == 0 ]]
 then
-  prettier ./*.css --write
+  prettier --parser css --write ./*.css 
   CSS_SUCCESS=$CSS_SUCCESS+$?
 fi
 files=$(find . -maxdepth 2 -type f -name "*.html" \
