@@ -1,7 +1,9 @@
-|Skill Name | Candidate Name | Mobile | Email Id 
-| Total Experience (In Years) 
-| Relevant Experience (In Years) 
-| Current Company | Current CTC (In LPA) | Expected CTC  (In LPA) | Notice period (In Days) | Buyout (Yes/No) | Current location | DOB | Total number of companies changed/Stability | Offers In Hand | CTC When you Joined | Core Consultant | Can you attend an interview on Monday 21st June |
+|Skill Name | Candidate Name | Mobile | Email Id  
+| Total Experience (In Years)  
+| Relevant Experience (In Years)  
+| Current Company | Current CTC (In LPA) | Expected CTC  (In LPA) | Notice period (In Days) | Buyout (Yes/No) | Current location | DOB   
+| Total number of companies changed/Stability   
+| Offers In Hand | CTC When you Joined | Core Consultant | Can you attend an interview on Monday 21st June |
 | --- | ---- | ---- | ---- | ---- | ---- | ---- 
 | ---- | ---- | ---- | ----- | ---- | ---- | ---- | ---- | ---- 
 | ---- | ----- |
