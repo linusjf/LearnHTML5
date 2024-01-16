@@ -1,28 +1,26 @@
-#!/bin/bash
+#!/usr/bin/env bash
 declare -i SUCCESS=0
 declare -i CSS_SUCCESS=0
 declare -r configFileName="tidy.config"
-configFilePath="$(find .. -maxdepth 2 \
--type f -name "$configFileName" ! -path \
-"**/.git/**" | head -n 1)"
-csslint --quiet --format=compact ./*.css
+configFilePath="$(find . -maxdepth 2 \
+  -type f -name "$configFileName" ! -path \
+  "**/.git/**" | head -n 1)"
+csslint --quiet --format=compact "$(find . -name '*.css')"
 CSS_SUCCESS=$?
-if [[ CSS_SUCCESS == 0 ]]
-then
-  prettier --parser css --write ./*.css 
+if [[ $CSS_SUCCESS == 0 ]]; then
+  prettier --parser css --write "$(find . -name '*.css')"
   CSS_SUCCESS=$CSS_SUCCESS+$?
 fi
 files=$(find . -maxdepth 2 -type f -name "*.html" \
   ! -path "**/.git/**")
-echo "$files" \
-  | parallel -j 5 -I% \
-  htmlhint -f compact %
+echo "$files" |
+  parallel -j 5 -I% \
+    htmlhint -f compact %
 SUCCESS=$?
-if [[ SUCCESS == 0 ]]
-then 
-  echo "$files" \
-    | parallel -j 5 -I% \
-    tidy -config "$configFilePath" -quiet -xml -m %
+if [[ $SUCCESS == 0 ]]; then
+  echo "$files" |
+    parallel -j 5 -I% \
+      tidy -config "$configFilePath" -quiet -xml -m %
   SUCCESS=$SUCCESS+$?
 fi
-exit "$(($SUCCESS + $CSS_SUCCESS))"
+exit "$((SUCCESS + CSS_SUCCESS))"
