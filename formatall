@@ -5,10 +5,16 @@ declare -r configFileName="tidy.config"
 configFilePath="$(find . -maxdepth 2 \
   -type f -name "$configFileName" ! -path \
   "**/.git/**" | head -n 1)"
-csslint --quiet --format=compact "$(find . -name '*.css')"
+files=$(find . -type f -name "*.css" \
+  ! -path "**/.git/**")
+echo "$files" |
+  parallel -j 5 -I% \
+    csslint --quiet --format=compact %
 CSS_SUCCESS=$?
 if [[ $CSS_SUCCESS == 0 ]]; then
-  prettier --parser css --write "$(find . -name '*.css')"
+  echo "$files" |
+    parallel -j 5 -I% \
+      prettier --parser css --write %
   CSS_SUCCESS=$CSS_SUCCESS+$?
 fi
 files=$(find . -maxdepth 2 -type f -name "*.html" \
