@@ -42,6 +42,8 @@ p {
 
 .dessert,
 .flavor {
+  margin: 0;
+  padding: 0;
   text-align: left;
   width: 49%;
 }
@@ -69,6 +71,8 @@ p {
 }
 
 .price {
+  margin: 0;
+  padding: 0;
   text-align: right;
   width: 49%;
 }
