@@ -1,4 +1,8 @@
 #!/usr/bin/env bash
+require() {
+  hash "$@" || exit
+}
+require csslint htmlhint prettier tidy find parallel head
 declare -i SUCCESS=0
 declare -i CSS_SUCCESS=0
 declare -r configFileName="tidy.config"
