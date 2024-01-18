@@ -4,7 +4,7 @@ h1 {
 }
 
 .container {
-  background-color: rgb(255 255 255);
+  background-color: white;
   padding: 10px 0;
 }
 
@@ -20,9 +20,9 @@ h1 {
 }
 
 .sleeve {
-  background-color: rgb(255 255 255) /* fallback color */;
+  background-color: white /* fallback color */;
   background-color: rgb(255 255 255 / 50%);
-  border-left: 10px double rgb(0 0 0) /* fallback color */;
+  border-left: 10px double black /* fallback color */;
   border-left: 10px double rgb(0 0 0 / 75%);
   box-sizing: border-box;
   height: 25px;
@@ -35,11 +35,7 @@ h1 {
 }
 
 .red {
-  background: linear-gradient(
-    rgb(122 74 14),
-    rgb(245 62 113),
-    rgb(162 27 27)
-  );
+  background: linear-gradient(rgb(122 74 14), rgb(245 62 113), rgb(162 27 27));
   box-shadow: 0 0 20px 0 rgb(83 14 14 / 80%);
 }
 

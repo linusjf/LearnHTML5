@@ -11,18 +11,28 @@ configFilePath="$(find . -maxdepth 2 \
   "**/.git/**" | head -n 1)"
 files=$(find . -type f -name "*.css" \
   ! -path "**/.git/**")
+echo "Executing csslint..."
 echo "$files" |
   parallel -j 5 -I% \
     csslint --quiet --format=compact %
 CSS_SUCCESS=$?
-if [[ $CSS_SUCCESS == 0 ]]; then
+echo "Executing stylelint..."
+echo "$files" |
+  parallel -j 5 -I% \
+    stylelint % --fix
+echo "$files" |
+  parallel -j 5 -I% \
+    stylelint %
+STYLE_SUCCESS=$CSS_SUCCESS+$?
+if [[ $STYLE_SUCCESS == 0 ]]; then
   echo "$files" |
     parallel -j 5 -I% \
       prettier --parser css --write %
-  CSS_SUCCESS=$CSS_SUCCESS+$?
+  STYLE_SUCCESS=$STYLE_SUCCESS+$?
 fi
 files=$(find . -maxdepth 2 -type f -name "*.html" \
   ! -path "**/.git/**")
+echo "Executing htmlhint..."
 echo "$files" |
   parallel -j 5 -I% \
     htmlhint -f compact %
@@ -33,4 +43,4 @@ if [[ $SUCCESS == 0 ]]; then
       tidy -config "$configFilePath" -quiet -xml -m %
   SUCCESS=$SUCCESS+$?
 fi
-exit "$((SUCCESS + CSS_SUCCESS))"
+exit "$((SUCCESS + STYLE_SUCCESS))"
