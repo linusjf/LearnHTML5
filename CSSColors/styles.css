@@ -1,10 +1,10 @@
-/*csslint box-sizing: false*/
+/* csslint box-sizing: false */
 h1 {
   text-align: center;
 }
 
 .container {
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(255 255 255);
   padding: 10px 0;
 }
 
@@ -20,10 +20,10 @@ h1 {
 }
 
 .sleeve {
-  background-color: rgb(255, 255, 255) /* fallback color */;
-  background-color: rgba(255, 255, 255, 0.5);
-  border-left: 10px double rgb(0, 0, 0) /* fallback color */;
-  border-left: 10px double rgba(0, 0, 0, 0.75);
+  background-color: rgb(255 255 255) /* fallback color */;
+  background-color: rgb(255 255 255 / 50%);
+  border-left: 10px double rgb(0 0 0) /* fallback color */;
+  border-left: 10px double rgb(0 0 0 / 75%);
   box-sizing: border-box;
   height: 25px;
   width: 110px;
@@ -36,22 +36,23 @@ h1 {
 
 .red {
   background: linear-gradient(
-    rgb(122, 74, 14),
-    rgb(245, 62, 113),
-    rgb(162, 27, 27)
+    rgb(122 74 14),
+    rgb(245 62 113),
+    rgb(162 27 27)
   );
-  box-shadow: 0 0 20px 0 rgba(83, 14, 14, 0.8);
+  box-shadow: 0 0 20px 0 rgb(83 14 14 / 80%);
 }
 
 .green {
   background: linear-gradient(#55680d, #71f53e, #116c31);
   box-shadow: 0 0 20px 0 #3b7e20cc;
 }
+
 .blue {
   background: linear-gradient(
-    hsl(186, 76%, 16%),
-    hsl(223, 90%, 60%),
-    hsl(240, 56%, 42%)
+    hsl(186deg 76% 16%),
+    hsl(223deg 90% 60%),
+    hsl(240deg 56% 42%)
   );
-  box-shadow: 0 0 20px 0 hsla(223, 59%, 31%, 0.8);
+  box-shadow: 0 0 20px 0 hsl(223deg 59% 31% / 80%);
 }
