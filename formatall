@@ -20,9 +20,6 @@ echo "Executing stylelint..."
 echo "$files" |
   parallel -j 5 -I% \
     stylelint % --fix
-echo "$files" |
-  parallel -j 5 -I% \
-    stylelint %
 STYLE_SUCCESS=$CSS_SUCCESS+$?
 if [[ $STYLE_SUCCESS == 0 ]]; then
   echo "$files" |
