@@ -1,0 +1,19 @@
+.container {
+  align-items: center;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  width: 100vh;
+}
+
+.parent {
+  font-size: 15px;
+}
+
+.em-child {
+  font-size: 2em;
+}
+
+.rem-child {
+  font-size: 2rem;
+}
