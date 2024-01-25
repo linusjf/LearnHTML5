@@ -1,7 +1,7 @@
 .container {
   align-items: center;
   display: flex;
-  height: 100vh;
+  height: 50vh;
   justify-content: center;
   width: 100vh;
 }
@@ -11,9 +11,11 @@
 }
 
 .em-child {
+  display: block;
   font-size: 2em;
 }
 
 .rem-child {
+  display: block;
   font-size: 2rem;
 }
