@@ -1,37 +1,67 @@
 body {
-  background-image: url("laptop.jpg");
-  background-size: contain;
+  color: black;
   font-size: 16px;
+  font-style: italic;
+  font-weight: bolder;
   height: 100vh;
   line-height: 1.5;
   max-width: 100%;
-  opacity: 0.6;
   width: 100%;
 }
 
 form {
+  font-size: 1.25rem;
   margin: 0 auto;
+  margin-bottom: 10px;
   max-width: 500px;
   min-width: 300px;
   padding-bottom: 2em;
   width: 60vw;
 }
 
-img, picture, video, canvas, svg {
+img {
+  display: block;
+  filter: grayscale(1); /* Microsoft Edge and */
+  height: 100%;
+  max-width: 100%;
+  opacity: 0.3;
+  pointer-events: none;
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+}
+
+legend {
+  margin-bottom: 5px;
+  padding-top: 5px;
+}
+
+picture, video, canvas, svg {
   display: block;
   max-width: 100%;
 }
 
 input, button, textarea, select {
   font: inherit;
+  margin: inherit;
   width: 100%;
+}
+
+input:last-of-type[type="checkbox"] {
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+}
+
+input:last-of-type[type="radio"] {
+  margin-bottom: 10px;
+  padding-bottom: 5px;
 }
 
 input[type="submit"] {
   background-color: green;
   border-color: white;
   display: block;
-  font-size: 1.1rem;
+  font-size: 2.0rem;
   height: 2em;
   margin: 1em auto;
   min-width: 300px;
@@ -39,7 +69,7 @@ input[type="submit"] {
 }
 
 h1, p {
-  margin: 1em auto;
+  margin: 0.25em auto;
   overflow-wrap: break-word;
   padding: 0;
   text-align: center;
@@ -47,6 +77,8 @@ h1, p {
 
 fieldset {
   border: none;
+  margin-bottom: 5px;
+  padding:0;
 }
 
 label {
