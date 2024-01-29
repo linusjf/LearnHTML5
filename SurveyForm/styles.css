@@ -61,7 +61,7 @@ input[type="submit"] {
   background-color: green;
   border-color: white;
   display: block;
-  font-size: 2.0rem;
+  font-size: 1.5rem;
   height: 2em;
   margin: 1em auto;
   min-width: 300px;
@@ -85,9 +85,20 @@ label {
   display: block;
 }
 
+select,
+select option {
+  color: #000;
+}
+
+select:invalid,
+select option[value=""] {
+  color: #999;
+}
+
 .inline {
   display: inline-block;
   margin: 0 0.5em 0 0;
-  vertical-align: middle;
+  padding: 0;
+  vertical-align: baseline;
   width: unset;
 }

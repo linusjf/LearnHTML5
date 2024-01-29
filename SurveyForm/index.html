@@ -47,7 +47,9 @@
             <legend>Which option best describes your current role?</legend>
             <select id="dropdown"
                     name="current-role">
-              <option value="">Select current role</option>
+              <option value=""
+                      selected="selected"
+                      disabled="disabled">Select current role</option>
               <option value="Student">Student</option>
               <option value="Full Time Job">Full Time Job</option>
               <option value="Full Time Learner">Full Time Learner</option>
@@ -77,7 +79,9 @@
             <legend>Which is your favorite feature of freeCodeCamp?</legend>
             <select name="fav-feature"
                     id="fav-feature">
-              <option value="">Select an option</option>
+              <option value=""
+                      selected="selected"
+                      disabled="disabled">Select an option</option>
               <option value="Challenges">Challenges</option>
               <option id="feature"
                       value="Projects">Projects</option>
@@ -155,7 +159,10 @@
             <legend>Any comments or suggestions?</legend>
             <textarea id="comments"
                       rows="6"
-                      placeholder="Enter your comment here" />
+                      placeholder="Enter your comment here">
+              <input type="submit"
+                     id="submit"
+                     value="Submit" /></textarea>
             <input type="submit"
                    id="submit"
                    value="Submit" />
