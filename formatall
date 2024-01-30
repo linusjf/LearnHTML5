@@ -36,11 +36,10 @@ echo "$files" |
     htmlhint -f compact %
 SUCCESS=$?
 if [[ $SUCCESS == 0 ]]; then
-echo "Executing tidy..."
-echo "$files" |
+  echo "Executing tidy..."
   echo "$files" |
     parallel -j 5 -I% \
-      tidy -config "$configFilePath" -quiet -xml -m %
+      tidy -config "$configFilePath" -quiet -m %
   SUCCESS=$SUCCESS+$?
 fi
 exit "$((SUCCESS + STYLE_SUCCESS))"
