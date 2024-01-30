@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# run http server to view html code in 
+# same directory
+python -m http.server
