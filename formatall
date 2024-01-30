@@ -2,7 +2,7 @@
 require() {
   hash "$@" || exit
 }
-require csslint htmlhint prettier tidy find parallel head
+require csslint htmlhint stylelint prettier tidy find parallel head
 declare -i SUCCESS=0
 declare -i CSS_SUCCESS=0
 declare -r configFileName="tidy.config"
@@ -22,6 +22,7 @@ echo "$files" |
     stylelint % --fix
 STYLE_SUCCESS=$CSS_SUCCESS+$?
 if [[ $STYLE_SUCCESS == 0 ]]; then
+  echo "Executing prettier..."
   echo "$files" |
     parallel -j 5 -I% \
       prettier --parser css --write %
@@ -35,6 +36,8 @@ echo "$files" |
     htmlhint -f compact %
 SUCCESS=$?
 if [[ $SUCCESS == 0 ]]; then
+echo "Executing tidy..."
+echo "$files" |
   echo "$files" |
     parallel -j 5 -I% \
       tidy -config "$configFilePath" -quiet -xml -m %
