@@ -33,7 +33,7 @@ files=$(find . -maxdepth 2 -type f -name "*.html" \
 echo "Executing htmlhint..."
 echo "$files" |
   parallel -j 5 -I% \
-    htmlhint -f compact %
+    htmlhint --config .htmlhintrc -f compact %
 SUCCESS=$?
 if [[ $SUCCESS == 0 ]]; then
   echo "Executing tidy..."
