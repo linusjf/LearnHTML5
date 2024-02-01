@@ -1,3 +1,26 @@
+body {
+font-family: Verdana, sans-serif;
+font-size: 16px;
+}
+
+figcaption {
+font-style: italic;
+text-align: center;
+}
+
+article {
+margin: auto;
+width: 70%;
+}
+
+h3 {
+text-align: center;
+}
+
+h1, h2 {
+text-align: center;
+}
+
 img {
   display: block;
   height: auto;
