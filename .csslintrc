@@ -2,7 +2,6 @@
 "ignore":[
   "box-model",
   "box-sizing",
-  "important",
   "known-properties",
   "universal-selector"
 ]
