@@ -1,7 +1,7 @@
 @media (prefers-reduced-motion: no-preference) {
-* {
-  scroll-behavior: smooth;
-}
+  * {
+    scroll-behavior: smooth;
+  }
 }
 
 body {
@@ -100,7 +100,8 @@ input {
   font-size: 16px;
 }
 
-.info label, .info input {
+.info label,
+.info input {
   display: inline-block;
 }
 

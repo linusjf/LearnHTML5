@@ -35,7 +35,8 @@
   width: 475px;
 }
 
-.one, .two {
+.one,
+.two {
   filter: blur(1px);
 }
 

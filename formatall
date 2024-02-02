@@ -20,13 +20,13 @@ echo "Executing stylelint..."
 echo "$files" |
   parallel -j 5 -I% \
     stylelint % --fix
-STYLE_SUCCESS=$CSS_SUCCESS+$?
+STYLE_SUCCESS=$((CSS_SUCCESS + $?))
 if [[ $STYLE_SUCCESS == 0 ]]; then
   echo "Executing prettier..."
   echo "$files" |
     parallel -j 5 -I% \
       prettier --parser css --write %
-  STYLE_SUCCESS=$STYLE_SUCCESS+$?
+  STYLE_SUCCESS=$((STYLE_SUCCESS + $?))
 fi
 files=$(find . -maxdepth 2 -type f -name "*.html" \
   ! -path "**/.git/**")
@@ -40,6 +40,6 @@ if [[ $SUCCESS == 0 ]]; then
   echo "$files" |
     parallel -j 5 -I% \
       tidy -config "$configFilePath" -quiet -m %
-  SUCCESS=$SUCCESS+$?
+  SUCCESS=$((SUCCESS + $?))
 fi
-exit "$((SUCCESS + STYLE_SUCCESS))"
+exit $((SUCCESS + STYLE_SUCCESS))

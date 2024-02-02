@@ -8,7 +8,7 @@ html {
 }
 
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 .label {
@@ -43,7 +43,8 @@ p {
   height: 10px;
 }
 
-.large, .medium {
+.large,
+.medium {
   background-color: black;
   border: 0;
 }
@@ -55,7 +56,6 @@ p {
 .small-text {
   font-size: 0.85rem;
 }
-
 
 .calories-info {
   align-items: flex-end;

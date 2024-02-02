@@ -36,12 +36,18 @@ legend {
   padding-top: 5px;
 }
 
-picture, video, canvas, svg {
+picture,
+video,
+canvas,
+svg {
   display: block;
   max-width: 100%;
 }
 
-input, button, textarea, select {
+input,
+button,
+textarea,
+select {
   font: inherit;
   margin: inherit;
   width: 100%;
@@ -68,7 +74,8 @@ input[type="submit"] {
   width: 100%;
 }
 
-h1, p {
+h1,
+p {
   margin: 0.25em auto;
   overflow-wrap: break-word;
   padding: 0;
@@ -78,7 +85,7 @@ h1, p {
 fieldset {
   border: none;
   margin-bottom: 5px;
-  padding:0;
+  padding: 0;
 }
 
 label {
