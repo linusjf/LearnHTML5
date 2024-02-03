@@ -1,9 +1,6 @@
-* {
-  box-sizing: border-box;
-}
-
 body {
   background: #f5f6f7;
+  box-sizing: border-box;
   font-family: sans-serif;
   margin: 0;
 }
@@ -11,6 +8,7 @@ body {
 .header {
   background-color: #0a0a23;
   border-bottom: 4px solid #fdb347;
+  box-sizing: border-box;
   color: #fff;
   padding: 32px;
   text-align: center;
@@ -19,6 +17,7 @@ body {
 
 .gallery {
   align-items: center;
+  box-sizing: border-box;
   display: flex;
   flex-flow: row wrap;
   gap: 16px;
@@ -30,6 +29,7 @@ body {
 
 .gallery img {
   border-radius: 10px;
+  box-sizing: border-box;
   height: 300px;
   max-width: 350px;
   object-fit: cover;
@@ -37,6 +37,7 @@ body {
 }
 
 .gallery::after {
+  box-sizing: border-box;
   content: "";
   width: 350px;
 }
