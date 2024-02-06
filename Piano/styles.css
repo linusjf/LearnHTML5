@@ -54,8 +54,7 @@ html {
   width: 200px;
 }
 
-/* csslint ignore:start */
-@media (width <= 768px) {
+@media (max-width: 768px) {
   .piano {
     width: 358px;
   }
@@ -69,7 +68,7 @@ html {
   }
 }
 
-@media (width <= 1199px) and (width >= 769px) {
+@media (max-width: 1199px) and (min-width: 769px) {
   .piano {
     width: 675px;
   }
@@ -78,5 +77,3 @@ html {
     width: 633px;
   }
 }
-
-/* csslint ignore:end */
