@@ -8,9 +8,9 @@ body {
 }
 
 .portraits {
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 
 .clinton-container,
@@ -19,7 +19,7 @@ body {
 }
 
 .body {
-  background-color: #001F3F;
+  background-color: #001f3f;
   border-radius: 10px;
   height: 150px;
   left: 50px;
@@ -67,7 +67,7 @@ body {
 
 .head,
 .face {
-  background-color: #F0E68C;
+  background-color: #f0e68c;
   border-radius: 15% 15% 70% 70%;
   height: 150px;
   left: 50px;
@@ -94,7 +94,7 @@ body {
 }
 
 .nose {
-  background-color: #F0E68C;
+  background-color: #f0e68c;
   border-radius: 50%;
   height: 15px;
   left: 90px;
@@ -113,7 +113,7 @@ body {
 }
 
 .tie {
-  background-color: #B22222;
+  background-color: #b22222;
   border-radius: 5px;
   height: 80px;
   left: 75px;

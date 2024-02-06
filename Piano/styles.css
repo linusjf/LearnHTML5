@@ -1,0 +1,82 @@
+/* csslint universal-selector: false */
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.piano {
+  background-color: #00471b;
+  border-radius: 10px;
+  height: 290px;
+  margin: 80px auto;
+  padding: 90px 20px 0;
+  position: relative;
+  width: 992px;
+}
+
+.keys {
+  background-color: #040404;
+  height: 180px;
+  overflow: hidden;
+  padding-left: 2px;
+  width: 949px;
+}
+
+.key {
+  background-color: #fff;
+  border-radius: 0 0 3px 3px;
+  float: left;
+  height: 175px;
+  margin: 2px;
+  position: relative;
+  width: 41px;
+}
+
+.key.black-key::after {
+  background-color: #1d1e22;
+  border-radius: 0 0 3px 3px;
+  content: "";
+  height: 100px;
+  left: -18px;
+  position: absolute;
+  width: 32px;
+}
+
+.logo {
+  position: absolute;
+  top: 23px;
+  width: 200px;
+}
+
+/* csslint ignore:start */
+@media (width <= 768px) {
+  .piano {
+    width: 358px;
+  }
+
+  .keys {
+    width: 318px;
+  }
+
+  .logo {
+    width: 150px;
+  }
+}
+
+@media (width <= 1199px) and (width >= 769px) {
+  .piano {
+    width: 675px;
+  }
+
+  .keys {
+    width: 633px;
+  }
+}
+
+/* csslint ignore:end */

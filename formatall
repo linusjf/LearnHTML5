@@ -14,7 +14,7 @@ files=$(find . -type f -name "*.css" \
 echo "Executing csslint..."
 echo "$files" |
   parallel -j 5 -I% \
-    csslint --quiet --format=compact %
+    csslint --quiet --format=compact --exclude-list=Piano %
 CSS_SUCCESS=$?
 echo "Executing stylelint..."
 echo "$files" |
