@@ -10,6 +10,7 @@ code {
 
 header {
   background-color: #f2f2f2;
+  box-sizing: border-box;
   font-size: 1.3rem;
   font-weight: bolder;
   padding: 10px;
@@ -17,13 +18,16 @@ header {
 }
 
 .navbar {
+  border-right: 1px;
+  border-style: solid;
   bottom: 0;
+  box-sizing: border-box;
   left: 0;
   margin: 0;
   position: fixed;
   text-align: left;
   top: 0;
-  width: 20%;
+  width: 30%;
 }
 
 .navbar ul {
@@ -33,21 +37,28 @@ header {
 }
 
 .navbar li {
+  border-bottom: 0;
+  border-left: 0;
+  border-right: 0;
   border-style: solid;
+  border-top: 1px;
   border-width: 1px;
   box-sizing: border-box;
   display: block;
-  margin: 5px;
+  margin: 0;
   margin-bottom: 0;
-  padding: 6px;
+  padding: 10px;
 }
 
 div {
-  margin-left: 200px;
+  box-sizing: border-box;
+  margin-left: auto;
   padding: 5px;
+  width: 70%;
 }
 
 main {
+  float: left;
   padding: 20px;
 }
 
@@ -67,8 +78,7 @@ main {
   }
 
   div {
-    margin-left: 0;
-    padding: 5px;
+    width: 100%;
   }
 }
 
