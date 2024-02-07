@@ -4,8 +4,14 @@ body {
   padding: 0;
 }
 
+code {
+  background-color: #eef;
+}
+
 header {
   background-color: #f2f2f2;
+  font-size: 1.3rem;
+  font-weight: bolder;
   padding: 10px;
   text-align: center;
 }
@@ -17,7 +23,7 @@ header {
   position: fixed;
   text-align: left;
   top: 0;
-  width: 25%;
+  width: 20%;
 }
 
 .navbar ul {
@@ -48,11 +54,20 @@ main {
 @media screen and (max-width: 400px) {
   .navbar {
     text-align: center;
+    position: relative;
     width: 100%;
   }
 
   .navbar li {
-    display: block-inline;
-    margin-bottom: 10px;
+  border: none;
+    display: inline-block;
+  margin: 2px;
+  margin-bottom: 0;
+  padding: 1px;
   }
+
+  div {
+  margin-left: 0;
+  padding: 5px;
+}
 }
