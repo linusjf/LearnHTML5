@@ -53,21 +53,21 @@ main {
 
 @media screen and (max-width: 400px) {
   .navbar {
-    text-align: center;
     position: relative;
+    text-align: center;
     width: 100%;
   }
 
   .navbar li {
-  border: none;
+    border: none;
     display: inline-block;
-  margin: 2px;
-  margin-bottom: 0;
-  padding: 1px;
+    margin: 2px;
+    margin-bottom: 0;
+    padding: 1px;
   }
 
   div {
-  margin-left: 0;
-  padding: 5px;
-}
+    margin-left: 0;
+    padding: 5px;
+  }
 }
