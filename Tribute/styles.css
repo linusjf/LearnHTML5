@@ -1,3 +1,11 @@
+/* csslint universal-selector: false */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
   background-color: white;
   font-family: Verdana, sans-serif;
@@ -27,7 +35,7 @@ figcaption {
 article {
   font-size: 1.2rem;
   margin: auto;
-  width: 70%;
+  width: 80%;
 }
 
 blockquote {
@@ -50,6 +58,7 @@ img {
   height: auto;
   margin: 0 auto;
   max-width: 100%;
+  object-fit: cover;
   padding: 10px;
   width: 90%;
 }
