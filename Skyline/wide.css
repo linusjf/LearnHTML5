@@ -1,0 +1,13 @@
+/* csslint ignore:start */
+:root {
+  --building-color1: #aa80ff;
+  --building-color2: #6c9;
+  --building-color3: #c69;
+  --building-color4: #538cc6;
+  --window-color1: #b9f;
+  --window-color2: #8cd9b3;
+  --window-color3: #d98cb3;
+  --window-color4: #8cb3d9;
+}
+
+/* csslint ignore:end */
