@@ -10,6 +10,10 @@ body {
   overflow: hidden;
 }
 
+.empty {
+  opacity: 1;
+}
+
 .background-buildings,
 .foreground-buildings {
   align-items: flex-end;
