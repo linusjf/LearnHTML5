@@ -21,13 +21,11 @@ echo "$files" |
   parallel -j 5 -I% \
     stylelint % --fix
 STYLE_SUCCESS=$((CSS_SUCCESS + $?))
-if [[ $STYLE_SUCCESS == 0 ]]; then
-  echo "Executing prettier..."
-  echo "$files" |
-    parallel -j 5 -I% \
-      prettier --parser css --write %
-  STYLE_SUCCESS=$((STYLE_SUCCESS + $?))
-fi
+echo "Executing prettier..."
+echo "$files" |
+  parallel -j 5 -I% \
+    prettier --parser css --write %
+STYLE_SUCCESS=$((STYLE_SUCCESS + $?))
 files=$(find . -maxdepth 2 -type f -name "*.html" \
   ! -path "**/.git/**")
 echo "Executing htmlhint..."

@@ -24,7 +24,8 @@ body {
   overflow: hidden;
 }
 
-.background-buildings, .foreground-buildings {
+.background-buildings,
+.foreground-buildings {
   align-items: flex-end;
   display: flex;
   height: 100%;
@@ -48,12 +49,12 @@ body {
 
 .sky {
   background: radial-gradient(
-      closest-corner circle at 15% 15%,
-      #ffcf33,
-      #ffcf33 20%,
-      #ff6 21%,
-      #bef 100%
-    );
+    closest-corner circle at 15% 15%,
+    #ffcf33,
+    #ffcf33 20%,
+    #ff6 21%,
+    #bef 100%
+  );
 }
 
 /* BACKGROUND BUILDINGS - "bb" stands for "background building" */
@@ -65,29 +66,23 @@ body {
 .bb1a {
   width: 70%;
 }
-  
+
 .bb1b {
   width: 80%;
 }
-  
+
 .bb1c {
   width: 90%;
 }
 
 .bb1d {
-  background: linear-gradient(
-      var(--building-color1) 50%,
-      var(--window-color1)
-    );
+  background: linear-gradient(var(--building-color1) 50%, var(--window-color1));
   height: 70%;
   width: 100%;
 }
 
 .bb1-window {
-  background: linear-gradient(
-      var(--building-color1),
-      var(--window-color1)
-    );
+  background: linear-gradient(var(--building-color1), var(--window-color1));
   height: 10%;
 }
 
@@ -104,22 +99,22 @@ body {
 
 .bb2b {
   background: repeating-linear-gradient(
-      var(--building-color2),
-      var(--building-color2) 6%,
-      var(--window-color2) 6%,
-      var(--window-color2) 9%
-    );
+    var(--building-color2),
+    var(--building-color2) 6%,
+    var(--window-color2) 6%,
+    var(--window-color2) 9%
+  );
   height: 100%;
   width: 100%;
 }
 
 .bb3 {
   background: repeating-linear-gradient(
-      90deg,
-      var(--building-color3),
-      var(--building-color3),
-      var(--window-color3) 15%
-    );
+    90deg,
+    var(--building-color3),
+    var(--building-color3),
+    var(--window-color3) 15%
+  );
   height: 55%;
   width: 10%;
 }
@@ -140,7 +135,7 @@ body {
   height: 5%;
   width: 80%;
 }
-  
+
 .bb4c {
   background-color: var(--building-color4);
   height: 85%;
@@ -170,7 +165,7 @@ body {
   height: 10%;
   width: 60%;
 }
-  
+
 .fb1c {
   background: repeating-linear-gradient(
       90deg,
@@ -217,13 +212,13 @@ body {
   height: 35%;
   width: 10%;
 }
-  
+
 .fb3a {
   background-color: var(--building-color1);
   height: 15%;
   width: 80%;
 }
-  
+
 .fb3b {
   background-color: var(--building-color1);
   height: 35%;
@@ -303,7 +298,7 @@ body {
 }
 
 @media screen and (max-width: 1000px) {
-/* csslint ignore:start */
+  /* csslint ignore:start */
   :root {
     --building-color1: #000;
     --building-color2: #000;
@@ -316,14 +311,40 @@ body {
   }
 
   /* csslint ignore:end */
-  
+
   .sky {
     background: radial-gradient(
-        closest-corner circle at 15% 15%,
-        #ccc,
-        #ccc 20%,
-        #445 21%,
-        #223 100%
-      );
+      closest-corner circle at 15% 15%,
+      #ccc,
+      #ccc 20%,
+      #445 21%,
+      #223 100%
+    );
+  }
+}
+
+@media screen and (orientation: landscape) {
+  /* csslint ignore:start */
+
+  :root {
+    --building-color1: #aa80ff;
+    --building-color2: #6c9;
+    --building-color3: #c69;
+    --building-color4: #538cc6;
+    --window-color1: #b9f;
+    --window-color2: #8cd9b3;
+    --window-color3: #d98cb3;
+    --window-color4: #8cb3d9;
+  }
+
+  /* csslint ignore:end */
+  .sky {
+    background: radial-gradient(
+      closest-corner circle at 15% 15%,
+      #ffcf33,
+      #ffcf33 20%,
+      #ff6 21%,
+      #bef 100%
+    );
   }
 }
