@@ -2,7 +2,7 @@
 require() {
   hash "$@" || exit
 }
-require csslint htmlhint stylelint prettier tidy find parallel head
+require htmlhint stylelint prettier tidy find parallel head
 declare -i SUCCESS=0
 declare -i CSS_SUCCESS=0
 declare -r configFileName="tidy.config"
@@ -11,11 +11,6 @@ configFilePath="$(find . -maxdepth 2 \
   "**/.git/**" | head -n 1)"
 files=$(find . -type f -name "*.css" \
   ! -path "**/.git/**")
-echo "Executing csslint..."
-echo "$files" |
-  parallel -j 5 -I% \
-    csslint --quiet --format=compact %
-CSS_SUCCESS=$?
 echo "Executing stylelint..."
 echo "$files" |
   parallel -j 5 -I% \

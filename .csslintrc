@@ -1,8 +1,0 @@
-{
-"ignore":[
-  "adjoining-classes",
-  "box-model",
-  "box-sizing",
-  "known-properties"
-]
-}
