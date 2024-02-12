@@ -1,11 +1,13 @@
-*, *::before, ::after {
-box-sizing: border-box;
+*,
+*::before,
+::after {
+  box-sizing: border-box;
 }
 
 header {
   align-items: flex-start;
   display: flex;
-  font-family: 'Exo 2', sans-serif;
+  font-family: "Exo 2", sans-serif;
   padding: 1em;
   position: sticky;
   top: 0;
@@ -16,8 +18,8 @@ header {
 .header-img {
   display: flex;
   justify-content: left;
-    object-fit: scale-down;
-   width: 20%;
+  object-fit: scale-down;
+  width: 20%;
 }
 
 .nav-bar {
@@ -25,7 +27,6 @@ header {
   justify-content: right;
   width: 80%;
   margin: auto;
-
 }
 
 .nav-bar a {
