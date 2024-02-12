@@ -6,6 +6,7 @@
 
 header {
   align-items: flex-start;
+  background: white;
   display: flex;
   font-family: "Exo 2", sans-serif;
   padding: 1em;
@@ -31,4 +32,22 @@ header {
 
 .nav-bar a {
   padding: 10px;
+}
+
+.email {
+  display: block;
+  margin: 10px auto;
+  width: 100%;
+}
+
+.submit {
+  background-color: green;
+  display: block;
+  margin: 10px auto;
+  padding: 10px;
+  width: 100%;
+}
+
+.copyright {
+  text-align: right;
 }
