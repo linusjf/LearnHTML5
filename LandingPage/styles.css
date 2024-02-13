@@ -1,12 +1,13 @@
 *,
 *::before,
-::after {
+*::after {
   box-sizing: border-box;
-  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 html {
-  font-size: 16px;
+  font-size: 14px;
 }
 
 header {
@@ -31,25 +32,50 @@ padding: 10px;
 text-align: center;
 }
 
+hgroup, hgroup::before, hgroup::after {
+margin: 0 auto;
+padding: 0;
+}
+
+section[id="HowItWorks"] {
+position: relative;
+  overflow: hidden;
+  height: 300px;
+width: 50%;
+padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+}
+
 h1 {
 text-align: center;
 }
 
 iframe {
-height: 400px;
-width: 50%;
+ position: absolute;
+ inset: 0;
+   width: 100%;
+  height: 100%; 
+}
+
+ul {
+  list-style: none;
 }
 
 footer {
+  background-color: white;
+  border-top: 2px double black;
+  bottom: 0;
 display: grid;
 grid-template-areas: 
 ". nav"
-". copyright"; 
+". copyright";
+left: 0;
+  position: sticky;
 }
 
 footer nav {
   grid-area: nav;
 }
+
 
 .header-img {
   align-items: flex-start;
@@ -63,21 +89,20 @@ footer nav {
 
 .nav-bar {
   align-items: center;
-  justify-content: flex-end;
+  justify-content: end;
   display: flex;
   margin: 0;
   width: 80%;
 }
 
 .nav-bar a {
-  margin: 0;
+  margin: 0 2em;
   padding: 0;
-  padding-right: 25px;
   text-align: right;
 }
 
-.nav-bar a:last-of-type {
-padding-right: 0;
+.nav-bar a:hover {
+background-color: pink;
 }
 
 .email {
@@ -90,14 +115,23 @@ padding-right: 0;
 .submit {
   background-color: green;
   display: block;
+  font-size: 0.75rem;
   margin: 10px auto;
   padding: 10px;
   width: 20%;
 }
 
-.feature-header {
-font-size: 2.0rem;
-font-weight: bolder;
+.features {
+ display: grid;
+ grid-gap: 0;
+ margin: 0 auto;
+padding: 0;
+grid-template-columns: repeat(2, 1fr);
+width: 50%;
+}
+
+h2 {
+text-align: center;
 }
 
 .copyright {
@@ -106,7 +140,7 @@ font-weight: bolder;
   grid-area: copyright;
   justify-content: flex-end;
   margin: 0;
-  margin-left: 2em;
+  margin-left: -5em;
   margin-top: 0.5em;
   padding: 0;
   text-align: left;
