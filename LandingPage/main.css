@@ -26,7 +26,7 @@ header {
 }
 
 section {
-  margin: 20px auto;
+  margin: 5px auto;
   padding: 10px;
   text-align: center;
 }
@@ -113,7 +113,7 @@ footer nav {
   display: block;
   font-style: italic;
   font-weight: bolder;
-  margin: 10px auto;
+  margin: 10px auto 5px;
   padding: 10px;
   width: 20%;
 }
