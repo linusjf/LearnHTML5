@@ -7,14 +7,14 @@
 }
 
 html {
-  font-size: 14px;
+  font-family: Anton, sans-serif;
+  font-size: 16px;
 }
 
 header {
   background: white;
   border-bottom: 2px double black;
   display: grid;
-  font-family: "Exo 2", sans-serif;
   font-size: 1.3rem;
   grid-template-columns: auto auto;
   margin: 0 auto;
@@ -27,33 +27,30 @@ header {
 }
 
 section {
-margin: auto;
-padding: 10px;
-text-align: center;
-}
-
-hgroup, hgroup::before, hgroup::after {
-margin: 0 auto;
-padding: 0;
+  margin: 20px auto;
+  padding: 10px;
+  text-align: center;
 }
 
 section[id="HowItWorks"] {
-position: relative;
+  position: relative;
   overflow: hidden;
   height: 300px;
-width: 50%;
-padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+  width: 50%;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
 }
 
-h1 {
-text-align: center;
+h1,
+h2 {
+  text-align: center;
 }
 
 iframe {
- position: absolute;
- inset: 0;
-   width: 100%;
-  height: 100%; 
+  display: block;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
 }
 
 ul {
@@ -64,11 +61,11 @@ footer {
   background-color: white;
   border-top: 2px double black;
   bottom: 0;
-display: grid;
-grid-template-areas: 
-". nav"
-". copyright";
-left: 0;
+  display: grid;
+  grid-template-areas:
+    ". nav"
+    ". copyright";
+  left: 0;
   position: sticky;
 }
 
@@ -76,13 +73,12 @@ footer nav {
   grid-area: nav;
 }
 
-
 .header-img {
   align-items: flex-start;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  margin-left: 10px;
+  margin-left: 20px;
   object-fit: scale-down;
   width: 20%;
 }
@@ -102,7 +98,7 @@ footer nav {
 }
 
 .nav-bar a:hover {
-background-color: pink;
+  background-color: pink;
 }
 
 .email {
@@ -115,23 +111,34 @@ background-color: pink;
 .submit {
   background-color: green;
   display: block;
-  font-size: 0.75rem;
+  font-style: italic;
+  font-weight: bolder;
   margin: 10px auto;
   padding: 10px;
   width: 20%;
 }
 
 .features {
- display: grid;
- grid-gap: 0;
- margin: 0 auto;
-padding: 0;
-grid-template-columns: repeat(2, 1fr);
-width: 50%;
+  display: grid;
+  grid-gap: 0;
+  margin: 0 auto;
+  padding: 0;
+  grid-template-columns: repeat(2, 1fr);
+  width: 50%;
 }
 
-h2 {
-text-align: center;
+.area {
+display: flex;
+margin: auto;
+width: 50%;
+justify-content: space-evenly;
+}
+
+.price {
+background-color: red;
+font-size: 2em;
+font-style: italic;
+padding: 0 1em;
 }
 
 .copyright {
