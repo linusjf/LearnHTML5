@@ -11,18 +11,27 @@ html {
   font-size: 16px;
 }
 
-header {
+header, footer {
   background: white;
-  border-bottom: 2px double black;
   display: grid;
   grid-template-columns: auto auto;
+  left: 0;
   margin: 0 auto;
   max-width: 100%;
   padding: 0;
   position: sticky;
-  top: 0;
   width: 100%;
   z-index: 999;
+}
+
+header {
+  border-bottom: 2px double black;
+  top: 0;
+}
+
+footer {
+  border-top: 2px double black;
+  bottom: 0;
 }
 
 section {
@@ -56,17 +65,8 @@ ul {
   list-style: none;
 }
 
-footer {
-  background-color: white;
-  border-top: 2px double black;
-  bottom: 0;
-  left: 0;
-  position: sticky;
-  width: 100%;
-  z-index: 999;
-}
 
-.header-img {
+.header-img, .footer-img {
   align-items: flex-start;
   display: flex;
   flex-direction: row;
