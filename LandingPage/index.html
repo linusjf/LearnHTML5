@@ -10,7 +10,12 @@
 </head>
 <body>
   <header id="header">
-    <img alt="Thinkers Nest Logo" class="header-img" id="header-img" src="thinkersnestlogo.png" />
+    <picture id="header-img" class="header-img">
+  <source media="(min-width:481px)" srcset="thinkersnestlogo.png">
+  <source media="(max-width:480px)" srcset="thinkersnestlogo_50.png">
+  <source media="(orientation:landscape)" srcset="thinkersnestlogo_50.png">
+  <img src="thinkersnestlogo.png" alt="Thinkers Nest Logo"/>
+</picture>
     <nav class="nav-bar" id="nav-bar">
       <a class="nav-link" href="#Features">Features</a> <a class="nav-link" href="#HowItWorks">How It Works</a> <a class="nav-link" href="#Pricing">Pricing</a>
     </nav>
@@ -112,11 +117,15 @@
     </section>
   </main>
   <footer>
-    <img alt="Thinkers Nest Logo Small" class="footer-img" src="thinkersnestlogo_50.png" />
-    <nav class="nav-bar">
+        <nav class="nav-bar">
       <a href="#">Privacy</a> <a href="#">Terms</a> <a href="#">Contact</a>
     </nav>
-    <p class="copyright">© Copyright 2022 - Thinkers Nest</p>
+    <div class="hidden"></div>
+    <div class="nav-bar">
+    <p>© Copyright 2022 - Thinkers Nest</p>
+    <p class="hidden"></p>
+    <p class="hidden"></p>
+    </div>
   </footer>
 </body>
 </html>

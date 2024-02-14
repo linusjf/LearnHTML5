@@ -6,7 +6,7 @@
   padding: 0;
 }
 
-html {
+body {
   font-family: Anton, sans-serif;
   font-size: 16px;
 }
@@ -14,7 +14,6 @@ html {
 header, footer {
   background: white;
   display: grid;
-  grid-template-columns: auto auto;
   left: 0;
   margin: 0 auto;
   max-width: 100%;
@@ -26,17 +25,13 @@ header, footer {
 
 header {
   border-bottom: 2px double black;
+  grid-template-columns: auto auto;
   top: 0;
 }
 
-footer {
-  border-top: 2px double black;
-  bottom: 0;
-}
-
 section {
-  margin: 5px auto;
-  padding: 10px;
+  margin: 0 auto;
+  padding: 0;
   text-align: center;
 }
 
@@ -65,13 +60,31 @@ ul {
   list-style: none;
 }
 
+footer {
+  display: grid;
+  border-top: 2px double black;
+  bottom: 0;
+  grid-template-areas:
+  ". nav-bar"
+  "hidden copyright";
+}
 
-.header-img, .footer-img {
+footer nav {
+grid-area: nav-bar;
+}
+
+div[class="hidden"] {
+visibility: hidden;
+grid-area: hidden;
+width: 20%;
+}
+
+.header-img, {
   align-items: flex-start;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  margin-left: 8vw;
+  margin-left: 0;
   object-fit: scale-down;
   width: 20%;
 }
@@ -82,11 +95,12 @@ ul {
   justify-content: end;
   display: flex;
   margin: 0;
-  width: 80%;
+  padding: 0;
+  width: 100%;
 }
 
 .nav-bar a {
-  margin: 0 2em;
+  margin: 0 5vw;
   padding: 0;
   text-align: right;
 }
@@ -133,14 +147,4 @@ background-color: red;
 font-size: 2em;
 font-style: italic;
 padding: 0 1em;
-}
-
-.copyright {
-  border: none;
-  font-size: 0.75rem;
-  margin: 0 auto;
-  margin-top: 0.5em;
-  padding: 0;
-  text-align: center;
-  width: 100%;
 }

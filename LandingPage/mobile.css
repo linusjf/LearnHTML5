@@ -1,11 +1,10 @@
 @media screen and (max-width: 480px) {
-.header-img {
-  margin-top: auto;
-  margin-bottom: auto;
-}
-
 section[id="HowItWorks"] {
   width: 100%;
+}
+
+.header-img {
+  margin: auto 0;
 }
 
 .email {
@@ -23,5 +22,4 @@ section[id="HowItWorks"] {
 .area {
 width: 100%;
 }
-
 }
