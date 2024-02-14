@@ -1,16 +1,7 @@
 @media screen and (max-width: 480px) {
-header {
-  grid-template-columns: auto auto;
-}
-
 .header-img {
-  margin: auto;
-  width: 20%;
-}
-
-.nav-bar {
-  font-size: 0.75rem;
-  width: 80%;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 section[id="HowItWorks"] {
@@ -32,4 +23,5 @@ section[id="HowItWorks"] {
 .area {
 width: 100%;
 }
+
 }
