@@ -12,7 +12,8 @@ body {
   font-size: 16px;
 }
 
-header, footer {
+header,
+footer {
   background: white;
   display: grid;
   font-size: 0.75rem;
@@ -60,32 +61,31 @@ footer {
   display: grid;
   border-top: 2px double black;
   bottom: 0;
-  grid-template-areas:
-  "copyright nav-bar";
+  grid-template-areas: "copyright nav-bar";
   grid-template-columns: 50% 50%;
   margin-top: 2vh;
 }
 
 footer nav {
-grid-area: nav-bar;
+  grid-area: nav-bar;
 }
 
 div[class="hidden"] {
-grid-area: hid;
+  grid-area: hid;
 }
 
 div[class="nav-bar"] {
-grid-area: copyright;
+  grid-area: copyright;
 }
 
 .copyright {
   grid-area: copyright;
   padding-left: 3vw;
-text-align: left;
+  text-align: left;
 }
 
 .hidden {
-visibility: hidden;
+  visibility: hidden;
 }
 
 .header-img {
@@ -142,16 +142,20 @@ visibility: hidden;
 }
 
 .area {
-  border: 2px solid black;
-display: flex;
-margin: auto;
-width: 50%;
-justify-content: space-evenly;
+  border-bottom: 2px solid gray;
+  display: flex;
+  margin: auto;
+  width: 50%;
+  justify-content: space-evenly;
+}
+
+.area:last-of-type {
+  border: none;
 }
 
 .price {
-background-color: red;
-font-size: 2em;
-font-style: italic;
-padding: 0 1em;
+  background-color: red;
+  font-size: 2em;
+  font-style: italic;
+  padding: 0 1em;
 }
