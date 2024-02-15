@@ -14,7 +14,7 @@ files=$(find . -type f -name "*.css" \
 echo "Executing stylelint..."
 echo "$files" |
   parallel -j 5 -I% \
-    stylelint % --fix
+    stylelint % --fix --quiet-deprecation-warnings
 STYLE_SUCCESS=$((CSS_SUCCESS + $?))
 echo "Executing prettier..."
 echo "$files" |

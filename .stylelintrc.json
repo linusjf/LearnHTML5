@@ -1,6 +1,15 @@
 {
   "extends": "stylelint-config-standard-scss",
+  "plugins": [
+    "stylelint-csstree-validator"
+  ],
   "rules": {
+    "csstree/validator": {
+      "properties": {
+        "font-size": "| min(<length-percentage>, <length-percentage>) | max(<length-percentage>, <length-percentage>)",
+        "width": "| min(<length-percentage>, <length-percentage>) | max(<length-percentage>, <length-percentage>)"
+      }
+    },
     "media-feature-range-notation": "prefix",
     "selector-class-pattern": null
   }
