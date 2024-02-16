@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 npm install -D tailwindcss
 npx tailwindcss init
-npx tailwindcss -i ./input.css -o ./output.css
+npx tailwindcss -i ./inputtailwind.css -o ./outputtailwind.css --no-autoprefixer

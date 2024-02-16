@@ -10,7 +10,7 @@ configFilePath="$(find . -maxdepth 2 \
   -type f -name "$configFileName" ! -path \
   "**/.git/**" | head -n 1)"
 files=$(find . -type f -name "*.css" \
-  ! -path "**/.git/**" ! -path "**/node_modules/**")
+  ! -path "**/.git/**" ! -path "**/node_modules/**" ! -path "**/*tailwind.css")
 echo "Executing stylelint..."
 echo "$files" |
   parallel -j 5 -I% \

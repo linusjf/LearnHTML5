@@ -47,6 +47,7 @@ html,
   text-size-adjust: 100%;
 
   /* 2 */
+  tab-size: 4;
 
   /* 3 */
   tab-size: 4;
@@ -414,16 +415,6 @@ textarea {
 1. Reset the default placeholder opacity in Firefox. (https://github.com/tailwindlabs/tailwindcss/issues/3300)
 2. Set the default placeholder color to the user's configured gray 400 color.
 */
-
-input::placeholder,
-textarea::placeholder {
-  opacity: 1;
-
-  /* 1 */
-  color: #9ca3af;
-
-  /* 2 */
-}
 
 input::placeholder,
 textarea::placeholder {
@@ -1087,52 +1078,42 @@ video {
 }
 
 .break-before-auto {
-  -moz-column-break-before: auto;
   break-before: auto;
 }
 
 .break-before-avoid {
-  -moz-column-break-before: avoid;
   break-before: avoid;
 }
 
 .break-before-all {
-  -moz-column-break-before: all;
   break-before: all;
 }
 
 .break-before-avoid-page {
-  -moz-column-break-before: avoid;
   break-before: avoid-page;
 }
 
 .break-before-page {
-  -moz-column-break-before: page;
   break-before: page;
 }
 
 .break-before-left {
-  -moz-column-break-before: left;
   break-before: left;
 }
 
 .break-before-right {
-  -moz-column-break-before: right;
   break-before: right;
 }
 
 .break-before-column {
-  -moz-column-break-before: column;
   break-before: column;
 }
 
 .break-inside-auto {
-  -moz-column-break-inside: auto;
   break-inside: auto;
 }
 
 .break-inside-avoid {
-  -moz-column-break-inside: avoid;
   break-inside: avoid;
 }
 
@@ -1141,47 +1122,38 @@ video {
 }
 
 .break-inside-avoid-column {
-  -moz-column-break-inside: avoid;
   break-inside: avoid-column;
 }
 
 .break-after-auto {
-  -moz-column-break-after: auto;
   break-after: auto;
 }
 
 .break-after-avoid {
-  -moz-column-break-after: avoid;
   break-after: avoid;
 }
 
 .break-after-all {
-  -moz-column-break-after: all;
   break-after: all;
 }
 
 .break-after-avoid-page {
-  -moz-column-break-after: avoid;
   break-after: avoid-page;
 }
 
 .break-after-page {
-  -moz-column-break-after: page;
   break-after: page;
 }
 
 .break-after-left {
-  -moz-column-break-after: left;
   break-after: left;
 }
 
 .break-after-right {
-  -moz-column-break-after: right;
   break-after: right;
 }
 
 .break-after-column {
-  -moz-column-break-after: column;
   break-after: column;
 }
 
@@ -2443,34 +2415,9 @@ video {
 }
 
 .transition {
-  transition-property:
-    color,
-    background-color,
-    border-color,
-    text-decoration-color,
-    fill,
-    stroke,
-    opacity,
-    box-shadow,
-    transform,
-    filter,
-    -webkit-backdrop-filter;
   transition-property: color, background-color, border-color,
     text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter,
     backdrop-filter;
-  transition-property:
-    color,
-    background-color,
-    border-color,
-    text-decoration-color,
-    fill,
-    stroke,
-    opacity,
-    box-shadow,
-    transform,
-    filter,
-    backdrop-filter,
-    -webkit-backdrop-filter;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
