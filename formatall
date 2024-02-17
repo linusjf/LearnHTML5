@@ -2,7 +2,7 @@
 require() {
   hash "$@" || exit
 }
-require htmlhint stylelint prettier tidy find parallel head
+require htmlhint stylelint prettier tidy find parallel head colorguard
 declare -i SUCCESS=0
 declare -i CSS_SUCCESS=0
 declare -r configFileName="tidy.config"
@@ -20,6 +20,11 @@ echo "Executing prettier..."
 echo "$files" |
   parallel -j 5 -I% \
     prettier --parser css --write %
+STYLE_SUCCESS=$((STYLE_SUCCESS + $?))
+echo "Executing colorguard..."
+echo "$files" |
+  parallel -j 5 -I% \
+    colorguard --file % --allow-equivalent-notation
 STYLE_SUCCESS=$((STYLE_SUCCESS + $?))
 files=$(find . -maxdepth 2 -type f -name "*.html" \
   ! -path "**/.git/**")
