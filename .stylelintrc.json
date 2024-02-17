@@ -14,7 +14,12 @@
       }
     },
     "media-feature-range-notation": "prefix",
-    "no-duplicate-selectors": null,
+    "no-duplicate-selectors": [
+      true,
+      {
+        "disallowInList": false
+      }
+    ],
     "scss/at-rule-no-unknown": [
       true,
       {
