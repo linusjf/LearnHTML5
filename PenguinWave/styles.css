@@ -212,7 +212,7 @@ body {
   left: 5%;
   transform-origin: top left;
   transform: rotate(130deg) scaleX(-1);
-  animation: 3s linear infinite wave;
+  animation: 3s ease-in-out infinite wave alternate-reverse;
 }
 
 .arm.right {
@@ -252,14 +252,14 @@ body {
   left: 25%;
   transform: rotate(80deg);
   transform-origin: top left;
-  animation: 3s linear infinite rightdance;
+  animation: 3s ease-in-out infinite rightdance alternate-reverse;
 }
 
 .foot.right {
   right: 25%;
   transform: rotate(-80deg);
   transform-origin: top right;
-  animation: 3s linear infinite leftdance;
+  animation: 3s ease-in-out infinite leftdance alternate-reverse;
 }
 
 @keyframes rightdance {
