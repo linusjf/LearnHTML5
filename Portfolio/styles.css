@@ -1,4 +1,6 @@
-*, *::before,*::after {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   text-align: center;
@@ -15,7 +17,7 @@
 }
 
 .navbar a {
-  margin: auto auto;
+  margin: auto;
   margin-right: 1rem;
   color: white;
 }
@@ -29,26 +31,47 @@
   font-size: 16px;
 }
 
-.projects:
-{
+.projects: {
   width: 100vw;
   height: 100vh;
 }
 
 .project-tile {
-
 }
 
 .welcome {
   height: 100vh;
   width: 100vw;
-  }
+}
 
 .welcome div {
   margin-top: 45vh;
   margin-bottom: 45vh;
 }
 
+.contact {
+  width: 100%;
+}
+
+.contact > a {
+  width: 50px !important;
+  height: 50px !important;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+footer p:first-of-type() {
+  align-self: flex-start;
+}
+
+footer p:last-of-type() {
+  align-self: flex-end;
+}
+
 @media screen and (max-width: 480px) {
-  
 }
