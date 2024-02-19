@@ -1,0 +1,54 @@
+*, *::before,*::after {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  text-align: right;
+  background-color: red;
+  height: 10vh;
+}
+
+.navbar a {
+  margin: auto auto;
+  margin-right: 1rem;
+  color: white;
+}
+
+.navbar a:hover {
+  background-color: gray;
+}
+
+.body {
+  font-family: Raleway, sans-serif;
+  font-size: 16px;
+}
+
+.projects:
+{
+  width: 100vw;
+  height: 100vh;
+}
+
+.project-tile {
+
+}
+
+.welcome {
+  height: 100vh;
+  width: 100vw;
+  }
+
+.welcome div {
+  margin-top: 45vh;
+  margin-bottom: 45vh;
+}
+
+@media screen and (max-width: 480px) {
+  
+}
