@@ -6,14 +6,20 @@
   text-align: center;
 }
 
+body {
+  font-family: Raleway, sans-serif;
+  font-size: 16px;
+}
+
 .navbar {
+  font-size: 0.5rem;
   display: flex;
   align-items: center;
   justify-content: flex-end;
   position: fixed;
   top: 0;
   left: 0;
-  width: 50vw;
+  width: 100vw;
   text-align: right;
   background-color: red;
   height: 5vh;
@@ -22,32 +28,15 @@
 
 .navbar a {
   color: white;
-  margin: 0 auto;
-}
-
-.navbar a:first-of-type {
-margin-left: 0;
+  margin: 0 0.5rem;
 }
 
 .navbar a:last-of-type {
-margin-right: 0;
+  margin-right: 0.25rem;
 }
 
 .navbar a:hover {
   background-color: gray;
-}
-
-.body {
-  font-family: Raleway, sans-serif;
-  font-size: 16px;
-}
-
-.projects: {
-  width: 100vw;
-  height: 100vh;
-}
-
-.project-tile {
 }
 
 .welcome {
@@ -60,13 +49,22 @@ margin-right: 0;
   margin-bottom: 45vh;
 }
 
-.contact {
-  width: 100%;
+.projects: {
+  width: 100vw;
+  height: 100vh;
 }
 
-.contact > a {
-  width: 50px !important;
-  height: 50px !important;
+.project-tile {
+  border: 2px groove blue;
+}
+
+figcaption {
+  background-color: brown;
+}
+
+.profile {
+  width: 100%;
+  margin: 35vw auto;
 }
 
 footer {
@@ -74,6 +72,7 @@ footer {
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
+  font-size: 0.4rem;
 }
 
 footer p:first-of-type() {
