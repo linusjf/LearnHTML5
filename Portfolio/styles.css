@@ -64,12 +64,11 @@ body {
   height: 200%;
   max-height: 200%;
   grid-template-columns: auto auto;
+  grid-template-rows: 33% 33% 34%;
 }
 
 .project-tile {
   margin: 0 auto;
-  height: 33%;
-  max-height: 33%;
 }
 
 picture img {
@@ -102,4 +101,12 @@ footer p:last-of-type() {
 }
 
 @media screen and (min-width: 481px) {
+.navbar, footer {
+  font-size: 0.70rem;
+}
+
+.navbar {
+  height: 7vh;
+}
+
 }
