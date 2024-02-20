@@ -1,6 +1,7 @@
 *,
 *::before,
 *::after {
+  border: none;
   margin: 0;
   padding: 0;
   text-align: center;
@@ -50,15 +51,27 @@ body {
 }
 
 .projects: {
+  display: grid;
   width: 100vw;
   height: 100vh;
+  gap: 0.25rem;
+  grid-template-columns: repeat(2, 1fr);
 }
 
 .project-tile {
   border: 2px groove blue;
+  width: 40vw;
+  height: 30vh;
+  grid-column: span 1;
+}
+
+picture img {
+  width: 40vw;
+object-fit: contain;
 }
 
 figcaption {
+  width: 40vw;
   background-color: brown;
 }
 
