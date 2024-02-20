@@ -56,19 +56,17 @@ body {
   height: 100vh;
   gap: 0.25rem;
   grid-template-columns: repeat(2, 1fr);
-  margin: auto;
 }
 
 .project-tile {
   border: 2px groove blue;
-  width: 40vw;
   height: 30vh;
   grid-column: span 1;
 }
 
 picture img {
   width: 40vw;
-object-fit: contain;
+  object-fit: scale-down;
 }
 
 figcaption {
@@ -84,7 +82,7 @@ figcaption {
 footer {
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: space-evenly;
   align-items: center;
   font-size: 0.4rem;
   border-top: 2px solid brown;
