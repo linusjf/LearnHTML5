@@ -10,6 +10,7 @@
 body {
   font-family: Raleway, sans-serif;
   font-size: 16px;
+  width: 100vw;
 }
 
 .navbar {
@@ -20,7 +21,7 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
+  width: 100%;
   text-align: right;
   background-color: red;
   height: 5vh;
@@ -40,14 +41,16 @@ body {
   background-color: gray;
 }
 
-.welcome {
-  height: 100vh;
+.welcome, .profile {
   width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.welcome div {
-  margin-top: 45vh;
-  margin-bottom: 45vh;
+.profile {
+flex-direction: column;
 }
 
 .projects: {
@@ -55,28 +58,50 @@ body {
   width: 100vw;
   height: 100vh;
   gap: 0.25rem;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas:
+  "tribute landingpage"
+  "magazine typography"
+  "techdoc regform";
 }
 
 .project-tile {
   border: 2px groove blue;
-  height: 30vh;
-  grid-column: span 1;
+  height: 33%;
+  width: 50%;
+}
+
+.project-tile:nth-of-type(1) {
+grid-area: tribute;
+}
+
+.project-tile:nth-of-type(2) {
+grid-area: landingpage;
+}
+
+.project-tile:nth-of-type(3) {
+grid-area: magazine;
+}
+
+.project-tile:nth-of-type(4) {
+grid-area: typography;
+}
+
+.project-tile:nth-of-type(5) {
+grid-area: techdoc;
+}
+
+.project-tile:nth-of-type(6) {
+grid-area: regform;
 }
 
 picture img {
-  width: 40vw;
-  object-fit: scale-down;
+  width: 100%;
+  object-fit: cover;
 }
 
 figcaption {
   width: 40vw;
   background-color: brown;
-}
-
-.profile {
-  width: 100%;
-  margin: 35vw auto;
 }
 
 footer {
