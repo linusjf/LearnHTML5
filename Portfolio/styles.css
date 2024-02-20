@@ -58,20 +58,22 @@ body {
 
 .projects {
   display: grid;
-  gap: 0.5rem;
+  gap: 0.25rem;
   width: 100%;
   max-width: 100%;
   height: 200%;
   max-height: 200%;
+  grid-template-columns: auto auto;
 }
 
 .project-tile {
-  border: 2px groove blue;
+  margin: 0 auto;
   height: 33%;
   max-height: 33%;
 }
 
 picture img {
+  border: 2px groove blue;
   width: 100%;
   object-fit: scale-down;
 }
@@ -99,5 +101,5 @@ footer p:last-of-type() {
   align-self: flex-end;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (min-width: 481px) {
 }
