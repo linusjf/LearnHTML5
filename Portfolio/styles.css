@@ -70,7 +70,7 @@ body {
   max-width: 100%;
   height: 100%;
   max-height: 100%;
-  grid-template-columns: repeat(3, 33%);
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .project-tile {
@@ -94,7 +94,7 @@ figure {
 }
 
 picture {
-height: 100%;
+  height: 100%;
   margin: 0;
 }
 
@@ -152,6 +152,32 @@ footer p:last-of-type() {
   }
 
   .project-tile {
-  border: none;
+    border: none;
+  }
 }
+
+@media screen and and (min-width: 320px) and (max-device-width: 640px) and (orientation: landscape) {
+  figcaption {
+    font-size: 0.8rem;
+  }
+
+  .navbar {
+    height: 7vh;
+  }
+
+  .projects {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  figure > img {
+    width: 100%;
+  }
+
+  footer {
+    flex-direction: column;
+  }
+
+  .project-tile {
+    border: none;
+  }
 }
