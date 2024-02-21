@@ -1,0 +1,25 @@
+@media screen and (max-width: 480px) and (min-width: 48px) {
+  figcaption {
+    font-size: 0.8rem;
+  }
+
+  .navbar {
+    height: 7vh;
+  }
+
+  .projects {
+    grid-template-columns: repeat(auto-fit, 100%);
+  }
+
+  figure > img {
+    width: 75%;
+  }
+
+  footer {
+    flex-direction: column;
+  }
+
+  .project-tile {
+    border: none;
+  }
+}
