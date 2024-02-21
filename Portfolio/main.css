@@ -83,14 +83,41 @@ body {
   height: 100%;
   border: 2px solid black;
   grid-template-rows: repeat(1, auto);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
-figure {
+.project-tile figure {
   display: grid;
   height: 100%;
   margin: 0;
   padding: 0;
   grid-template-rows: repeat(2, auto);
+}
+
+.project-tile:nth-of-type(1) {
+  background-image: url("tribute.jpg");
+}
+
+.project-tile:nth-of-type(2) {
+  background-image: url("landingpage.jpg");
+}
+
+.project-tile:nth-of-type(3) {
+  background-image: url("magazine.jpg");
+}
+
+.project-tile:nth-of-type(4) {
+  background-image: url("typography.jpg");
+}
+
+.project-tile:nth-of-type(5) {
+  background-image: url("techdoc.jpg");
+}
+
+.project-tile:nth-of-type(6) {
+  background-image: url("registrationform.jpg");
 }
 
 picture {
@@ -102,14 +129,14 @@ picture > img {
   width: 100%;
   height: 100%;
   object-fit: fill;
+  visibility: hidden;
 }
 
 figcaption {
   width: 100%;
-  height: 20%;
   font-size: 1rem;
   font-weight: bolder;
-  order: -1;
+  visibility: hidden;
 }
 
 footer {
