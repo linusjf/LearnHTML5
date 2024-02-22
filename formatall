@@ -31,8 +31,13 @@ files=$(find . -maxdepth 2 -type f -name "*.html" \
 echo "Executing htmlhint..."
 echo "$files" |
   parallel -j 5 -I% \
-    htmlhint --config .htmlhintrc -f compact %
+    htmlhint --config .htmlhintrc -f compact % 2>/dev/null
 SUCCESS=$?
+echo "Executing html-validate..."
+echo "$files" |
+  parallel -j 5 -I% \
+    html-validate %
+SUCCESS=$((SUCCESS + $?))
 if [[ $SUCCESS == 0 ]]; then
   echo "Executing tidy..."
   echo "$files" |

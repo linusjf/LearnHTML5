@@ -159,3 +159,8 @@ div[class="nav-bar"] {
   font-style: italic;
   padding: 0 1em;
 }
+
+.heading5 {
+  font-size: 1.125rem;
+  font-weight: bold;
+}
