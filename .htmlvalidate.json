@@ -16,6 +16,19 @@
     "doctype-html": "off",
     "doctype-style": "off",
     "element-permitted-content": "off",
+    "form-dup-name": [
+      "error",
+      {
+        "allowArrayBrackets": true,
+        "shared": [
+          "radio",
+          "submit",
+          "button",
+          "reset",
+          "checkbox"
+        ]
+      }
+    ],
     "input-missing-label": "off",
     "meta-refresh": "off",
     "no-autoplay": "off",
