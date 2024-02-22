@@ -6,11 +6,15 @@
     "html-validate:recommended"
   ],
   "rules": {
-    "attr-delimiter": "off",
-    "attr-pattern": "off",
-    "attr-spacing": "off",
+    "attr-pattern": "warn",
+    "attr-spacing": "error",
     "attribute-allowed-values": "warn",
-    "attribute-boolean-style": "off",
+    "attribute-boolean-style": [
+      "warn",
+      {
+        "style": "name"
+      }
+    ],
     "attribute-empty-style": "off",
     "class-pattern": "off",
     "doctype-html": "off",
