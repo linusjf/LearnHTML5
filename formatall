@@ -44,5 +44,10 @@ if [[ $SUCCESS == 0 ]]; then
     parallel -j 5 -I% \
       tidy -config "$configFilePath" -quiet -m %
   SUCCESS=$((SUCCESS + $?))
+  echo "Executing prettier..."
+  echo "$files" |
+    parallel -j 5 -I% \
+      prettier --parser html --write %
+  SUCCESS=$((SUCCESS + $?))
 fi
 exit $((SUCCESS + STYLE_SUCCESS))
