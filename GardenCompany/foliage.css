@@ -17,7 +17,15 @@ figcaption {
 }
 
 hr {
-background-color: green;
-color: green;
-height: 3px;
+  background-color: green;
+  color: green;
+  height: 3px;
+}
+
+.nomargin {
+margin: 0;
+}
+
+.upper-alpha {
+list-style-type: upper-alpha;
 }
