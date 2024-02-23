@@ -58,7 +58,11 @@
             </fieldset>
             <fieldset form="survey-form">
               <legend>Which option best describes your current role?</legend>
-              <select id="dropdown" name="current-role">
+              <select
+                aria-label="Current Role"
+                id="dropdown"
+                name="current-role"
+              >
                 <option disabled="disabled" selected="selected" value="">
                   Select current role
                 </option>
@@ -102,7 +106,11 @@
             </fieldset>
             <fieldset form="survey-form">
               <legend>Which is your favorite feature of freeCodeCamp?</legend>
-              <select id="fav-feature" name="fav-feature">
+              <select
+                aria-label="Favourite Feature"
+                id="fav-feature"
+                name="fav-feature"
+              >
                 <option disabled="disabled" selected="selected" value="">
                   Select an option
                 </option>
@@ -219,6 +227,7 @@
             <fieldset form="survey-form">
               <legend>Any comments or suggestions?</legend>
               <textarea
+                aria-label="Enter your comments"
                 id="comments"
                 placeholder="Enter your comment here"
                 rows="6"

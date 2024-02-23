@@ -38,7 +38,7 @@
             alt="A slice of lasagna on a plate."
             src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/lasagna.jpg"
           />
-          <figcaption>Cats <em>love</em>lasagna.</figcaption>
+          <figcaption>Cats <em>love</em>&#160;lasagna.</figcaption>
         </figure>
         <h3>Top 3 things cats hate:</h3>
         <ol>
@@ -51,7 +51,7 @@
             alt="Five cats looking around a field."
             src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/cats.jpg"
           />
-          <figcaption>Cats <strong>hate</strong>other cats.</figcaption>
+          <figcaption>Cats <strong>hate</strong>&#160;other cats.</figcaption>
         </figure>
       </section>
       <section>
@@ -95,12 +95,15 @@
             />
             <label for="energetic">Energetic</label>
           </fieldset>
-          <input
-            name="catphotourl"
-            placeholder="cat photo URL"
-            required="required"
-            type="text"
-          />
+          <label for="catphotourl"
+            >Cat Photo URL:&#160;
+            <input
+              id="catphotourl"
+              name="catphotourl"
+              placeholder="cat photo URL"
+              required="required"
+              type="text"
+          /></label>
           <button type="submit">Submit</button>
         </form>
       </section>
