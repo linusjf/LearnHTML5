@@ -105,6 +105,9 @@ nav {
 /* csslint ignore:end */
 .tagline {
   margin: 2px;
+  font-weight: bold;
+  font-size: 1.125rem;
+  font-style: italic;
 }
 
 .logo {
