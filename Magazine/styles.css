@@ -30,6 +30,12 @@ h6 {
   font-family: Raleway, sans-serif;
 }
 
+.h3 {
+  font-family: Raleway, sans-serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
 a {
   color: linen;
   text-decoration: none;
