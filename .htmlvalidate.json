@@ -21,12 +21,7 @@
         "style": "empty"
       }
     ],
-    "class-pattern": [
-      "warn",
-      {
-        "pattern": "kebabcase"
-      }
-    ],
+    "class-pattern": "warn",
     "doctype-html": "error",
     "doctype-style": [
       "warn",
@@ -48,6 +43,7 @@
         ]
       }
     ],
+    "id-pattern": "warn",
     "input-missing-label": "error",
     "meta-refresh": "error",
     "no-autoplay": "error",
@@ -58,6 +54,7 @@
     "no-redundant-role": "warn",
     "no-style-tag": "error",
     "no-trailing-whitespace": "error",
+    "no-unknown-elements": "error",
     "prefer-button": "warn",
     "prefer-tbody": "error",
     "tel-non-breaking": "warn",
