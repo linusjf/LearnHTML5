@@ -53,10 +53,6 @@ iframe {
   height: 100%;
 }
 
-ul {
-  list-style: none;
-}
-
 footer {
   display: grid;
   border-top: 2px double black;

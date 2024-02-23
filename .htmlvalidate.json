@@ -15,11 +15,21 @@
         "style": "name"
       }
     ],
-    "attribute-empty-style": "off",
-    "class-pattern": "off",
-    "doctype-html": "off",
-    "doctype-style": "off",
-    "element-permitted-content": "off",
+    "attribute-empty-style": [
+      "warn",
+      {
+        "style": "empty"
+      }
+    ],
+    "class-pattern": [
+      "warn",
+      {
+        "pattern": "kebabcase"
+      }
+    ],
+    "doctype-html": "error",
+    "doctype-style": "warn",
+    "element-permitted-content": "warn",
     "form-dup-name": [
       "error",
       {
