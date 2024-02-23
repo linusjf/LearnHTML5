@@ -43,14 +43,21 @@
         ]
       }
     ],
-    "heading-level": "warn",
+    "heading-level": [
+      "warn",
+      {
+        "allowMultipleH1": true
+      }
+    ],
     "id-pattern": "warn",
     "input-missing-label": "error",
     "meta-refresh": "error",
+    "missing-doctype": "error",
     "no-autoplay": "error",
     "no-conditional-comment": "error",
     "no-deprecated-attr": "error",
     "no-inline-style": "warn",
+    "no-missing-references": "error",
     "no-redundant-for": "off",
     "no-redundant-role": "warn",
     "no-style-tag": "error",
