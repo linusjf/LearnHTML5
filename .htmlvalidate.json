@@ -43,6 +43,7 @@
         ]
       }
     ],
+    "heading-level": "warn",
     "id-pattern": "warn",
     "input-missing-label": "error",
     "meta-refresh": "error",
