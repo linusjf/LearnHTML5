@@ -31,7 +31,7 @@
     "doctype-style": [
       "warn",
       {
-        "style": "lowerase"
+        "style": "lowercase"
       }
     ],
     "element-permitted-content": "warn",
@@ -48,7 +48,7 @@
         ]
       }
     ],
-    "input-missing-label": "off",
+    "input-missing-label": "error",
     "meta-refresh": "off",
     "no-autoplay": "off",
     "no-conditional-comment": "off",
