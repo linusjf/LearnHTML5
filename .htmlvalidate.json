@@ -49,7 +49,7 @@
       }
     ],
     "input-missing-label": "error",
-    "meta-refresh": "off",
+    "meta-refresh": "error",
     "no-autoplay": "off",
     "no-conditional-comment": "off",
     "no-deprecated-attr": "off",
