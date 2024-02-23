@@ -1,0 +1,23 @@
+ol {
+  list-style-type: decimal;
+  font-weight: bold;
+}
+
+ul {
+  font-weight: normal;
+}
+
+ul ul {
+  font-style: italic;
+}
+
+figcaption {
+  font-size: 12px;
+  font-style: italic;
+}
+
+hr {
+background-color: green;
+color: green;
+height: 3px;
+}

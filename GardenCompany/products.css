@@ -1,0 +1,15 @@
+p {
+  margin: 0;
+}
+
+.item {
+  width: 100px;
+}
+
+.price {
+  width: 75px;
+}
+
+.name {
+  width: 400px;
+}

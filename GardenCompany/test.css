@@ -1,4 +1,15 @@
-      .red-box { display:table-cell; text-align: center;
-        vertical-align: middle; width: 640px; height: 732px; background:
-        red; } .blue-box { width: 200px; height: 200px; background: blue;
-        display:inline-block; }
+.red-box {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  width: 640px;
+  height: 732px;
+  background: red;
+}
+
+.blue-box {
+  width: 200px;
+  height: 200px;
+  background: blue;
+  display: inline-block;
+}
