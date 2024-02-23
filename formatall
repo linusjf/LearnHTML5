@@ -4,28 +4,32 @@ require() {
 }
 require htmlhint stylelint prettier tidy find parallel head colorguard
 declare -i SUCCESS=0
-declare -i CSS_SUCCESS=0
+declare -i STYLE_SUCCESS=0
 declare -r configFileName="tidy.config"
 configFilePath="$(find . -maxdepth 2 \
   -type f -name "$configFileName" ! -path \
   "**/.git/**" | head -n 1)"
 files=$(find . -type f -name "*.css" \
   ! -path "**/.git/**" ! -path "**/node_modules/**" ! -path "**/*tailwind.css")
-echo "Executing stylelint..."
-echo "$files" |
-  parallel -j 5 -I% \
-    stylelint % --fix --quiet-deprecation-warnings
-STYLE_SUCCESS=$((CSS_SUCCESS + $?))
-echo "Executing prettier for css..."
-echo "$files" |
-  parallel -j 5 -I% \
-    prettier --cache --parser css --write %
-STYLE_SUCCESS=$((STYLE_SUCCESS + $?))
 echo "Executing colorguard..."
 echo "$files" |
   parallel -j 5 -I% \
     colorguard --file % --allow-equivalent-notation
 STYLE_SUCCESS=$((STYLE_SUCCESS + $?))
+echo "Executing stylelint..."
+echo "$files" |
+  parallel -j 5 -I% \
+    stylelint % --fix --quiet-deprecation-warnings
+STYLE_SUCCESS=$((STYLE_SUCCESS + $?))
+if [[ $STYLE_SUCCESS == 0 ]]; then
+  echo "Executing prettier for css..."
+  echo "$files" |
+    parallel -j 5 -I% \
+      prettier --cache --parser css --write %
+  STYLE_SUCCESS=$((STYLE_SUCCESS + $?))
+else
+  exit $STYLE_SUCCESS
+fi
 files=$(find . -maxdepth 2 -type f -name "*.html" \
   ! -path "**/.git/**")
 echo "Executing htmlhint..."

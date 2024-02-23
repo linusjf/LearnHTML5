@@ -55,13 +55,13 @@
     "no-deprecated-attr": "error",
     "no-inline-style": "warn",
     "no-redundant-for": "off",
-    "no-redundant-role": "off",
-    "no-style-tag": "off",
-    "no-trailing-whitespace": "off",
+    "no-redundant-role": "warn",
+    "no-style-tag": "error",
+    "no-trailing-whitespace": "error",
     "prefer-button": "warn",
-    "prefer-tbody": "off",
-    "tel-non-breaking": "off",
-    "unrecognized-char-ref": "off",
+    "prefer-tbody": "error",
+    "tel-non-breaking": "warn",
+    "unrecognized-char-ref": "error",
     "void-style": "off"
   }
 }

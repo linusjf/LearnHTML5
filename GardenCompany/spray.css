@@ -1,0 +1,13 @@
+p {
+padding-left: 20px;
+text-indent: 20px;
+line-height: 150%
+}
+
+.first {
+text-indent: 0;
+}
+
+li {
+line-height:130%;
+}

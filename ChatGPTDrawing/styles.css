@@ -37,7 +37,7 @@ body {
   width: 20px;
 }
 
-.eye .righteye {
+.eye {
   background-color: #000;
   height: 50px;
   left: 25%;
@@ -45,7 +45,10 @@ body {
 }
 
 .righteye {
-left: 50%;
+  background-color: #000;
+  height: 50px;
+  left: 50%;
+  top: 25%;
 }
 
 .eye-ai {
