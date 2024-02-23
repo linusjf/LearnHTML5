@@ -28,7 +28,12 @@
       }
     ],
     "doctype-html": "error",
-    "doctype-style": "warn",
+    "doctype-style": [
+      "warn",
+      {
+        "style": "lowerase"
+      }
+    ],
     "element-permitted-content": "warn",
     "form-dup-name": [
       "error",
