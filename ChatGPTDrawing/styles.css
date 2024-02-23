@@ -37,11 +37,15 @@ body {
   width: 20px;
 }
 
-.eye {
+.eye .righteye {
   background-color: #000;
   height: 50px;
   left: 25%;
   top: 25%;
+}
+
+.righteye {
+left: 50%;
 }
 
 .eye-ai {
