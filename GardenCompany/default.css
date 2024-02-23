@@ -132,3 +132,9 @@ nav {
 .text-center {
   text-align: center;
 }
+
+.peaches {
+height: 50px;
+width: 100px;
+object-fit: scale-down;
+}
