@@ -62,6 +62,11 @@
     "prefer-tbody": "error",
     "tel-non-breaking": "warn",
     "unrecognized-char-ref": "error",
-    "void-style": "off"
+    "void-style": [
+      "warn",
+      {
+        "style": "selfclosing"
+      }
+    ]
   }
 }

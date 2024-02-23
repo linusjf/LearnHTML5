@@ -40,7 +40,7 @@ SUCCESS=$?
 echo "Executing html-validate..."
 echo "$files" |
   parallel -j 5 -I% \
-    html-validate %
+    html-validate --formatter stylish %
 SUCCESS=$((SUCCESS + $?))
 if [[ $SUCCESS == 0 ]]; then
   echo "Executing tidy..."
