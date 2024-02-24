@@ -2,7 +2,7 @@
 require() {
   hash "$@" || exit
 }
-require htmlhint stylelint prettier tidy find parallel head colorguard
+require htmlhint stylelint prettier tidy find parallel head colorguard html-validate
 declare -i SUCCESS=0
 declare -i STYLE_SUCCESS=0
 declare -r configFileName="tidy.config"
