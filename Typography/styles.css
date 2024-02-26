@@ -1,4 +1,7 @@
-/* csslint qualified-headings: false */
+/**
+*  csslint qualified-headings: false
+*/
+
 html {
   box-sizing: border-box;
   font-size: 1rem;

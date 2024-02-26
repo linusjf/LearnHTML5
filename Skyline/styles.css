@@ -1,4 +1,7 @@
-/* csslint ignore:start */
+/**
+*  csslint ignore:start
+*/
+
 @import "wide.css" screen and (min-width: 1001 / 16 rem);
 @import "main.css";
 @import "normal.css" screen and (max-width: 1000 / 16 rem);

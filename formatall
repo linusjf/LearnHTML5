@@ -2,7 +2,7 @@
 require() {
   hash "$@" || exit
 }
-require htmlhint stylelint prettier tidy find parallel head colorguard html-validate
+require htmlhint stylelint prettier tidy find parallel head colorguard html-validate js-beautify
 declare -i SUCCESS=0
 declare -i STYLE_SUCCESS=0
 declare -r configFileName="tidy.config"
@@ -25,7 +25,7 @@ if [[ $STYLE_SUCCESS == 0 ]]; then
   echo "Executing prettier for css..."
   echo "$files" |
     parallel -j 5 -I% \
-      prettier --insert-pragma --cache --parser css --write %
+      prettier --cache --parser css --write %
   STYLE_SUCCESS=$((STYLE_SUCCESS + $?))
 else
   exit $STYLE_SUCCESS
@@ -51,7 +51,7 @@ if [[ $SUCCESS == 0 ]]; then
   echo "Executing prettier for html..."
   echo "$files" |
     parallel -j 5 -I% \
-      prettier --insert-pragma --cache --parser html --write %
+      prettier --cache --parser html --write %
   SUCCESS=$((SUCCESS + $?))
 fi
 files=$(find . -type f -name "*.js" \

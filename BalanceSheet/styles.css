@@ -1,4 +1,6 @@
-/* csslint important: false */
+/**
+*  csslint important: false
+*/
 
 span[class="sr-only"] {
   border: 0 !important;
