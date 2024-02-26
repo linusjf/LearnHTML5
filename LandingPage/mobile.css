@@ -1,27 +1,23 @@
-/** @format */
+section[id="HowItWorks"] {
+  width: 100%;
+}
 
-@media screen and (max-width: 480px) {
-  section[id="HowItWorks"] {
-    width: 100%;
-  }
+.header-img {
+  margin: auto 0;
+}
 
-  .header-img {
-    margin: auto 0;
-  }
+.email {
+  width: 80%;
+}
 
-  .email {
-    width: 80%;
-  }
+.submit {
+  width: 70%;
+}
 
-  .submit {
-    width: 70%;
-  }
+.features {
+  width: 100%;
+}
 
-  .features {
-    width: 100%;
-  }
-
-  .area {
-    width: 100%;
-  }
+.area {
+  width: 100%;
 }

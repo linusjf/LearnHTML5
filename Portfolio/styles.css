@@ -1,5 +1,4 @@
 @import "main.css";
-@import "mobile.css" screen and (max-width: 480 / 16 rem) and
-  (min-width: 48 / 16 rem);
-@import "landscape.css" screen and (min-width: 320 / 16 rem) and
-  (max-device-width: 640 / 16 rem) and (orientation: landscape);
+@import "mobile.css" screen and (max-width: 30rem) and (min-width: 3rem);
+@import "landscape.css" screen and (min-width: 20rem) and
+  (max-device-width: 40rem) and (orientation: landscape);
