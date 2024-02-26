@@ -1,3 +1,7 @@
+body {
+font-size: 1rem;
+}
+
 .container {
   align-items: center;
   display: flex;
@@ -7,7 +11,7 @@
 }
 
 .parent {
-  font-size: 0.9375rem;
+  font-size: 1rem;
 }
 
 .em-child {
