@@ -3,13 +3,13 @@ p {
 }
 
 .item {
-  width: 100px;
+  width: 6.25rem;
 }
 
 .price {
-  width: 75px;
+  width: 4.6875rem;
 }
 
 .name {
-  width: 400px;
+  width: 25rem;
 }

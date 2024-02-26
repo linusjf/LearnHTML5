@@ -2,7 +2,7 @@ body {
   background-color: #1b1b32;
   color: #f5f6f7;
   font-family: Tahoma, sans-serif;
-  font-size: 16px;
+  font-size: 1rem;
   height: 100vh;
   margin: 0;
   width: 100%;
@@ -16,15 +16,15 @@ p {
 
 form {
   margin: 0 auto;
-  max-width: 500px;
-  min-width: 300px;
+  max-width: 31.25rem;
+  min-width: 18.75rem;
   padding-bottom: 2em;
   width: 60vw;
 }
 
 fieldset {
   border: none;
-  border-bottom: 3px solid #3b3b4f;
+  border-bottom: 0.1875rem solid #3b3b4f;
   padding: 2rem 0;
 }
 
@@ -40,7 +40,7 @@ label {
 input,
 textarea,
 select {
-  margin: 10px 0 0;
+  margin: 0.625rem 0 0;
   min-height: 2em;
   width: 100%;
 }
@@ -66,12 +66,12 @@ input[type="submit"] {
   font-size: 1.1rem;
   height: 2em;
   margin: 1em auto;
-  min-width: 300px;
+  min-width: 18.75rem;
   width: 60%;
 }
 
 input[type="file"] {
-  padding: 1px 2px;
+  padding: 0.0625rem 0.125rem;
 }
 
 a {

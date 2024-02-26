@@ -17,7 +17,7 @@ header {
   align-items: center;
   background-color: #1b1b32;
   display: flex;
-  height: 50px;
+  height: 3.125rem;
   justify-content: space-between;
   position: fixed;
   top: 0;
@@ -28,7 +28,7 @@ header {
   aspect-ratio: 35 / 4;
   background-color: #0a0a23;
   padding: 0.4rem;
-  width: max(100px, 18vw);
+  width: max(6.25rem, 18vw);
 }
 
 h1 {
@@ -39,8 +39,8 @@ h1 {
 }
 
 nav {
-  height: 50px;
-  max-width: 300px;
+  height: 3.125rem;
+  max-width: 18.75rem;
   width: 50%;
 }
 
@@ -73,33 +73,33 @@ li > a {
 }
 
 main {
-  padding-top: 50px;
+  padding-top: 3.125rem;
 }
 
 section {
-  margin: 0 auto 10px;
-  max-width: 600px;
+  margin: 0 auto 0.625rem;
+  max-width: 37.5rem;
   width: 80%;
 }
 
 h2 {
-  border-bottom: 4px solid #dfdfe2;
+  border-bottom: 0.25rem solid #dfdfe2;
   font-family: Verdana, Tahoma, sans-serif;
   margin-top: 0;
-  padding-top: 60px;
+  padding-top: 3.75rem;
 }
 
 .info {
-  padding: 10px 0 0 5px;
+  padding: 0.625rem 0 0 0.3125rem;
 }
 
 .formrow {
-  margin-top: 30px;
-  padding: 0 15px;
+  margin-top: 1.875rem;
+  padding: 0 0.9375rem;
 }
 
 input {
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 .info label,
@@ -113,23 +113,23 @@ input {
 }
 
 .info label {
-  min-width: 55px;
+  min-width: 3.4375rem;
   text-align: right;
   width: 10%;
 }
 
 .question-block {
   display: block;
-  margin-top: 20px;
-  padding-top: 5px;
+  margin-top: 1.25rem;
+  padding-top: 0.3125rem;
   text-align: left;
   width: 100%;
 }
 
 p {
-  font-size: 20px;
-  margin-top: 5px;
-  padding-left: 15px;
+  font-size: 1.25rem;
+  margin-top: 0.3125rem;
+  padding-left: 0.9375rem;
 }
 
 p::before {
@@ -148,11 +148,11 @@ p::before {
 
 button {
   background: #d0d0d5;
-  border: 3px solid #3b3b4f;
+  border: 0.1875rem solid #3b3b4f;
   display: block;
-  font-size: 23px;
-  margin: 40px auto;
-  padding: 15px;
+  font-size: 1.4375rem;
+  margin: 2.5rem auto;
+  padding: 0.9375rem;
   width: 40%;
 }
 
@@ -176,7 +176,7 @@ address {
   border: 0;
   clip: rect(0, 0, 0, 0);
   height: 1px;
-  margin: -1px;
+  margin: -0.0625rem;
   overflow: hidden;
   padding: 0;
   position: absolute;

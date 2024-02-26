@@ -2,37 +2,37 @@
 
 .canvas {
   background-color: #4d0f00;
-  filter: blur(2px);
-  height: 600px;
+  filter: blur(0.125rem);
+  height: 37.5rem;
   overflow: hidden;
-  width: 500px;
+  width: 31.25rem;
 }
 
 .frame {
-  border: 50px solid black;
-  margin: 20px auto;
-  padding: 50px;
-  width: 500px;
+  border: 3.125rem solid black;
+  margin: 1.25rem auto;
+  padding: 3.125rem;
+  width: 31.25rem;
 }
 
 .one {
   background-color: #efb762;
-  border-radius: 9px;
-  box-shadow: 0 0 3px 3px #efb762;
-  height: 150px;
-  margin: 20px auto;
+  border-radius: 0.5625rem;
+  box-shadow: 0 0 0.1875rem 0.1875rem #efb762;
+  height: 9.375rem;
+  margin: 1.25rem auto;
   transform: rotate(-0.6deg);
-  width: 425px;
+  width: 26.5625rem;
 }
 
 .two {
   background-color: #8f0401;
-  border-radius: 8px 10px;
-  box-shadow: 0 0 3px 3px #8f0401;
-  height: 200px;
-  margin: 0 auto 20px;
+  border-radius: 0.5rem 0.625rem;
+  box-shadow: 0 0 0.1875rem 0.1875rem #8f0401;
+  height: 12.5rem;
+  margin: 0 auto 1.25rem;
   transform: rotate(0.4deg);
-  width: 475px;
+  width: 29.6875rem;
 }
 
 .one,
@@ -42,9 +42,9 @@
 
 .three {
   background-color: #b20403;
-  border-radius: 30px 25px 60px 12px;
-  box-shadow: 0 0 5px 5px #b20403;
-  filter: blur(2px);
+  border-radius: 1.875rem 1.5625rem 3.75rem 0.75rem;
+  box-shadow: 0 0 0.3125rem 0.3125rem #b20403;
+  filter: blur(0.125rem);
   height: 28%;
   margin: auto;
   transform: rotate(-0.2deg);

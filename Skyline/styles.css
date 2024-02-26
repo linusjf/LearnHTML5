@@ -1,7 +1,7 @@
 /* csslint ignore:start */
-@import "wide.css" screen and (min-width: 1001px);
+@import "wide.css" screen and (min-width: 1001 / 16 rem);
 @import "main.css";
-@import "normal.css" screen and (max-width: 1000px);
+@import "normal.css" screen and (max-width: 1000 / 16 rem);
 @import "landscape.css" screen and (orientation: landscape);
 
 /* csslint ignore:end */

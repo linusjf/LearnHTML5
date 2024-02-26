@@ -4,7 +4,7 @@ h2 {
 
 .thick-green-border {
   border-color: green;
-  border-width: 10px;
+  border-width: 0.625rem;
   border-style: solid;
   border-radius: 50%;
 }

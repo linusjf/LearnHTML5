@@ -2,14 +2,14 @@
   display: table-cell;
   text-align: center;
   vertical-align: middle;
-  width: 640px;
-  height: 732px;
+  width: 40rem;
+  height: 45.75rem;
   background: red;
 }
 
 .blue-box {
-  width: 200px;
-  height: 200px;
+  width: 12.5rem;
+  height: 12.5rem;
   background: blue;
   display: inline-block;
 }

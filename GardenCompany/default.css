@@ -1,14 +1,14 @@
 body {
   font-family: Verdana, Arial, Helvetica, sans-serif;
-  font-size: 13px;
+  font-size: 0.8125rem;
 }
 
 h1 {
-  font-size: 26px;
+  font-size: 1.625rem;
 }
 
 h2 {
-  font-size: 20px;
+  font-size: 1.25rem;
 }
 
 dt {
@@ -18,7 +18,7 @@ dt {
 hr {
   background-color: green;
   color: green;
-  height: 3px;
+  height: 0.1875rem;
 }
 
 ul {
@@ -56,7 +56,7 @@ ol {
 p,
 li {
   font-family: Verdana, Arial, Helvetica, sans-serif;
-  font-size: 13px;
+  font-size: 0.8125rem;
 }
 
 .copyright {
@@ -80,14 +80,14 @@ li {
 }
 
 .pagetitle {
-  font-size: 30px;
+  font-size: 1.875rem;
   margin: 0;
 }
 
 nav {
   float: left;
-  padding-top: 15px;
-  width: 150px;
+  padding-top: 0.9375rem;
+  width: 9.375rem;
 }
 
 /* csslint ignore:start */
@@ -99,12 +99,12 @@ nav {
 #header {
   background-image: url("images/leaf-green.jpg");
   color: white;
-  padding: 10px;
+  padding: 0.625rem;
 }
 
 /* csslint ignore:end */
 .tagline {
-  margin: 2px;
+  margin: 0.125rem;
   font-weight: bold;
   font-size: 1.125rem;
   font-style: italic;
@@ -113,8 +113,8 @@ nav {
 .logo {
   border: none;
   float: left;
-  height: 55px;
-  margin: 5px;
+  height: 3.4375rem;
+  margin: 0.3125rem;
 }
 
 .italics {
@@ -126,7 +126,7 @@ nav {
 }
 
 .width150 {
-  width: 150px;
+  width: 9.375rem;
 }
 
 .text-center {

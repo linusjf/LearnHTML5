@@ -11,7 +11,7 @@
 body {
   background-color: ivory;
   font-family: Raleway, sans-serif;
-  font-size: 16px;
+  font-size: 1rem;
   width: 100vw;
 }
 
@@ -81,7 +81,7 @@ body {
   padding: 0.5em;
   overflow: hidden;
   height: 100%;
-  border: 2px solid black;
+  border: 0.125rem solid black;
   grid-template-rows: repeat(1, auto);
   background-size: cover;
   background-repeat: no-repeat;
@@ -144,7 +144,7 @@ footer {
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
-  border-top: 2px solid darkgoldenrod;
+  border-top: 0.125rem solid darkgoldenrod;
   padding: 0.5rem 0;
   font-size: 0.8rem;
 }

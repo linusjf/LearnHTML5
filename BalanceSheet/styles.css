@@ -5,7 +5,7 @@ span[class="sr-only"] {
   clip: rect(1px, 1px, 1px, 1px) !important;
   clip-path: inset(50%) !important;
   height: 1px !important;
-  margin: -1px !important;
+  margin: -0.0625rem !important;
   overflow: hidden !important;
   padding: 0 !important;
   position: absolute !important;
@@ -43,7 +43,7 @@ h1 .flex span:last-of-type {
 }
 
 section {
-  border: 2px solid #d0d0d5;
+  border: 0.125rem solid #d0d0d5;
   margin: 0 auto;
   max-width: 40rem;
 }
@@ -53,8 +53,8 @@ section {
   color: #fff;
   display: flex;
   justify-content: flex-end;
-  margin: 0 -2px;
-  padding: 0.5rem calc(1.25rem + 2px) 0.5rem 0;
+  margin: 0 -0.125rem;
+  padding: 0.5rem calc(1.25rem + 0.125rem) 0.5rem 0;
   position: sticky;
   top: 0;
   z-index: 999;
@@ -98,7 +98,7 @@ tbody th {
 }
 
 tr[class="total"] {
-  border-bottom: 4px double #0a0a23;
+  border-bottom: 0.25rem double #0a0a23;
   font-weight: bold;
 }
 

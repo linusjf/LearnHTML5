@@ -12,14 +12,14 @@ ul ul {
 }
 
 figcaption {
-  font-size: 12px;
+  font-size: 0.75rem;
   font-style: italic;
 }
 
 hr {
   background-color: green;
   color: green;
-  height: 3px;
+  height: 0.1875rem;
 }
 
 .nomargin {
