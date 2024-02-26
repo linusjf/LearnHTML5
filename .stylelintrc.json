@@ -20,6 +20,7 @@
         "disallowInList": false
       }
     ],
+    "number-max-precision": 6,
     "scss/at-rule-no-unknown": [
       true,
       {
