@@ -34,39 +34,14 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     ></script>
-    <script>
-      <![CDATA[
-
-      $(document).ready(function() {
-        setTimeout('$("#target1").css("color", "red")', 1000);
-        setTimeout('$("#target1").prop("disabled", true)'
-            ,2000);
-        setTimeout('$("#target4").remove()', 3000);
-        setTimeout('$("#target2").appendTo("#right-well")', 4000);
-        setTimeout('$("#target5").clone().appendTo("#left-well")', 5000);
-        setTimeout('$("#target1").parent().css("background-color", "red")', 6000);
-        setTimeout('$("#right-well").children().css("color", "orange")', 7000);
-        setTimeout('$("#left-well").children().css("color", "green")', 8000);
-        setTimeout('$(".target:nth-child(2)").addClass("animate bounce")', 9000);
-        setTimeout('$(".target:even").addClass("animate shake")', 10000);
-        setTimeout('$("body").addClass("spinner-border collapsing")', 11000);
-         setTimeout('$("body").addClass("collapse")', 13000);
-          setTimeout('$("body").removeClass("collapse")', 13500);
-        setTimeout('$("body").removeClass("spinner-border collapsing")', 13750);
-         setTimeout('$("body").addClass("collapse")', 13000);
-          setTimeout('$("body").addClass("collapse.show")', 14000);
-        setTimeout('$("body").addClass("animate hinge")', 16000);
-
-      });
-      ]]>
-    </script>
+    <script src="ready.js"></script>
     <!-- Only change code above this line -->
     <div class="container-fluid">
       <h1 class="text-primary text-center">jQuery Playground</h1>
       <div class="row">
         <div class="col-xs-6">
-          <h2>#left-well</h2>
-          <div class="card" id="left-well">
+          <h2>#left-card</h2>
+          <div class="card" id="left-card">
             <button
               class="btn btn-outline-secondary btn-light target"
               id="target1"
@@ -91,8 +66,8 @@
           </div>
         </div>
         <div class="col-xs-6">
-          <h2>#right-well</h2>
-          <div class="card" id="right-well">
+          <h2>#right-card</h2>
+          <div class="card" id="right-card">
             <button
               class="btn btn-outline-secondary btn-light target"
               id="target4"
