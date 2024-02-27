@@ -8,6 +8,7 @@
   ],
   "rules": {
     "at-rule-no-unknown": null,
+    "comment-no-empty": null,
     "csstree/validator": {
       "atrules": false,
       "ignoreProperties": [
@@ -30,6 +31,7 @@
     ],
     "number-max-precision": 6,
     "rem-over-px/rem-over-px": true,
+    "scss/at-each-key-value-single-line": true,
     "scss/at-rule-no-unknown": [
       true,
       {
@@ -38,6 +40,11 @@
         ]
       }
     ],
+    "scss/block-no-redundant-nesting": true,
+    "scss/comment-no-empty": true,
+    "scss/double-slash-comment-empty-line-before": "always",
+    "scss/double-slash-comment-inline": "never",
+    "scss/double-slash-comment-whitespace-inside": "always",
     "selector-class-pattern": null
   }
 }

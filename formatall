@@ -10,7 +10,7 @@ declare -i PROCS=$(($(nproc) - 1))
 configFilePath="$(find . -maxdepth 2 \
   -type f -name "$configFileName" ! -path \
   "**/.git/**" | head -n 1)"
-files=$(find . -type f -name "*.css" \
+files=$(find . -type f -name "*.scss" -o -name "*.css" \
   ! -path "**/.git/**" ! -path "**/node_modules/**" ! -path "**/*tailwind.css")
 echo "Executing colorguard..."
 echo "$files" |
@@ -26,7 +26,7 @@ if [[ $STYLE_SUCCESS == 0 ]]; then
   echo "Executing prettier for css..."
   echo "$files" |
     parallel -j "$PROCS" -I% \
-      prettier --cache --parser css --write %
+      prettier --cache --parser scss --write %
   STYLE_SUCCESS=$((STYLE_SUCCESS + $?))
 else
   exit $STYLE_SUCCESS
