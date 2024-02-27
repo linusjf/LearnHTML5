@@ -61,4 +61,18 @@ echo "$files" |
   parallel -j 5 -I% \
     js-beautify -r %
 SUCCESS=$((SUCCESS + $?))
+files=$(find . -type f -name "*.scss" \
+  ! -path "**/.git/**" ! -path "**/node_modules/**" ! -path "**/*tailwind.css")
+echo "Executing sass for scss..."
+echo "$files" |
+  parallel -j 5 -I@ \
+    ./runsass @
+SUCCESS=$((SUCCESS + $?))
+files=$(find . -type f -name "*.sass" \
+  ! -path "**/.git/**" ! -path "**/node_modules/**" ! -path "**/*tailwind.css")
+echo "Executing sass for sass..."
+echo "$files" |
+  parallel -j 5 -I% \
+    ./runsass %
+SUCCESS=$((SUCCESS + $?))
 exit $((SUCCESS + STYLE_SUCCESS))

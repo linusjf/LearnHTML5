@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+require() {
+  hash "$@" || exit
+}
+require sass
+filename="$1"
+sass --update "$filename" "${filename%.*}.css"
+exit "$?"
