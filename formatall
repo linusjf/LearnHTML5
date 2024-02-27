@@ -2,10 +2,11 @@
 require() {
   hash "$@" || exit
 }
-require htmlhint stylelint prettier tidy find parallel head colorguard html-validate js-beautify
+require htmlhint stylelint prettier tidy find parallel head colorguard html-validate js-beautify nproc
 declare -i SUCCESS=0
 declare -i STYLE_SUCCESS=0
 declare -r configFileName="tidy.config"
+declare -i PROCS=$(($(nproc) - 1))
 configFilePath="$(find . -maxdepth 2 \
   -type f -name "$configFileName" ! -path \
   "**/.git/**" | head -n 1)"
@@ -13,18 +14,18 @@ files=$(find . -type f -name "*.css" \
   ! -path "**/.git/**" ! -path "**/node_modules/**" ! -path "**/*tailwind.css")
 echo "Executing colorguard..."
 echo "$files" |
-  parallel -j 5 -I% \
+  parallel -j "$PROCS" -I% \
     colorguard --file % --allow-equivalent-notation
 STYLE_SUCCESS=$((STYLE_SUCCESS + $?))
 echo "Executing stylelint..."
 echo "$files" |
-  parallel -j 5 -I% \
+  parallel -j "$PROCS" -I% \
     stylelint % --fix --quiet-deprecation-warnings
 STYLE_SUCCESS=$((STYLE_SUCCESS + $?))
 if [[ $STYLE_SUCCESS == 0 ]]; then
   echo "Executing prettier for css..."
   echo "$files" |
-    parallel -j 5 -I% \
+    parallel -j "$PROCS" -I% \
       prettier --cache --parser css --write %
   STYLE_SUCCESS=$((STYLE_SUCCESS + $?))
 else
@@ -34,23 +35,23 @@ files=$(find . -maxdepth 2 -type f -name "*.html" \
   ! -path "**/.git/**")
 echo "Executing htmlhint..."
 echo "$files" |
-  parallel -j 5 -I% \
+  parallel -j "$PROCS" -I% \
     htmlhint --config .htmlhintrc -f compact % 2>/dev/null
 SUCCESS=$?
 echo "Executing html-validate..."
 echo "$files" |
-  parallel -j 5 -I% \
+  parallel -j "$PROCS" -I% \
     html-validate --formatter stylish %
 SUCCESS=$((SUCCESS + $?))
 if [[ $SUCCESS == 0 ]]; then
   echo "Executing tidy..."
   echo "$files" |
-    parallel -j 5 -I% \
+    parallel -j "$PROCS" -I% \
       tidy -config "$configFilePath" -quiet -m %
   SUCCESS=$((SUCCESS + $?))
   echo "Executing prettier for html..."
   echo "$files" |
-    parallel -j 5 -I% \
+    parallel -j "$PROCS" -I% \
       prettier --cache --parser html --write %
   SUCCESS=$((SUCCESS + $?))
 fi
@@ -58,21 +59,21 @@ files=$(find . -type f -name "*.js" \
   ! -path "**/.git/**" ! -path "**/node_modules/**" ! -path "**/*tailwind.css")
 echo "Executing js-beautify for js..."
 echo "$files" |
-  parallel -j 5 -I% \
+  parallel -j "$PROCS" -I% \
     js-beautify -r %
 SUCCESS=$((SUCCESS + $?))
 files=$(find . -type f -name "*.scss" \
   ! -path "**/.git/**" ! -path "**/node_modules/**" ! -path "**/*tailwind.css")
 echo "Executing sass for scss..."
 echo "$files" |
-  parallel -j 5 -I@ \
+  parallel -j "$PROCS" -I@ \
     ./runsass @
 SUCCESS=$((SUCCESS + $?))
 files=$(find . -type f -name "*.sass" \
   ! -path "**/.git/**" ! -path "**/node_modules/**" ! -path "**/*tailwind.css")
 echo "Executing sass for sass..."
 echo "$files" |
-  parallel -j 5 -I% \
+  parallel -j "$PROCS" -I% \
     ./runsass %
 SUCCESS=$((SUCCESS + $?))
 exit $((SUCCESS + STYLE_SUCCESS))
