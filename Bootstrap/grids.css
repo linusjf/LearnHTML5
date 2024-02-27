@@ -14,13 +14,12 @@ body {
 
 section {
   margin: 0.3125rem;
-  padding-top: 5px;
   border: 1px dashed red;
 }
 
 div {
   border: 1px solid white;
-  margin: 0.1875rem;
+  margin: 0;
 }
 
 div.row {
