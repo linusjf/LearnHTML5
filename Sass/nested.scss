@@ -28,3 +28,23 @@ nav {
     font-size: 0.75rem;
   }
 }
+
+.info-page {
+  margin: auto {
+    bottom: 10px;
+    top: 2px;
+  }
+}
+
+.enlarge {
+  font-size: 0.875rem;
+  transition: {
+    property: font-size;
+    duration: 4s;
+    delay: 2s;
+  }
+
+  &:hover {
+    font-size: 2.25rem;
+  }
+}

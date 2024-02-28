@@ -1,12 +1,22 @@
 @use "sass:meta";
 
+$rounded-corners: true;
 $font-family-sans-serif: -apple-system, blinkmacsystemfont, "Segoe UI", roboto;
 $font-family-monospace: sfmono-regular, menlo, monaco, consolas;
 $text-color: red;
 $font-stack: helvetica, sans-serif;
 $primary-color: #333;
+$primary: #81899b;
+$accent: #302e24;
+$warn: #dfa612;
 
 :root {
+  --primary: #{$primary};
+  --accent: #{$accent};
+  --warn: #{$warn};
+  // Even though this looks like a Sass variable, it's valid CSS so it's not
+  // evaluated.
+  --consumed-by-js: $primary;
   --font-family-sans-serif: #{meta.inspect($font-family-sans-serif)};
   --font-family-monospace: #{meta.inspect($font-family-monospace)};
 }
@@ -27,4 +37,17 @@ h2 {
 body {
   font: 100% $font-stack;
   background-color: $primary-color;
+}
+
+.button {
+  border: 1px solid black;
+  border-radius: if($rounded-corners, 0.3125rem, null);
+}
+
+.circle {
+  $size: 6.25rem;
+
+  width: $size;
+  height: $size;
+  border-radius: $size * 0.5;
 }
