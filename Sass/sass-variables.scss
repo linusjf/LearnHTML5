@@ -1,4 +1,6 @@
 $text-color: red;
+$font-stack: helvetica, sans-serif;
+$primary-color: #333;
 
 .header {
   text-align: center;
@@ -11,4 +13,9 @@ h2 {
 
 h2 {
   color: $text-color;
+}
+
+body {
+  font: 100% $font-stack;
+  background-color: $primary-color;
 }
