@@ -12,10 +12,12 @@
     "csstree/validator": {
       "atrules": false,
       "ignoreProperties": [
-        "[$][A-Za-z_0-9-]+"
+        "[$][A-Za-z_0-9-]+",
+        "parent-selector{1}"
       ],
-      "ignoreValue": "(.*[$].*)|(math.*)",
+      "ignoreValue": "(.*[$].*)|(math.*)|([&])",
       "properties": {
+        "color": "| rgb(<any-value>)",
         "font-size": "| min(<length-percentage>, <length-percentage>) | max(<length-percentage>, <length-percentage>)",
         "text-wrap": "wrap | nowrap | balance | pretty | stable | inherit | initial | revert | revert-layer | unset",
         "width": "| min(<length-percentage>, <length-percentage>) | max(<length-percentage>, <length-percentage>)"
@@ -41,6 +43,14 @@
       }
     ],
     "number-max-precision": 6,
+    "property-no-unknown": [
+      true,
+      {
+        "ignoreProperties": [
+          "parent-selector"
+        ]
+      }
+    ],
     "rem-over-px/rem-over-px": true,
     "scss/at-each-key-value-single-line": true,
     "scss/at-extend-no-missing-placeholder": true,
