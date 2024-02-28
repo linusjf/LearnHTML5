@@ -17,7 +17,6 @@
       ],
       "ignoreValue": "(.*[$].*)|(math.*)|([&])",
       "properties": {
-        "color": "| rgb(<any-value>)",
         "font-size": "| min(<length-percentage>, <length-percentage>) | max(<length-percentage>, <length-percentage>)",
         "text-wrap": "wrap | nowrap | balance | pretty | stable | inherit | initial | revert | revert-layer | unset",
         "width": "| min(<length-percentage>, <length-percentage>) | max(<length-percentage>, <length-percentage>)"
