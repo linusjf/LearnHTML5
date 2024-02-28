@@ -42,7 +42,7 @@
     ],
     "scss/block-no-redundant-nesting": true,
     "scss/comment-no-empty": true,
-    "scss/double-slash-comment-empty-line-before": "always",
+    "scss/double-slash-comment-empty-line-before": "never",
     "scss/double-slash-comment-inline": "never",
     "scss/double-slash-comment-whitespace-inside": "always",
     "selector-class-pattern": null
