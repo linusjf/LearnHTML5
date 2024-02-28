@@ -78,7 +78,7 @@ echo "$files" |
   parallel -j "$PROCS" -I% \
     js-beautify -r %
 SUCCESS=$((SUCCESS + $?))
-files=$(find . -type f -name "*.scss" \
+files=$(find . -type f -name "*.scss" ! -name "_*.scss" \
   ! -path "**/.git/**" ! -path "**/node_modules/**" ! -path "**/*tailwind.css")
 echo "Executing sass for scss..."
 echo "$files" |
