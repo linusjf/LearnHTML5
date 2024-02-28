@@ -1,6 +1,15 @@
+@use "sass:meta";
+
+$font-family-sans-serif: -apple-system, blinkmacsystemfont, "Segoe UI", roboto;
+$font-family-monospace: sfmono-regular, menlo, monaco, consolas;
 $text-color: red;
 $font-stack: helvetica, sans-serif;
 $primary-color: #333;
+
+:root {
+  --font-family-sans-serif: #{meta.inspect($font-family-sans-serif)};
+  --font-family-monospace: #{meta.inspect($font-family-monospace)};
+}
 
 .header {
   text-align: center;
