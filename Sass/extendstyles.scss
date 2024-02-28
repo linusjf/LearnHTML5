@@ -1,0 +1,19 @@
+h1 {
+  text-align: center;
+}
+
+%info {
+  width: 12.5rem;
+  border: 1px solid black;
+  margin: 0 auto;
+}
+
+div.info {
+  @extend %info;
+}
+
+div.info-important {
+  @extend %info;
+
+  background-color: magenta;
+}

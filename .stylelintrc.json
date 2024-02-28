@@ -44,7 +44,7 @@
     "scss/comment-no-empty": true,
     "scss/double-slash-comment-empty-line-before": "never",
     "scss/double-slash-comment-inline": "never",
-    "scss/double-slash-comment-whitespace-inside": "always",
+    "scss/at-extend-no-missing-placeholder": true,
     "selector-class-pattern": null
   }
 }
