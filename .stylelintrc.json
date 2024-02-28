@@ -25,6 +25,14 @@
         "less"
       ]
     },
+    "font-family-no-missing-generic-family-keyword": [
+      true,
+      {
+        "ignoreFontFamilies": [
+          "IconFont"
+        ]
+      }
+    ],
     "media-feature-range-notation": "prefix",
     "no-duplicate-selectors": [
       true,
