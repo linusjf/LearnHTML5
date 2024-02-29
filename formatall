@@ -92,4 +92,7 @@ echo "$files" |
   parallel -j "$PROCS" -I% \
     ./runsass %
 SUCCESS=$((SUCCESS + $?))
+echo "Executing prettier for svg..."
+prettier --cache --parser html --write -- **/*.svg
+SUCCESS=$((SUCCESS + $?))
 exit $((SUCCESS + STYLE_SUCCESS))
