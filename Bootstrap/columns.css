@@ -1,0 +1,27 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+body {
+  background-color: black;
+  color: white;
+}
+
+section {
+  margin: 0.3125rem;
+  border: 1px dashed red;
+}
+
+div {
+  border: 1px solid white;
+  margin: 0;
+}
+
+div.row {
+  border: none;
+}

@@ -4,7 +4,8 @@
   ],
   "plugins": [
     "stylelint-csstree-validator",
-    "stylelint-rem-over-px"
+    "stylelint-rem-over-px",
+    "stylelint-scss"
   ],
   "rules": {
     "at-rule-no-unknown": null,
@@ -43,7 +44,7 @@
     ],
     "number-max-precision": 6,
     "property-no-unknown": [
-      true,
+      null,
       {
         "ignoreProperties": [
           "parent-selector"
@@ -65,6 +66,41 @@
     "scss/comment-no-empty": true,
     "scss/double-slash-comment-empty-line-before": "never",
     "scss/double-slash-comment-inline": "never",
+    "scss/load-no-partial-leading-underscore": true,
+    "scss/no-duplicate-dollar-variables": true,
+    "scss/no-duplicate-mixins": true,
+    "scss/no-global-function-names": true,
+    "scss/no-unused-private-members": true,
+    "scss/property-no-unknown": [
+      true,
+      {
+        "checkPrefixed": true,
+        "ignoreAtRules": [],
+        "ignoreProperties": [
+          "parent-selector"
+        ],
+        "ignoreSelectors": [],
+        "severity": "error"
+      }
+    ],
+    "scss/selector-nest-combinators": [
+      null,
+      {
+        "severity": "warning"
+      }
+    ],
+    "scss/selector-no-redundant-nesting-selector": [
+      true,
+      {
+        "severity": "warning"
+      }
+    ],
+    "scss/selector-no-union-class-name": [
+      true,
+      {
+        "severity": "warning"
+      }
+    ],
     "selector-class-pattern": null
   }
 }
