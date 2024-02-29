@@ -3,6 +3,8 @@ require() {
   hash "$@" || exit
 }
 require htmlhint stylelint prettier tidy find parallel head colorguard html-validate js-beautify nproc
+RED="\e[31m"
+ENDCOLOR="\e[0m"
 declare -i SUCCESS=0
 declare -i STYLE_SUCCESS=0
 declare -r configFileName="tidy.config"
@@ -12,18 +14,18 @@ configFilePath="$(find . -maxdepth 2 \
   "**/.git/**" | head -n 1)"
 files=$(find . -type f -name "*.css" ! -name "*.scss.css" ! -name "*.sass.css" \
   ! -path "**/.git/**" ! -path "**/node_modules/**" ! -path "**/*tailwind.css")
-echo "Executing colorguard..."
+echo -e "${RED}Executing colorguard...${ENDCOLOR}"
 echo "$files" |
   parallel -j "$PROCS" -I% \
     colorguard --file % --allow-equivalent-notation
 STYLE_SUCCESS=$((STYLE_SUCCESS + $?))
-echo "Executing stylelint for css..."
+echo -e "${RED}Executing stylelint for css...${ENDCOLOR}"
 echo "$files" |
   parallel -j "$PROCS" -I% \
     stylelint % --fix --quiet-deprecation-warnings
 STYLE_SUCCESS=$((STYLE_SUCCESS + $?))
 if [[ $STYLE_SUCCESS == 0 ]]; then
-  echo "Executing prettier for css..."
+  echo -e "${RED}Executing prettier for css...${ENDCOLOR}"
   echo "$files" |
     parallel -j "$PROCS" -I% \
       prettier --cache --parser css --write %
@@ -33,13 +35,13 @@ else
 fi
 files=$(find . -type f -name "*.scss" \
   ! -path "**/.git/**" ! -path "**/node_modules/**" ! -path "**/*tailwind.css")
-echo "Executing stylelint for scss..."
+echo -e "${RED}Executing stylelint for scss...${ENDCOLOR}"
 echo "$files" |
   parallel -j "$PROCS" -I% \
     stylelint % --fix --quiet-deprecation-warnings
 STYLE_SUCCESS=$((STYLE_SUCCESS + $?))
 if [[ $STYLE_SUCCESS == 0 ]]; then
-  echo "Executing prettier for scss..."
+  echo -e "${RED}Executing prettier for scss...${ENDCOLOR}"
   echo "$files" |
     parallel -j "$PROCS" -I% \
       prettier --cache --parser scss --write %
@@ -49,23 +51,23 @@ else
 fi
 files=$(find . -maxdepth 2 -type f -name "*.html" \
   ! -path "**/.git/**")
-echo "Executing htmlhint..."
+echo -e "${RED}Executing htmlhint...${ENDCOLOR}"
 echo "$files" |
   parallel -j "$PROCS" -I% \
     htmlhint --config .htmlhintrc -f compact % 2>/dev/null
 SUCCESS=$?
-echo "Executing html-validate..."
+echo -e "${RED}Executing html-validate...${ENDCOLOR}"
 echo "$files" |
   parallel -j "$PROCS" -I% \
     html-validate --formatter stylish %
 SUCCESS=$((SUCCESS + $?))
 if [[ $SUCCESS == 0 ]]; then
-  echo "Executing tidy..."
+  echo -e "${RED}Executing tidy...${ENDCOLOR}"
   echo "$files" |
     parallel -j "$PROCS" -I% \
       tidy -config "$configFilePath" -quiet -m %
   SUCCESS=$((SUCCESS + $?))
-  echo "Executing prettier for html..."
+  echo -e "${RED}Executing prettier for html...${ENDCOLOR}"
   echo "$files" |
     parallel -j "$PROCS" -I% \
       prettier --cache --parser html --write %
@@ -73,26 +75,26 @@ if [[ $SUCCESS == 0 ]]; then
 fi
 files=$(find . -type f -name "*.js" \
   ! -path "**/.git/**" ! -path "**/node_modules/**" ! -path "**/*tailwind.css")
-echo "Executing js-beautify for js..."
+echo -e "${RED}Executing js-beautify for js...${ENDCOLOR}"
 echo "$files" |
   parallel -j "$PROCS" -I% \
     js-beautify -r %
 SUCCESS=$((SUCCESS + $?))
 files=$(find . -type f -name "*.scss" ! -name "_*.scss" \
   ! -path "**/.git/**" ! -path "**/node_modules/**" ! -path "**/*tailwind.css")
-echo "Executing sass for scss..."
+echo -e "${RED}Executing sass for scss...${ENDCOLOR}"
 echo "$files" |
   parallel -j "$PROCS" -I@ \
     ./runsass @
 SUCCESS=$((SUCCESS + $?))
 files=$(find . -type f -name "*.sass" \
   ! -path "**/.git/**" ! -path "**/node_modules/**" ! -path "**/*tailwind.css")
-echo "Executing sass for sass..."
+echo -e "${RED}Executing sass for sass...${ENDCOLOR}"
 echo "$files" |
   parallel -j "$PROCS" -I% \
     ./runsass %
 SUCCESS=$((SUCCESS + $?))
-echo "Executing prettier for svg..."
+echo -e "${RED}Executing prettier for svg...${ENDCOLOR}"
 prettier --cache --parser html --write -- **/*.svg
 SUCCESS=$((SUCCESS + $?))
 exit $((SUCCESS + STYLE_SUCCESS))
