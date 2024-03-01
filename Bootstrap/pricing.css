@@ -2,6 +2,8 @@
   font-size: 1.125rem;
   text-anchor: middle;
   user-select: none;
+  user-select: none;
+  user-select: none;
 }
 
 @media (min-width: 768px) {
@@ -74,72 +76,27 @@
   display: block !important;
 }
 
+body {
+  background-image: linear-gradient(
+    180deg,
+    var(--bs-secondary-bg),
+    var(--bs-body-bg) 6.25rem,
+    var(--bs-body-bg)
+  );
+}
+
 .container {
   max-width: 60rem;
 }
 
-.icon-link > .bi {
-  width: 0.75em;
-  height: 0.75em;
+.pricing-header {
+  max-width: 43.75rem;
 }
 
-/* Custom translucent site header */
-
-.site-header {
-  background-color: rgb(0 0 0 / 85%);
-  backdrop-filter: saturate(180%) blur(1.25rem);
+thead tr th {
+  width: 22%;
 }
 
-.site-header a {
-  color: #8e8e8e;
-  transition: color 0.15s ease-in-out;
-}
-
-.site-header a:hover {
-  color: #fff;
-  text-decoration: none;
-}
-
-/* Dummy devices (replace them with your own or something else entirely!) */
-
-.product-device {
-  position: absolute;
-  right: 10%;
-  bottom: -30%;
-  width: 18.75rem;
-  height: 33.75rem;
-  background-color: #333;
-  border-radius: 1.3125rem;
-  transform: rotate(30deg);
-}
-
-.product-device::before {
-  position: absolute;
-  inset: 10% 0.625rem;
-  content: "";
-  background-color: rgb(255 255 255 / 10%);
-  border-radius: 0.3125rem;
-}
-
-.product-device-2 {
-  inset: -25% auto 0 5%;
-  background-color: #e5e5e5;
-}
-
-/* Extra utilities */
-
-.flex-equal > * {
-  flex: 1;
-}
-
-@media (min-width: 768px) {
-  .flex-md-equal > * {
-    flex: 1;
-  }
-}
-
-.border-radius {
-  width: 80%;
-  height: 18.75rem;
-  border-radius: 1.3125rem 1.3125rem 0 0;
+thead tr th:nth-of-type(1) {
+  width: 34%;
 }
