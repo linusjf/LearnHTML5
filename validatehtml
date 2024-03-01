@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+require() {
+  hash "$@" || exit
+}
+require find parallel html-validate nproc
+RED="\e[31m"
+ENDCOLOR="\e[0m"
+declare -i PROCS=$(($(nproc) - 1))
+files=$(find . -maxdepth 2 -type f -name "*.html" \
+  ! -path "**/.git/**")
+echo -e "${RED}Executing html-validate...${ENDCOLOR}"
+echo "$files" |
+  parallel -j "$PROCS" -I% \
+    html-validate --formatter stylish %
+exit $?
