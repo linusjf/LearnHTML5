@@ -52,8 +52,8 @@
   border: solid rgb(-1 0 0 / 15%);
   border-width: 0;
   box-shadow:
-    inset -1 0.5em 1.5em rgb(0 0 0 / 10%),
-    inset -1 0.125em 0.5em rgb(0 0 0 / 15%);
+    inset -1em 0.5em 1.5em rgb(0 0 0 / 10%),
+    inset -1em 0.125em 0.5em rgb(0 0 0 / 15%);
 }
 
 .b-example-vr {
