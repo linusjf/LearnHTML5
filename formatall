@@ -19,38 +19,40 @@ echo "$files" |
   parallel -j "$PROCS" -I% \
     colorguard --file % --allow-equivalent-notation
 STYLE_SUCCESS=$((STYLE_SUCCESS + $?))
+echo -e "${RED}Executing prettier for css...${ENDCOLOR}"
+echo "$files" |
+  parallel -j "$PROCS" -I% \
+    prettier --cache --parser css --write %
+STYLE_SUCCESS=$((STYLE_SUCCESS + $?))
 echo -e "${RED}Executing stylelint for css...${ENDCOLOR}"
 echo "$files" |
   parallel -j "$PROCS" -I% \
     stylelint % --fix --quiet-deprecation-warnings
 STYLE_SUCCESS=$((STYLE_SUCCESS + $?))
-if [[ $STYLE_SUCCESS == 0 ]]; then
-  echo -e "${RED}Executing prettier for css...${ENDCOLOR}"
-  echo "$files" |
-    parallel -j "$PROCS" -I% \
-      prettier --cache --parser css --write %
-  STYLE_SUCCESS=$((STYLE_SUCCESS + $?))
-else
-  exit $STYLE_SUCCESS
-fi
 files=$(find . -type f -name "*.scss" \
   ! -path "**/.git/**" ! -path "**/node_modules/**" ! -path "**/*tailwind.css")
+echo -e "${RED}Executing prettier for scss...${ENDCOLOR}"
+echo "$files" |
+  parallel -j "$PROCS" -I% \
+    prettier --cache --parser scss --write %
+STYLE_SUCCESS=$((STYLE_SUCCESS + $?))
 echo -e "${RED}Executing stylelint for scss...${ENDCOLOR}"
 echo "$files" |
   parallel -j "$PROCS" -I% \
     stylelint % --fix --quiet-deprecation-warnings
 STYLE_SUCCESS=$((STYLE_SUCCESS + $?))
-if [[ $STYLE_SUCCESS == 0 ]]; then
-  echo -e "${RED}Executing prettier for scss...${ENDCOLOR}"
-  echo "$files" |
-    parallel -j "$PROCS" -I% \
-      prettier --cache --parser scss --write %
-  STYLE_SUCCESS=$((STYLE_SUCCESS + $?))
-else
-  exit $STYLE_SUCCESS
-fi
 files=$(find . -maxdepth 2 -type f -name "*.html" \
   ! -path "**/.git/**")
+echo -e "${RED}Executing tidy...${ENDCOLOR}"
+echo "$files" |
+  parallel -j "$PROCS" -I% \
+    tidy -config "$configFilePath" -quiet -m %
+SUCCESS=$((SUCCESS + $?))
+echo -e "${RED}Executing prettier for html...${ENDCOLOR}"
+echo "$files" |
+  parallel -j "$PROCS" -I% \
+    prettier --cache --parser html --write %
+SUCCESS=$((SUCCESS + $?))
 echo -e "${RED}Executing htmlhint...${ENDCOLOR}"
 echo "$files" |
   parallel -j "$PROCS" -I% \
@@ -61,18 +63,6 @@ echo "$files" |
   parallel -j "$PROCS" -I% \
     html-validate --formatter stylish %
 SUCCESS=$((SUCCESS + $?))
-if [[ $SUCCESS == 0 ]]; then
-  echo -e "${RED}Executing tidy...${ENDCOLOR}"
-  echo "$files" |
-    parallel -j "$PROCS" -I% \
-      tidy -config "$configFilePath" -quiet -m %
-  SUCCESS=$((SUCCESS + $?))
-  echo -e "${RED}Executing prettier for html...${ENDCOLOR}"
-  echo "$files" |
-    parallel -j "$PROCS" -I% \
-      prettier --cache --parser html --write %
-  SUCCESS=$((SUCCESS + $?))
-fi
 files=$(find . -type f -name "*.js" \
   ! -path "**/.git/**" ! -path "**/node_modules/**" ! -path "**/*tailwind.css")
 echo -e "${RED}Executing js-beautify for js...${ENDCOLOR}"
