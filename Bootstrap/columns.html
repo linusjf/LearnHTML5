@@ -97,6 +97,30 @@
         <div class="col-6 col-sm-3">.col-6 .col-sm-3</div>
       </div>
     </section>
+    <section class="container text-center">
+      <div class="row">
+        <div class="col-6 col-sm-4">.col-6 .col-sm-4</div>
+        <div class="col-6 col-sm-4">.col-6 .col-sm-4</div>
+        <!-- Force next columns to break to new line at md breakpoint and up -->
+        <div class="w-100 d-none d-md-block"></div>
+        <div class="col-6 col-sm-4">.col-6 .col-sm-4</div>
+        <div class="col-6 col-sm-4">.col-6 .col-sm-4</div>
+      </div>
+    </section>
+    <section class="container text-center">
+      <div class="row">
+        <div class="col">First in DOM, no order applied</div>
+        <div class="col order-5">Second in DOM, with a larger order</div>
+        <div class="col order-1">Third in DOM, with an order of 1</div>
+      </div>
+    </section>
+    <section class="container text-center">
+      <div class="row">
+        <div class="col order-last">First in DOM, ordered last</div>
+        <div class="col">Second in DOM, unordered</div>
+        <div class="col order-first">Third in DOM, ordered first</div>
+      </div>
+    </section>
     <script
       crossorigin="anonymous"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
