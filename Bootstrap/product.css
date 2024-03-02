@@ -66,6 +66,11 @@
   --bs-btn-active-border-color: #5a23c8;
 }
 
+.icon-link > .bi {
+  width: 0.75em;
+  height: 0.75em;
+}
+
 .bd-mode-toggle {
   z-index: 1500;
 }
@@ -76,11 +81,6 @@
 
 .container {
   max-width: 60rem;
-}
-
-.icon-link > .bi {
-  width: 0.75em;
-  height: 0.75em;
 }
 
 /* Custom translucent site header */
