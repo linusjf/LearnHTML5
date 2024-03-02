@@ -12,8 +12,8 @@ declare -i PROCS=$(($(nproc) - 1))
 configFilePath="$(find . -maxdepth 1 \
   -type f -name "$configFileName" ! -path \
   "**/.git/**" | head -n 1)"
-files=$(find . -type f -name "*.css" ! -name "*.scss.css" ! -name "*.sass.css" \
-  ! -path "**/.git/**" ! -path "**/node_modules/**" ! -path "**/*tailwind.css")
+files=$(find . -type f -name "*.css" ! -name "*.scss.css" ! -name "*.sass.css" ! -name "tw-*.css" \
+  ! -path "**/.git/**" ! -path "**/node_modules/**")
 echo -e "${RED}Executing colorguard...${ENDCOLOR}"
 echo "$files" |
   parallel -j "$PROCS" -I% \

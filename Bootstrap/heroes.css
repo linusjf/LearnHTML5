@@ -2,8 +2,6 @@
   font-size: 1.125rem;
   text-anchor: middle;
   user-select: none;
-  user-select: none;
-  user-select: none;
 }
 
 @media (min-width: 768px) {
@@ -76,7 +74,7 @@
   display: block !important;
 }
 
-.max-height: {
+.maxheight: {
   max-height: 30vh;
 }
 
