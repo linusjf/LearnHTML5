@@ -9,7 +9,7 @@ declare -i SUCCESS=0
 declare -i STYLE_SUCCESS=0
 declare -r configFileName="tidy.config"
 declare -i PROCS=$(($(nproc) - 1))
-configFilePath="$(find . -maxdepth 2 \
+configFilePath="$(find . -maxdepth 1 \
   -type f -name "$configFileName" ! -path \
   "**/.git/**" | head -n 1)"
 files=$(find . -type f -name "*.css" ! -name "*.scss.css" ! -name "*.sass.css" \

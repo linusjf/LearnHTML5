@@ -2,19 +2,20 @@
 require() {
   hash "$@" || exit
 }
-require find parallel htmlhint html-validate nproc
+require prettier tidy find parallel nproc
 RED="\e[31m"
 ENDCOLOR="\e[0m"
+declare -r configFileName="tidy.config"
 declare -i PROCS=$(($(nproc) - 1))
 files=$(find . -maxdepth 2 -type f -name "*.html" \
   ! -path "**/.git/**")
-echo -e "${RED}Executing htmlhint...${ENDCOLOR}"
+echo -e "${RED}Executing tidy...${ENDCOLOR}"
 echo "$files" |
   parallel -j "$PROCS" -I% \
-    htmlhint --config .htmlhintrc -f compact % 2>/dev/null
+    tidy -config "$configFileName" -quiet -m %
 SUCCESS=$?
-echo -e "${RED}Executing html-validate...${ENDCOLOR}"
+echo -e "${RED}Executing prettier for html...${ENDCOLOR}"
 echo "$files" |
   parallel -j "$PROCS" -I% \
-    html-validate --formatter stylish %
+    prettier --cache --parser html --write %
 exit $((SUCCESS + $?))
