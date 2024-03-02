@@ -25,3 +25,9 @@ div {
 div.row {
   border: none;
 }
+
+img {
+width: 50%;
+max-width: 50%;
+object-fit: scale-down;
+}
