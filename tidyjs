@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+require() {
+  hash "$@" || exit
+}
+require find parallel js-beautify nproc
+RED="\e[31m"
+ENDCOLOR="\e[0m"
+declare -i PROCS=$(($(nproc) - 1))
+files=$(find . -type f -name "*.js" \
+  ! -path "**/.git/**" ! -path "**/node_modules/**" ! -path "**/*tailwind.css")
+echo -e "${RED}Executing js-beautify for js...${ENDCOLOR}"
+echo "$files" |
+  parallel -j "$PROCS" -I% \
+    js-beautify -r %
+exit $?

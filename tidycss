@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+require() {
+  hash "$@" || exit
+}
+require prettier find parallel nproc
+RED="\e[31m"
+ENDCOLOR="\e[0m"
+declare -i PROCS=$(($(nproc) - 1))
+files=$(find . -type f -name "*.css" ! -name "*.scss.css" ! -name "*.sass.css" \
+  ! -path "**/.git/**" ! -path "**/node_modules/**")
+echo -e "${RED}Executing prettier for css...${ENDCOLOR}"
+echo "$files" |
+  parallel -j "$PROCS" -I% \
+    prettier --cache --parser css --write %
+STYLE_SUCCESS=$?
+files=$(find . -type f -name "*.scss" \
+  ! -path "**/.git/**" ! -path "**/node_modules/**" ! -path "**/*tailwind.css")
+echo -e "${RED}Executing prettier for scss...${ENDCOLOR}"
+echo "$files" |
+  parallel -j "$PROCS" -I% \
+    prettier --cache --parser scss --write %
+exit $((STYLE_SUCCESS + $?))
