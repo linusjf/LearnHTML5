@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+require() {
+  hash "$@" || exit
+}
+require stylelint find parallel nproc
+RED="\e[31m"
+ENDCOLOR="\e[0m"
+declare -i PROCS=$(($(nproc) - 1))
+files=$(find . -type f -name "*.scss" \
+  ! -path "**/.git/**" ! -path "**/node_modules/**")
+echo -e "${RED}Executing stylelint for scss...${ENDCOLOR}"
+echo "$files" |
+  parallel -j "$PROCS" -I% \
+    stylelint % --fix --quiet-deprecation-warnings
+exit $?
