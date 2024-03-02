@@ -12,7 +12,7 @@ declare -i PROCS=$(($(nproc) - 1))
 configFilePath="$(find . -maxdepth 1 \
   -type f -name "$configFileName" ! -path \
   "**/.git/**" | head -n 1)"
-files=$(find . -type f -name "*.css" ! -name "*.scss.css" ! -name "*.sass.css" ! -name "tw-*.css" \
+files=$(find . -type f -name "*.css" ! -name "*.scss.css" ! -name "*.sass.css" \
   ! -path "**/.git/**" ! -path "**/node_modules/**")
 echo -e "${RED}Executing colorguard...${ENDCOLOR}"
 echo "$files" |
@@ -24,6 +24,8 @@ echo "$files" |
   parallel -j "$PROCS" -I% \
     prettier --cache --parser css --write %
 STYLE_SUCCESS=$((STYLE_SUCCESS + $?))
+files=$(find . -type f -name "*.css" ! -name "*.scss.css" ! -name "*.sass.css" ! -name "tw-*.css" \
+  ! -path "**/.git/**" ! -path "**/node_modules/**")
 echo -e "${RED}Executing stylelint for css...${ENDCOLOR}"
 echo "$files" |
   parallel -j "$PROCS" -I% \
