@@ -73,3 +73,12 @@
 .bd-mode-toggle .dropdown-menu .active .bi {
   display: block !important;
 }
+
+.modal-sheet .modal-dialog {
+  width: 23.75rem;
+  transition: bottom 0.75s ease-in-out;
+}
+
+.modal-sheet .modal-footer {
+  padding-bottom: 2rem;
+}

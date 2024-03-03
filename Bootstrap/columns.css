@@ -27,7 +27,7 @@ div.row {
 }
 
 img {
-width: 50%;
-max-width: 50%;
-object-fit: scale-down;
+  width: 50%;
+  max-width: 50%;
+  object-fit: scale-down;
 }

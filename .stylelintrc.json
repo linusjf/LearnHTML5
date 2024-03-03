@@ -19,8 +19,10 @@
       "ignoreValue": "(.*[$].*)|(math.*)|([&])",
       "properties": {
         "font-size": "| min(<length-percentage>, <length-percentage>) | max(<length-percentage>, <length-percentage>)",
+        "height": "| min(<length-percentage>, <length-percentage>) | max(<length-percentage>, <length-percentage>) | fill-available",
+        "min-height": "| min(<length-percentage>, <length-percentage>) | max(<length-percentage>, <length-percentage>) | fill-available",
         "text-wrap": "wrap | nowrap | balance | pretty | stable | inherit | initial | revert | revert-layer | unset",
-        "width": "| min(<length-percentage>, <length-percentage>) | max(<length-percentage>, <length-percentage>)"
+        "width": "| min(<length-percentage>, <length-percentage>) | max(<length-percentage>, <length-percentage>) | fill-available"
       },
       "syntaxExtensions": [
         "sass",
