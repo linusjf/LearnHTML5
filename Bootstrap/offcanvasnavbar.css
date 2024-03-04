@@ -4,7 +4,7 @@ body {
 }
 
 body {
-  padding-top: 56px;
+  padding-top: 3.5rem;
 }
 
 @media (max-width: 991.98px) {
@@ -23,6 +23,7 @@ body {
       transform 0.3s ease-in-out,
       visibility 0.3s ease-in-out;
   }
+
   .offcanvas-collapse.open {
     visibility: visible;
     transform: translateX(-100%);
@@ -30,7 +31,7 @@ body {
 }
 
 .nav-scroller .nav {
-  color: rgba(255, 255, 255, 0.75);
+  color: rgb(255 255 255 / 75%);
 }
 
 .nav-scroller .nav-link {
@@ -56,8 +57,8 @@ body {
 .bd-placeholder-img {
   font-size: 1.125rem;
   text-anchor: middle;
-  -webkit-user-select: none;
-  -moz-user-select: none;
+  user-select: none;
+  user-select: none;
   user-select: none;
 }
 
@@ -70,12 +71,12 @@ body {
 .b-example-divider {
   width: 100%;
   height: 3rem;
-  background-color: rgba(0, 0, 0, 0.1);
-  border: solid rgba(0, 0, 0, 0.15);
+  background-color: rgb(0 0 0 / 10%);
+  border: solid rgb(0 0 0 / 15%);
   border-width: 1px 0;
   box-shadow:
-    inset 0 0.5em 1.5em rgba(0, 0, 0, 0.1),
-    inset 0 0.125em 0.5em rgba(0, 0, 0, 0.15);
+    inset 0 0.5em 1.5em rgb(0 0 0 / 10%),
+    inset 0 0.125em 0.5em rgb(0 0 0 / 15%);
 }
 
 .b-example-vr {
@@ -86,7 +87,7 @@ body {
 
 .bi {
   vertical-align: -0.125em;
-  fill: currentColor;
+  fill: currentcolor;
 }
 
 .nav-scroller {
@@ -100,7 +101,7 @@ body {
   display: flex;
   flex-wrap: nowrap;
   padding-bottom: 1rem;
-  margin-top: -1px;
+  margin-top: -0.0625rem;
   overflow-x: auto;
   text-align: center;
   white-space: nowrap;
@@ -110,7 +111,6 @@ body {
 .btn-bd-primary {
   --bd-violet-bg: #712cf9;
   --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
-
   --bs-btn-font-weight: 600;
   --bs-btn-color: var(--bs-white);
   --bs-btn-bg: var(--bd-violet-bg);

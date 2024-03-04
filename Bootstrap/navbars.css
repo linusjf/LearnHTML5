@@ -1,11 +1,16 @@
-/* Show it's not fixed to the top */
 body {
-  min-height: 75rem;
+  padding-bottom: 1.25rem;
+}
+
+.navbar {
+  margin-bottom: 1.25rem;
 }
 
 .bd-placeholder-img {
   font-size: 1.125rem;
   text-anchor: middle;
+  user-select: none;
+  user-select: none;
   user-select: none;
 }
 
