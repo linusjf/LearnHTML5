@@ -29,7 +29,7 @@ files=$(find . -type f -name "*.css" ! -name "*.scss.css" ! -name "*.sass.css" !
 echo -e "${RED}Executing stylelint for css...${ENDCOLOR}"
 echo "$files" |
   parallel -j "$PROCS" -I% \
-    stylelint % --fix --quiet-deprecation-warnings
+    stylelint % --color --fix --quiet-deprecation-warnings
 STYLE_SUCCESS=$((STYLE_SUCCESS + $?))
 files=$(find . -type f -name "*.scss" \
   ! -path "**/.git/**" ! -path "**/node_modules/**" ! -path "**/*tailwind.css")
@@ -41,7 +41,7 @@ STYLE_SUCCESS=$((STYLE_SUCCESS + $?))
 echo -e "${RED}Executing stylelint for scss...${ENDCOLOR}"
 echo "$files" |
   parallel -j "$PROCS" -I% \
-    stylelint % --fix --quiet-deprecation-warnings
+    stylelint % --color --fix --quiet-deprecation-warnings
 STYLE_SUCCESS=$((STYLE_SUCCESS + $?))
 files=$(find . -maxdepth 2 -type f -name "*.html" \
   ! -path "**/.git/**")
