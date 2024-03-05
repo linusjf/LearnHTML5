@@ -114,8 +114,200 @@
             id="example-form-control-textarea-1"
             rows="3"
           ></textarea>
+          <input
+            aria-label=".form-control-lg example"
+            class="form-control form-control-lg"
+            placeholder=".form-control-lg"
+            type="text"
+          />
+          <input
+            aria-label="default input example"
+            class="form-control"
+            placeholder="Default input"
+            type="text"
+          />
+          <input
+            aria-label=".form-control-sm example"
+            class="form-control form-control-sm"
+            placeholder=".form-control-sm"
+            type="text"
+          />
+        </div>
+        <label class="form-label" for="input-password-5">Password</label>
+        <input
+          aria-describedby="password-help-block"
+          class="form-control"
+          id="input-password-5"
+          type="password"
+        />
+        <div class="form-text" id="password-help-block">
+          Your password must be 8-20 characters long, contain letters and
+          numbers, and must not contain spaces, special characters, or emoji.
+        </div>
+        <div class="row g-3 align-items-center">
+          <div class="col-auto">
+            <label class="col-form-label" for="input-password-6"
+              >Password</label
+            >
+          </div>
+          <div class="col-auto">
+            <input
+              aria-describedby="password-help-inline"
+              class="form-control"
+              id="input-password-6"
+              type="password"
+            />
+          </div>
+          <div class="col-auto">
+            <span class="form-text" id="password-help-inline"
+              >Must be 8-20 characters long.</span
+            >
+          </div>
+        </div>
+        <input
+          aria-label="Disabled input example"
+          class="form-control"
+          disabled="disabled"
+          placeholder="Disabled input"
+          type="text"
+        />
+        <input
+          aria-label="Disabled input example"
+          class="form-control"
+          disabled="disabled"
+          readonly="readonly"
+          type="text"
+          value="Disabled readonly input"
+        />
+        <input
+          aria-label="readonly input example"
+          class="form-control"
+          readonly="readonly"
+          type="text"
+          value="Readonly input here..."
+        />
+        <div class="mb-3 row">
+          <label class="col-sm-2 col-form-label" for="static-email"
+            >Email</label
+          >
+          <div class="col-sm-10">
+            <input
+              class="form-control-plaintext"
+              id="static-email"
+              readonly="readonly"
+              type="text"
+              value="email@example.com"
+            />
+          </div>
+        </div>
+        <div class="mb-3 row">
+          <label class="col-sm-2 col-form-label" for="input-password"
+            >Password</label
+          >
+          <div class="col-sm-10">
+            <input class="form-control" id="input-password" type="password" />
+          </div>
         </div>
         <button class="btn btn-primary" type="submit">Submit</button>
+      </form>
+      <form class="row g-3">
+        <div class="col-auto">
+          <label class="visually-hidden" for="static-email-2">Email</label>
+          <input
+            class="form-control-plaintext"
+            id="static-email-2"
+            readonly="readonly"
+            type="text"
+            value="email@example.com"
+          />
+        </div>
+        <div class="col-auto">
+          <label class="visually-hidden" for="input-password-2">Password</label>
+          <input
+            class="form-control"
+            id="input-password-2"
+            placeholder="Password"
+            type="password"
+          />
+        </div>
+        <div class="col-auto">
+          <button class="btn btn-primary mb-3" type="submit">
+            Confirm identity
+          </button>
+        </div>
+        <div class="mb-3">
+          <label class="form-label" for="form-file-"
+            >Default file input example</label
+          >
+          <input class="form-control" id="form-file-" type="file" />
+        </div>
+        <div class="mb-3">
+          <label class="form-label" for="form-file-multiple"
+            >Multiple files input example</label
+          >
+          <input
+            class="form-control"
+            id="form-file-multiple"
+            multiple="multiple"
+            type="file"
+          />
+        </div>
+        <div class="mb-3">
+          <label class="form-label" for="form-file-disabled"
+            >Disabled file input example</label
+          >
+          <input
+            class="form-control"
+            disabled="disabled"
+            id="form-file-disabled"
+            type="file"
+          />
+        </div>
+        <div class="mb-3">
+          <label class="form-label" for="form-file-sm"
+            >Small file input example</label
+          >
+          <input
+            class="form-control form-control-sm"
+            id="form-file-sm"
+            type="file"
+          />
+        </div>
+        <div>
+          <label class="form-label" for="form-file-lg"
+            >Large file input example</label
+          >
+          <input
+            class="form-control form-control-lg"
+            id="form-file-lg"
+            type="file"
+          />
+        </div>
+        <label class="form-label" for="example-color-input">Color picker</label>
+        <input
+          class="form-control form-control-color"
+          id="example-color-input"
+          title="Choose your color"
+          type="color"
+          value="#563d7c"
+        />
+        <label for="example-data-list" class="form-label"
+          >Datalist example</label
+        >
+        <input
+          type="text"
+          class="form-control"
+          list="datalist-options"
+          id="example-data-list"
+          placeholder="Type to search..."
+        />
+        <datalist id="datalist-options">
+          <option value="San Francisco"></option>
+          <option value="New York"></option>
+          <option value="Seattle"></option>
+          <option value="Los Angeles"></option>
+          <option value="Chicago"></option>
+        </datalist>
       </form>
     </section>
     <script
