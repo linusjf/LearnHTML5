@@ -4,6 +4,23 @@
   color: #fff;
 }
 
+@mixin box-shadow($x: 0, $y: 0, $blur: 0, $c: black) {
+  box-shadow: $x $y $blur $c;
+}
+
+@mixin border-radius($radius: 0) {
+  border-radius: $radius;
+}
+
+#awesome {
+  width: 9.375rem;
+  height: 9.375rem;
+  background-color: green;
+
+  @include box-shadow(0.0625rem, 0.0625rem, 0.25rem, #fff);
+  @include border-radius(0.9375rem);
+}
+
 .info {
   @include theme;
 }

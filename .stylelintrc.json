@@ -4,8 +4,7 @@
   ],
   "plugins": [
     "stylelint-csstree-validator",
-    "stylelint-rem-over-px",
-    "stylelint-scss"
+    "stylelint-rem-over-px"
   ],
   "rules": {
     "at-rule-no-unknown": null,
@@ -73,6 +72,7 @@
     "scss/no-duplicate-mixins": true,
     "scss/no-global-function-names": true,
     "scss/no-unused-private-members": true,
+    "scss/operator-no-unspaced": null,
     "scss/property-no-unknown": [
       true,
       {
