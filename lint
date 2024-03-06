@@ -2,7 +2,7 @@
 require() {
   hash "$@" || exit
 }
-require htmlhint stylelint prettier tidy find parallel head colorguard html-validate js-beautify nproc
+require htmlhint stylelint prettier tidy find parallel colorguard html-validate js-beautify nproc
 RED="\e[31m"
 ENDCOLOR="\e[0m"
 declare -i SUCCESS=0
