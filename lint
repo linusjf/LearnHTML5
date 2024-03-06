@@ -2,9 +2,12 @@
 require() {
   hash "$@" || exit
 }
-require htmlhint stylelint prettier tidy find parallel colorguard html-validate js-beautify nproc
+require date htmlhint stylelint prettier tidy find parallel colorguard html-validate js-beautify nproc
+start=$(date +%s)
 RED="\e[31m"
+GREEN="\e[32m"
 ENDCOLOR="\e[0m"
+echo -e "${GREEN}Starting...${ENDCOLOR}"
 declare -i SUCCESS=0
 declare -i STYLE_SUCCESS=0
 declare -r configFileName="tidy.config"
@@ -86,4 +89,6 @@ SUCCESS=$((SUCCESS + $?))
 echo -e "${RED}Executing prettier for svg...${ENDCOLOR}"
 prettier --cache --parser html --write -- **/*.svg
 SUCCESS=$((SUCCESS + $?))
+end=$(date +%s)
+echo -e "${GREEN}Execution time was $((end - start)) seconds.${ENDCOLOR}"
 exit $((SUCCESS + STYLE_SUCCESS))
