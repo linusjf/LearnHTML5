@@ -72,7 +72,7 @@
     "scss/no-duplicate-mixins": true,
     "scss/no-global-function-names": true,
     "scss/no-unused-private-members": true,
-    "scss/operator-no-unspaced": null,
+    "scss/operator-no-unspaced": true,
     "scss/property-no-unknown": [
       true,
       {
