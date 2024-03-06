@@ -1,0 +1,11 @@
+@for $i from 1 through 12 {
+  .col-#{$i} {
+    width: calc(100% / 12) * $i;
+  }
+}
+
+@for $j from 1 to 6 {
+  .text-#{$j} {
+    font-size: 0.9375rem * $j;
+  }
+}
