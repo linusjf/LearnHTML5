@@ -1,0 +1,47 @@
+@mixin make-bold($bool: true) {
+  @if $bool == true {
+    font-weight: bold;
+  } @else {
+    font-weight: normal;
+  }
+}
+
+@mixin text-effect($val) {
+  @if $val == danger {
+    color: red;
+  } @else if $val == alert {
+    color: yellow;
+  } @else if $val == success {
+    color: green;
+  } @else {
+    color: black;
+  }
+}
+
+@mixin border-stroke($val) {
+  @if $val == light {
+    border: 1px solid black;
+  } @else if $val == medium {
+    border: 0.1875rem solid black;
+  } @else if $val == heavy {
+    border: 0.375rem solid black;
+  } @else {
+    border: none;
+  }
+}
+
+#box {
+  width: 9.375rem;
+  height: 9.375rem;
+  background-color: red;
+
+  @include border-stroke(medium);
+}
+
+.bold {
+  @include make-bold;
+}
+
+.red-effect {
+  @include text-effect(danger);
+}
