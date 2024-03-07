@@ -1,21 +1,20 @@
 #!/usr/bin/env bash
-require() {
-  hash "$@" || exit
-}
+#shellcheck disable=SC1091
+source ./require.sh
+source ./errorhandlers.sh
+source ./colors.sh
 require find parallel nproc
-RED="\e[31m"
-ENDCOLOR="\e[0m"
 declare -i PROCS=$(($(nproc) - 1))
 files=$(find . -type f -name "*.scss" ! -name "_*.scss" \
   ! -path "**/.git/**" ! -path "**/node_modules/**" ! -path "**/*tailwind.css")
-echo -e "${RED}Executing sass for scss...${ENDCOLOR}"
+echo -e "${GREEN}Executing sass for scss...${ENDCOLOR}"
 echo "$files" |
   parallel -j "$PROCS" -I@ \
     ./runsass @
 SUCCESS=$?
 files=$(find . -type f -name "*.sass" \
   ! -path "**/.git/**" ! -path "**/node_modules/**" ! -path "**/*tailwind.css")
-echo -e "${RED}Executing sass for sass...${ENDCOLOR}"
+echo -e "${GREEN}Executing sass for sass...${ENDCOLOR}"
 echo "$files" |
   parallel -j "$PROCS" -I% \
     ./runsass %

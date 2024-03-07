@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
-require() {
-  hash "$@" || exit
-}
+#shellcheck disable=SC1091
+source ./require.sh
 require tidy
 tidy "$@"
 declare -i exitCode=$?

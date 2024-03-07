@@ -1,20 +1,19 @@
 #!/usr/bin/env bash
-require() {
-  hash "$@" || exit
-}
+#shellcheck disable=SC1091
+source ./require.sh
+source ./errorhandlers.sh
+source ./colors.sh
 require prettier tidy find parallel nproc
-RED="\e[31m"
-ENDCOLOR="\e[0m"
 declare -r configFileName="tidy.config"
 declare -i PROCS=$(($(nproc) - 1))
 files=$(find . -maxdepth 2 -type f -name "*.html" \
   ! -path "**/.git/**")
-echo -e "${RED}Executing tidy...${ENDCOLOR}"
+echo -e "${GREEN}Executing tidy...${ENDCOLOR}"
 echo "$files" |
   parallel -j "$PROCS" -I% \
     tidy -config "$configFileName" -quiet -m %
 SUCCESS=$?
-echo -e "${RED}Executing prettier for html...${ENDCOLOR}"
+echo -e "${GREEN}Executing prettier for html...${ENDCOLOR}"
 echo "$files" |
   parallel -j "$PROCS" -I% \
     prettier --cache --parser html --write %

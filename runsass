@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
-require() {
-  hash "$@" || exit
-}
+#shellcheck disable=SC1091
+source ./require.sh
+source ./errorhandlers.sh
 require sass
 filename="$1"
 sass --update "$filename" "${filename}.css"

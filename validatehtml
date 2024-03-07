@@ -1,19 +1,18 @@
 #!/usr/bin/env bash
-require() {
-  hash "$@" || exit
-}
+#shellcheck disable=SC1091
+source ./require.sh
+source ./errorhandlers.sh
+source ./colors.sh
 require find parallel htmlhint html-validate nproc
-RED="\e[31m"
-ENDCOLOR="\e[0m"
 declare -i PROCS=$(($(nproc) - 1))
 files=$(find . -maxdepth 2 -type f -name "*.html" \
   ! -path "**/.git/**")
-echo -e "${RED}Executing htmlhint...${ENDCOLOR}"
+echo -e "${GREEN}Executing htmlhint...${ENDCOLOR}"
 echo "$files" |
   parallel -j "$PROCS" -I% \
     htmlhint --config .htmlhintrc -f compact % 2>/dev/null
 SUCCESS=$?
-echo -e "${RED}Executing html-validate...${ENDCOLOR}"
+echo -e "${GREEN}Executing html-validate...${ENDCOLOR}"
 echo "$files" |
   parallel -j "$PROCS" -I% \
     html-validate --formatter stylish %

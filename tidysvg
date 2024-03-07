@@ -1,10 +1,11 @@
 #!/usr/bin/env bash
-require() {
-  hash "$@" || exit
-}
+#shellcheck disable=SC1091
+source ./require.sh
+source ./errorhandlers.sh
+source ./colors.sh
 require prettier find parallel
-RED="\e[31m"
+GREEN="\e[31m"
 ENDCOLOR="\e[0m"
-echo -e "${RED}Executing prettier for svg...${ENDCOLOR}"
+echo -e "${GREEN}Executing prettier for svg...${ENDCOLOR}"
 prettier --cache --parser html --write -- **/*.svg
 exit $?
