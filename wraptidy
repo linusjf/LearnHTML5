@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+require() {
+  hash "$@" || exit
+}
+require tidy
+tidy "$@"
+declare -i exitCode=$?
+if test "$exitCode" -eq 1; then
+  exit 0
+fi
+exit "$exitCode"

@@ -11,8 +11,8 @@
 }
 
 body {
-  background-color: gray;
-  color: #fefefe;
+  background-color: silver;
+  color: crimson;
   line-height: 1;
 }
 
@@ -60,5 +60,5 @@ fieldset {
 
 section {
   margin: auto;
-  border: 1px solid silver;
+  border: 1px solid green;
 }
