@@ -17,26 +17,31 @@
     <link href="/ranges.css" rel="stylesheet" />
   </head>
   <body>
-    <label for="custom-range-1" class="form-label">Example range</label>
-    <input type="range" class="form-range" id="custom-range-1" />
-    <label for="disabled-range-" class="form-label">Disabled range</label>
-    <input type="range" class="form-range" id="disabled-range-" disabled />
-    <label for="custom-range-2" class="form-label">Example range</label>
+    <label class="form-label" for="custom-range-1">Example range</label>
+    <input class="form-range" id="custom-range-1" type="range" />
+    <label class="form-label" for="disabled-range-">Disabled range</label>
     <input
-      type="range"
       class="form-range"
-      min="0"
-      max="5"
-      id="custom-range-2"
+      disabled="disabled"
+      id="disabled-range-"
+      type="range"
     />
-    <label for="custom-range-3" class="form-label">Example range</label>
+    <label class="form-label" for="custom-range-2">Example range</label>
     <input
-      type="range"
       class="form-range"
-      min="0"
+      id="custom-range-2"
       max="5"
-      step="0.5"
+      min="0"
+      type="range"
+    />
+    <label class="form-label" for="custom-range-3">Example range</label>
+    <input
+      class="form-range"
       id="custom-range-3"
+      max="5"
+      min="0"
+      step="0.5"
+      type="range"
     />
     <script
       crossorigin="anonymous"
