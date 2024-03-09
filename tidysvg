@@ -5,5 +5,5 @@ source ./errorhandlers.sh
 source ./colors.sh
 require prettier find parallel
 echo -e "${GREEN}Executing prettier for svg...${ENDCOLOR}"
-prettier --cache --parser html --write -- **/*.svg
+prettier --log-level silent --cache --parser html --write -- **/*.svg
 exit $?
