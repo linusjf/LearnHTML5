@@ -1,8 +1,13 @@
 #!/usr/bin/env bash
 #shellcheck disable=SC1091
 source ./require.sh
+source ./colors.sh
 source ./errorhandlers.sh
 require sass
-filename="$1"
-sass --quiet --no-source-map --update "$filename" "${filename}.css"
-exit "$?"
+filenames=("$@")
+declare -i exitCode=0
+for fname in "${filenames[@]}"; do
+  sass --quiet --no-source-map --update "$fname" "${fname}.css"
+  exitCode=$((exitCode + $?))
+done
+exit "$exitCode"

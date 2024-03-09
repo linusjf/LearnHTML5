@@ -9,6 +9,6 @@ files=$(find . -type f -name "*.js" \
   ! -path "**/.git/**" ! -path "**/node_modules/**" ! -path "**/*tailwind.css")
 echo -e "${GREEN}Executing js-beautify for js...${ENDCOLOR}"
 echo "$files" |
-  parallel --bar -j "$PROCS" -I% \
+  parallel -X --bar -j "$PROCS" -I% \
     js-beautify --quiet -r %
 exit $?

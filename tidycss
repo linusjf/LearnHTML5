@@ -9,13 +9,13 @@ files=$(find . -type f -name "*.css" ! -name "*.scss.css" ! -name "*.sass.css" \
   ! -path "**/.git/**" ! -path "**/node_modules/**")
 echo -e "${GREEN}Executing prettier for css...${ENDCOLOR}"
 echo "$files" |
-  parallel --bar -j "$PROCS" -I% \
+  parallel -X --bar -j "$PROCS" -I% \
     prettier --log-level silent --cache --parser css --write %
 STYLE_SUCCESS=$?
 files=$(find . -type f -name "*.scss" \
   ! -path "**/.git/**" ! -path "**/node_modules/**" ! -path "**/*tailwind.css")
 echo -e "${GREEN}Executing prettier for scss...${ENDCOLOR}"
 echo "$files" |
-  parallel --bar -j "$PROCS" -I% \
+  parallel -X --bar -j "$PROCS" -I% \
     prettier --log-level silent --cache --parser scss --write %
 exit $((STYLE_SUCCESS + $?))

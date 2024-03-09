@@ -9,11 +9,11 @@ files=$(find . -maxdepth 2 -type f -name "*.html" \
   ! -path "**/.git/**")
 echo -e "${GREEN}Executing htmlhint...${ENDCOLOR}"
 echo "$files" |
-  parallel --bar -j "$PROCS" -I% \
+  parallel -X --bar -j "$PROCS" -I% \
     htmlhint --config .htmlhintrc -f compact % 2>/dev/null
 SUCCESS=$?
 echo -e "${GREEN}Executing html-validate...${ENDCOLOR}"
 echo "$files" |
-  parallel --bar -j "$PROCS" -I% \
+  parallel -X --bar -j "$PROCS" -I% \
     html-validate --formatter stylish %
 exit $((SUCCESS + $?))
