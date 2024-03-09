@@ -45,6 +45,7 @@ files=$(find . -maxdepth 2 -type f -name "*.html" \
   ! -path "**/.git/**")
 echo -e "${GREEN}Executing tidy...${ENDCOLOR}"
 rm -f tidy.out &>/dev/null
+echo "Warnings and errors written to tidy.out."
 echo "$files" |
   parallel --bar -j "$PROCS" -I% \
     ./wraptidy -config "$configFileName" -quiet -modify % 2>>tidy.out
