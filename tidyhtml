@@ -9,9 +9,10 @@ declare -i PROCS=$(($(nproc) - 1))
 files=$(find . -maxdepth 2 -type f -name "*.html" \
   ! -path "**/.git/**")
 echo -e "${GREEN}Executing tidy...${ENDCOLOR}"
+rm -f tidy.out &>/dev/null
 echo "$files" |
   parallel --bar -j "$PROCS" -I% \
-    ./wraptidy -config "$configFileName" -quiet -m %
+    ./wraptidy -config "$configFileName" -quiet -m % 2>>tidy.out
 SUCCESS=$?
 echo -e "${GREEN}Executing prettier for html...${ENDCOLOR}"
 echo "$files" |

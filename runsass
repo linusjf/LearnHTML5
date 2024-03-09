@@ -4,5 +4,5 @@ source ./require.sh
 source ./errorhandlers.sh
 require sass
 filename="$1"
-sass --update "$filename" "${filename}.css"
+sass --quiet --no-source-map --update "$filename" "${filename}.css"
 exit "$?"

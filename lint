@@ -44,9 +44,10 @@ STYLE_SUCCESS=$((STYLE_SUCCESS + $?))
 files=$(find . -maxdepth 2 -type f -name "*.html" \
   ! -path "**/.git/**")
 echo -e "${GREEN}Executing tidy...${ENDCOLOR}"
+rm -f tidy.out &>/dev/null
 echo "$files" |
   parallel --bar -j "$PROCS" -I% \
-    ./wraptidy -config "$configFileName" -quiet -modify %
+    ./wraptidy -config "$configFileName" -quiet -modify % 2>>tidy.out
 SUCCESS=$((SUCCESS + $?))
 echo -e "${GREEN}Executing prettier for html...${ENDCOLOR}"
 echo "$files" |
