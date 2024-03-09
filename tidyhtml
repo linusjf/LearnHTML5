@@ -10,11 +10,11 @@ files=$(find . -maxdepth 2 -type f -name "*.html" \
   ! -path "**/.git/**")
 echo -e "${GREEN}Executing tidy...${ENDCOLOR}"
 echo "$files" |
-  parallel -j "$PROCS" -I% \
+  parallel --bar -j "$PROCS" -I% \
     ./wraptidy -config "$configFileName" -quiet -m %
 SUCCESS=$?
 echo -e "${GREEN}Executing prettier for html...${ENDCOLOR}"
 echo "$files" |
-  parallel -j "$PROCS" -I% \
-    prettier --cache --parser html --write %
+  parallel --bar -j "$PROCS" -I% \
+    prettier --log-level silent --cache --parser html --write %
 exit $((SUCCESS + $?))

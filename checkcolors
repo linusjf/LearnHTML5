@@ -9,5 +9,6 @@ files=$(find . -type f -name "*.css"! -name "*.scss.css" ! -name "*.sass.css" \
   ! -path "**/.git/**" ! -path "*/node_modules/*")
 echo -e "${GREEN}Executing colorguard...${ENDCOLOR}"
 echo "$files" |
-  parallel -j "$PROCS" -I% \
+  parallel --bar -j "$PROCS" -I% \
     colorguard --file % --allow-equivalent-notation
+exit $?

@@ -9,6 +9,6 @@ files=$(find . -type f -name "*.scss" \
   ! -path "**/.git/**" ! -path "**/node_modules/**")
 echo -e "${GREEN}Executing stylelint for scss...${ENDCOLOR}"
 echo "$files" |
-  parallel -j "$PROCS" -I% \
+  parallel --bar -j "$PROCS" -I% \
     stylelint % --fix --quiet-deprecation-warnings
 exit $?
