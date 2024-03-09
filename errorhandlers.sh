@@ -33,5 +33,5 @@ ctrl_c() {
 set -e
 set -o pipefail
 set -u
-trap "handle_error" ERR
-trap "ctrl_c" INT
+trap -- "handle_error" ERR
+trap -- "ctrl_c" INT
