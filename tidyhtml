@@ -12,7 +12,7 @@ echo -e "${GREEN}Executing tidy...${ENDCOLOR}"
 echo "Warnings and errors written to tidy.out."
 ./wraptidy -config "$configFileName" -quiet -m -- **/*.html
 SUCCESS=$?
-grep -v "^Tidy" tidy.out >|tidy.err && mv tidy.err tidy.out
+sed -i "/^Tidy.*$/d" tidy.out
 echo -e "${GREEN}Executing prettier for html...${ENDCOLOR}"
 echo "$files" |
   parallel -X --bar -j "$PROCS" -I% \

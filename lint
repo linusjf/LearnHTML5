@@ -3,7 +3,7 @@
 source ./require.sh
 source ./errorhandlers.sh
 source ./colors.sh
-require date htmlhint stylelint prettier tidy find parallel colorguard html-validate js-beautify nproc
+require date htmlhint sed stylelint prettier tidy find parallel colorguard html-validate js-beautify nproc
 start=$(date +%s)
 echo -e "${GREEN}Starting...${ENDCOLOR}"
 declare -i SUCCESS=0
@@ -47,7 +47,7 @@ echo -e "${GREEN}Executing tidy...${ENDCOLOR}"
 echo "Warnings and errors written to tidy.out."
 ./wraptidy -config "$configFileName" -quiet -modify -- **/*.html
 SUCCESS=$((SUCCESS + $?))
-grep -v "^Tidy" tidy.out >|tidy.err && mv tidy.err tidy.out
+sed -i "/^Tidy.*$/d" tidy.out
 echo -e "${GREEN}Executing prettier for html...${ENDCOLOR}"
 echo "$files" |
   parallel -X --bar -j "$PROCS" -I% \
