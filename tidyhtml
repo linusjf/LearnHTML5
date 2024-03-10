@@ -3,7 +3,7 @@
 source ./require.sh
 source ./errorhandlers.sh
 source ./colors.sh
-require prettier tidy find parallel nproc
+require sed prettier tidy find parallel nproc
 declare -r configFileName="tidy.config"
 declare -i PROCS=$(($(nproc) - 1))
 files=$(find . -maxdepth 2 -type f -name "*.html" \
