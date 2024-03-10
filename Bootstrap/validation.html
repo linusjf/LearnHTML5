@@ -17,7 +17,7 @@
     <link href="/validation.css" rel="stylesheet" />
   </head>
   <body class="p-3 m-0 border-0 bd-example">
-    <form class="row g-3 needs-validation" novalidate="novalidate">
+    <form class="row g-3 needs-validation mb-3" novalidate="novalidate">
       <div class="col-md-4">
         <label class="form-label" for="validation-custom-01">First name</label>
         <input
@@ -109,7 +109,7 @@
         <button class="btn btn-primary" type="submit">Submit form</button>
       </div>
     </form>
-    <form class="row g-3">
+    <form class="row g-3 mb-3">
       <div class="col-md-4">
         <label class="form-label" for="validation-default-01">First name</label>
         <input
@@ -188,6 +188,115 @@
           <label class="form-check-label" for="invalid-check-2"
             >Agree to terms and conditions</label
           >
+        </div>
+      </div>
+      <div class="col-12">
+        <button class="btn btn-primary" type="submit">Submit form</button>
+      </div>
+    </form>
+    <form class="row g-3 mb-3">
+      <div class="col-md-4">
+        <label class="form-label" for="validation-server-01">First name</label>
+        <input
+          class="form-control is-valid"
+          id="validation-server-01"
+          required="required"
+          type="text"
+          value="Mark"
+        />
+        <div class="valid-feedback">Looks good!</div>
+      </div>
+      <div class="col-md-4">
+        <label class="form-label" for="validation-server-02">Last name</label>
+        <input
+          class="form-control is-valid"
+          id="validation-server-02"
+          required="required"
+          type="text"
+          value="Otto"
+        />
+        <div class="valid-feedback">Looks good!</div>
+      </div>
+      <div class="col-md-4">
+        <label class="form-label" for="validation-server-username"
+          >Username</label
+        >
+        <div class="input-group has-validation">
+          <span class="input-group-text" id="input-group-prepend-3">@</span>
+          <input
+            aria-describedby="input-group-prepend-3 validation-server-username-feedback"
+            class="form-control is-invalid"
+            id="validation-server-username"
+            required="required"
+            type="text"
+          />
+          <div
+            class="invalid-feedback"
+            id="validation-server-username-feedback"
+          >
+            Please choose a username.
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <label class="form-label" for="validation-server-03">City</label>
+        <input
+          aria-describedby="validation-server-03-feedback"
+          class="form-control is-invalid"
+          id="validation-server-03"
+          required="required"
+          type="text"
+        />
+        <div class="invalid-feedback" id="validation-server-03-feedback">
+          Please provide a valid city.
+        </div>
+      </div>
+      <div class="col-md-3">
+        <label class="form-label" for="validation-server-04">State</label>
+        <select
+          aria-describedby="validation-server-04-feedback"
+          class="form-select is-invalid"
+          id="validation-server-04"
+          required="required"
+        >
+          <option disabled="disabled" selected="selected" value="">
+            Choose...
+          </option>
+          <option>...</option>
+        </select>
+        <div class="invalid-feedback" id="validation-server-04-feedback">
+          Please select a valid state.
+        </div>
+      </div>
+      <div class="col-md-3">
+        <label class="form-label" for="validation-server-05">Zip</label>
+        <input
+          aria-describedby="validation-server-05-feedback"
+          class="form-control is-invalid"
+          id="validation-server-05"
+          required="required"
+          type="text"
+        />
+        <div class="invalid-feedback" id="validation-server-05-feedback">
+          Please provide a valid zip.
+        </div>
+      </div>
+      <div class="col-12">
+        <div class="form-check">
+          <input
+            aria-describedby="invalid-check-3-feedback"
+            class="form-check-input is-invalid"
+            id="invalid-check-3"
+            required="required"
+            type="checkbox"
+            value=""
+          />
+          <label class="form-check-label" for="invalid-check-3"
+            >Agree to terms and conditions</label
+          >
+          <div class="invalid-feedback" id="invalid-check-3-feedback">
+            You must agree before submitting.
+          </div>
         </div>
       </div>
       <div class="col-12">
