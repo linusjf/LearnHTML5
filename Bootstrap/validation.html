@@ -303,6 +303,167 @@
         <button class="btn btn-primary" type="submit">Submit form</button>
       </div>
     </form>
+    <form class="was-validated mb-3">
+      <div class="mb-3">
+        <label class="form-label" for="validation-textarea-">Textarea</label>
+        <textarea
+          class="form-control"
+          id="validation-textarea-"
+          placeholder="Required example textarea"
+          required="required"
+        ></textarea>
+        <div class="invalid-feedback">
+          Please enter a message in the textarea.
+        </div>
+      </div>
+      <div class="form-check mb-3">
+        <input
+          class="form-check-input"
+          id="validation-form-check-1"
+          required="required"
+          type="checkbox"
+        />
+        <label class="form-check-label" for="validation-form-check-1"
+          >Check this checkbox</label
+        >
+        <div class="invalid-feedback">Example invalid feedback text</div>
+      </div>
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          id="validation-form-check-2"
+          name="radio-stacked"
+          required="required"
+          type="radio"
+        />
+        <label class="form-check-label" for="validation-form-check-2"
+          >Toggle this radio</label
+        >
+      </div>
+      <div class="form-check mb-3">
+        <input
+          class="form-check-input"
+          id="validation-form-check-3"
+          name="radio-stacked"
+          required="required"
+          type="radio"
+        />
+        <label class="form-check-label" for="validation-form-check-3"
+          >Or toggle this other radio</label
+        >
+        <div class="invalid-feedback">More example invalid feedback text</div>
+      </div>
+      <div class="mb-3">
+        <select
+          aria-label="select example"
+          class="form-select"
+          required="required"
+        >
+          <option value="">Open this select menu</option>
+          <option value="1">One</option>
+          <option value="2">Two</option>
+          <option value="3">Three</option>
+        </select>
+        <div class="invalid-feedback">Example invalid select feedback</div>
+      </div>
+      <div class="mb-3">
+        <input
+          aria-label="file example"
+          class="form-control"
+          required="required"
+          type="file"
+        />
+        <div class="invalid-feedback">Example invalid form file feedback</div>
+      </div>
+      <div class="mb-3">
+        <button class="btn btn-primary" disabled="disabled" type="submit">
+          Submit form
+        </button>
+      </div>
+    </form>
+    <form class="row g-3 needs-validation mb-3" novalidate="novalidate">
+      <div class="col-md-4 position-relative">
+        <label class="form-label" for="validation-tooltip-01">First name</label>
+        <input
+          class="form-control"
+          id="validation-tooltip-01"
+          required="required"
+          type="text"
+          value="Mark"
+        />
+        <div class="valid-tooltip">Looks good!</div>
+      </div>
+      <div class="col-md-4 position-relative">
+        <label class="form-label" for="validation-tooltip-02">Last name</label>
+        <input
+          class="form-control"
+          id="validation-tooltip-02"
+          required="required"
+          type="text"
+          value="Otto"
+        />
+        <div class="valid-tooltip">Looks good!</div>
+      </div>
+      <div class="col-md-4 position-relative">
+        <label class="form-label" for="validation-tooltip-username"
+          >Username</label
+        >
+        <div class="input-group has-validation">
+          <span
+            class="input-group-text"
+            id="validation-tooltip-username-prepend"
+            >@</span
+          >
+          <input
+            aria-describedby="validation-tooltip-username-prepend"
+            class="form-control"
+            id="validation-tooltip-username"
+            required="required"
+            type="text"
+          />
+          <div class="invalid-tooltip">
+            Please choose a unique and valid username.
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 position-relative">
+        <label class="form-label" for="validation-tooltip-03">City</label>
+        <input
+          class="form-control"
+          id="validation-tooltip-03"
+          required="required"
+          type="text"
+        />
+        <div class="invalid-tooltip">Please provide a valid city.</div>
+      </div>
+      <div class="col-md-3 position-relative">
+        <label class="form-label" for="validation-tooltip-04">State</label>
+        <select
+          class="form-select"
+          id="validation-tooltip-04"
+          required="required"
+        >
+          <option disabled="disabled" selected="selected" value="">
+            Choose...
+          </option>
+          <option>...</option>
+        </select>
+        <div class="invalid-tooltip">Please select a valid state.</div>
+      </div>
+      <div class="col-md-3 position-relative">
+        <label class="form-label" for="validation-tooltip-05">Zip</label>
+        <input
+          class="form-control"
+          id="validation-tooltip-05"
+          required="required"
+          type="text"
+        />
+        <div class="invalid-tooltip">Please provide a valid zip.</div>
+      </div>
+      <div class="col-12">
+        <button class="btn btn-primary" type="submit">Submit form</button>
+      </div>
+    </form>
     <script
       crossorigin="anonymous"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
