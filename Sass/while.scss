@@ -1,0 +1,19 @@
+$x: 1 !default;
+
+@while $x < 13 {
+  .col-#{$x} {
+    width: 100% / 12 * $x;
+  }
+
+  $x: $x + 1;
+}
+
+$y: 1 !default;
+
+@while $y < 6 {
+  .text-#{$y} {
+    font-size: 0.9375rem * $y;
+  }
+
+  $y: $y + 1;
+}
