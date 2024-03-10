@@ -42,106 +42,104 @@
     <div class="row mb-3">
       <div class="col">
         <input
-          type="text"
+          aria-label="First name"
           class="form-control"
           placeholder="First name"
-          aria-label="First name"
+          type="text"
         />
       </div>
       <div class="col">
         <input
-          type="text"
+          aria-label="Last name"
           class="form-control"
           placeholder="Last name"
-          aria-label="Last name"
+          type="text"
         />
       </div>
     </div>
     <div class="row g-3 mb-3">
       <div class="col">
         <input
-          type="text"
+          aria-label="First name"
           class="form-control"
           placeholder="First name"
-          aria-label="First name"
+          type="text"
         />
       </div>
       <div class="col">
         <input
-          type="text"
+          aria-label="Last name"
           class="form-control"
           placeholder="Last name"
-          aria-label="Last name"
+          type="text"
         />
       </div>
     </div>
     <form class="row g-3 mb-3">
       <div class="col-md-6">
-        <label for="input-email-4" class="form-label">Email</label>
-        <input type="email" class="form-control" id="input-email-4" />
+        <label class="form-label" for="input-email-4">Email</label>
+        <input class="form-control" id="input-email-4" type="email" />
       </div>
       <div class="col-md-6">
-        <label for="input-password-4" class="form-label">Password</label>
-        <input type="password" class="form-control" id="input-password-4" />
+        <label class="form-label" for="input-password-4">Password</label>
+        <input class="form-control" id="input-password-4" type="password" />
       </div>
       <div class="col-12">
-        <label for="input-address-" class="form-label">Address</label>
+        <label class="form-label" for="input-address-">Address</label>
         <input
-          type="text"
           class="form-control"
           id="input-address-"
           placeholder="1234 Main St"
+          type="text"
         />
       </div>
       <div class="col-12">
-        <label for="input-address-2" class="form-label">Address 2</label>
+        <label class="form-label" for="input-address-2">Address 2</label>
         <input
-          type="text"
           class="form-control"
           id="input-address-2"
           placeholder="Apartment, studio, or floor"
+          type="text"
         />
       </div>
       <div class="col-md-6">
-        <label for="input-city" class="form-label">City</label>
-        <input type="text" class="form-control" id="input-city" />
+        <label class="form-label" for="input-city">City</label>
+        <input class="form-control" id="input-city" type="text" />
       </div>
       <div class="col-md-4">
-        <label for="input-state" class="form-label">State</label>
-        <select id="input-state" class="form-select">
+        <label class="form-label" for="input-state">State</label>
+        <select class="form-select" id="input-state">
           <option selected="selected">Choose...</option>
           <option>...</option>
         </select>
       </div>
       <div class="col-md-2">
-        <label for="input-zip" class="form-label">Zip</label>
-        <input type="text" class="form-control" id="input-zip" />
+        <label class="form-label" for="input-zip">Zip</label>
+        <input class="form-control" id="input-zip" type="text" />
       </div>
       <div class="col-12">
         <div class="form-check">
-          <input class="form-check-input" type="checkbox" id="grid-check" />
-          <label class="form-check-label" for="grid-check">
-            Check me out
-          </label>
+          <input class="form-check-input" id="grid-check" type="checkbox" />
+          <label class="form-check-label" for="grid-check">Check me out</label>
         </div>
       </div>
       <div class="col-12">
-        <button type="submit" class="btn btn-primary">Sign in</button>
+        <button class="btn btn-primary" type="submit">Sign in</button>
       </div>
     </form>
     <form>
       <div class="row mb-3">
-        <label for="input-email-3" class="col-sm-2 col-form-label">Email</label>
+        <label class="col-sm-2 col-form-label" for="input-email-3">Email</label>
         <div class="col-sm-10">
-          <input type="email" class="form-control" id="input-email-3" />
+          <input class="form-control" id="input-email-3" type="email" />
         </div>
       </div>
       <div class="row mb-3">
-        <label for="input-password-3" class="col-sm-2 col-form-label"
+        <label class="col-sm-2 col-form-label" for="input-password-3"
           >Password</label
         >
         <div class="col-sm-10">
-          <input type="password" class="form-control" id="input-password-3" />
+          <input class="form-control" id="input-password-3" type="password" />
         </div>
       </div>
       <fieldset class="row mb-3">
@@ -149,55 +147,173 @@
         <div class="col-sm-10">
           <div class="form-check">
             <input
-              class="form-check-input"
-              type="radio"
-              name="grid-radio-s"
-              id="grid-radio-s1"
-              value="option1"
               checked="checked"
+              class="form-check-input"
+              id="grid-radio-s1"
+              name="grid-radio-s"
+              type="radio"
+              value="option1"
             />
-            <label class="form-check-label" for="grid-radio-s1">
-              First radio
-            </label>
+            <label class="form-check-label" for="grid-radio-s1"
+              >First radio</label
+            >
           </div>
           <div class="form-check">
             <input
               class="form-check-input"
-              type="radio"
-              name="grid-radio-s"
               id="grid-radio-s2"
+              name="grid-radio-s"
+              type="radio"
               value="option2"
             />
-            <label class="form-check-label" for="grid-radio-s2">
-              Second radio
-            </label>
+            <label class="form-check-label" for="grid-radio-s2"
+              >Second radio</label
+            >
           </div>
           <div class="form-check disabled">
             <input
               class="form-check-input"
-              type="radio"
-              name="grid-radio-s"
-              id="grid-radio-s3"
-              value="option3"
               disabled="disabled"
+              id="grid-radio-s3"
+              name="grid-radio-s"
+              type="radio"
+              value="option3"
             />
-            <label class="form-check-label" for="grid-radio-s3">
-              Third disabled radio
-            </label>
+            <label class="form-check-label" for="grid-radio-s3"
+              >Third disabled radio</label
+            >
           </div>
         </div>
       </fieldset>
       <div class="row mb-3">
         <div class="col-sm-10 offset-sm-2">
           <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="grid-check-1" />
-            <label class="form-check-label" for="grid-check-1">
-              Example checkbox
-            </label>
+            <input class="form-check-input" id="grid-check-1" type="checkbox" />
+            <label class="form-check-label" for="grid-check-1"
+              >Example checkbox</label
+            >
           </div>
         </div>
       </div>
-      <button type="submit" class="btn btn-primary">Sign in</button>
+      <button class="btn btn-primary" type="submit">Sign in</button>
+    </form>
+    <div class="row mb-3">
+      <label
+        for="col-form-label-sm"
+        class="col-sm-2 col-form-label col-form-label-sm"
+        >Email</label
+      >
+      <div class="col-sm-10">
+        <input
+          type="email"
+          class="form-control form-control-sm"
+          id="col-form-label-sm"
+          placeholder="col-form-label-sm"
+        />
+      </div>
+    </div>
+    <div class="row mb-3">
+      <label for="col-form-label-" class="col-sm-2 col-form-label">Email</label>
+      <div class="col-sm-10">
+        <input
+          type="email"
+          class="form-control"
+          id="col-form-label-"
+          placeholder="col-form-label"
+        />
+      </div>
+    </div>
+    <div class="row">
+      <label
+        for="col-form-label-lg"
+        class="col-sm-2 col-form-label col-form-label-lg"
+        >Email</label
+      >
+      <div class="col-sm-10">
+        <input
+          type="email"
+          class="form-control form-control-lg"
+          id="col-form-label-lg"
+          placeholder="col-form-label-lg"
+        />
+      </div>
+    </div>
+    <div class="row g-3">
+      <div class="col-sm-7">
+        <input
+          type="text"
+          class="form-control"
+          placeholder="City"
+          aria-label="City"
+        />
+      </div>
+      <div class="col-sm">
+        <input
+          type="text"
+          class="form-control"
+          placeholder="State"
+          aria-label="State"
+        />
+      </div>
+      <div class="col-sm">
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Zip"
+          aria-label="Zip"
+        />
+      </div>
+    </div>
+    <form class="row gy-2 gx-3 align-items-center">
+      <div class="col-auto">
+        <label class="visually-hidden" for="auto-sizing-input">Name</label>
+        <input
+          type="text"
+          class="form-control"
+          id="auto-sizing-input"
+          placeholder="Jane Doe"
+        />
+      </div>
+      <div class="col-auto">
+        <label class="visually-hidden" for="auto-sizing-input-group"
+          >Username</label
+        >
+        <div class="input-group">
+          <div class="input-group-text">@</div>
+          <input
+            type="text"
+            class="form-control"
+            id="auto-sizing-input-group"
+            placeholder="Username"
+          />
+        </div>
+      </div>
+      <div class="col-auto">
+        <label class="visually-hidden" for="auto-sizing-select"
+          >Preference</label
+        >
+        <select class="form-select" id="auto-sizing-select">
+          <option selected="selected">Choose...</option>
+          <option value="1">One</option>
+          <option value="2">Two</option>
+          <option value="3">Three</option>
+        </select>
+      </div>
+      <div class="col-auto">
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="checkbox"
+            id="auto-sizing-check"
+          />
+          <label class="form-check-label" for="auto-sizing-check">
+            Remember me
+          </label>
+        </div>
+      </div>
+      <div class="col-auto">
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
     </form>
     <script
       crossorigin="anonymous"
