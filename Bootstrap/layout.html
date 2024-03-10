@@ -16,7 +16,7 @@
     />
     <link href="/floatinglabels.css" rel="stylesheet" />
   </head>
-  <body class="p-3 m-0 border-0 bd-example">
+  <body class="p-3 m-0 border-0">
     <div class="mb-3">
       <label class="form-label" for="form-group-example-input"
         >Example label</label
@@ -39,6 +39,166 @@
         type="text"
       />
     </div>
+    <div class="row mb-3">
+      <div class="col">
+        <input
+          type="text"
+          class="form-control"
+          placeholder="First name"
+          aria-label="First name"
+        />
+      </div>
+      <div class="col">
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Last name"
+          aria-label="Last name"
+        />
+      </div>
+    </div>
+    <div class="row g-3 mb-3">
+      <div class="col">
+        <input
+          type="text"
+          class="form-control"
+          placeholder="First name"
+          aria-label="First name"
+        />
+      </div>
+      <div class="col">
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Last name"
+          aria-label="Last name"
+        />
+      </div>
+    </div>
+    <form class="row g-3 mb-3">
+      <div class="col-md-6">
+        <label for="input-email-4" class="form-label">Email</label>
+        <input type="email" class="form-control" id="input-email-4" />
+      </div>
+      <div class="col-md-6">
+        <label for="input-password-4" class="form-label">Password</label>
+        <input type="password" class="form-control" id="input-password-4" />
+      </div>
+      <div class="col-12">
+        <label for="input-address-" class="form-label">Address</label>
+        <input
+          type="text"
+          class="form-control"
+          id="input-address-"
+          placeholder="1234 Main St"
+        />
+      </div>
+      <div class="col-12">
+        <label for="input-address-2" class="form-label">Address 2</label>
+        <input
+          type="text"
+          class="form-control"
+          id="input-address-2"
+          placeholder="Apartment, studio, or floor"
+        />
+      </div>
+      <div class="col-md-6">
+        <label for="input-city" class="form-label">City</label>
+        <input type="text" class="form-control" id="input-city" />
+      </div>
+      <div class="col-md-4">
+        <label for="input-state" class="form-label">State</label>
+        <select id="input-state" class="form-select">
+          <option selected="selected">Choose...</option>
+          <option>...</option>
+        </select>
+      </div>
+      <div class="col-md-2">
+        <label for="input-zip" class="form-label">Zip</label>
+        <input type="text" class="form-control" id="input-zip" />
+      </div>
+      <div class="col-12">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="grid-check" />
+          <label class="form-check-label" for="grid-check">
+            Check me out
+          </label>
+        </div>
+      </div>
+      <div class="col-12">
+        <button type="submit" class="btn btn-primary">Sign in</button>
+      </div>
+    </form>
+    <form>
+      <div class="row mb-3">
+        <label for="input-email-3" class="col-sm-2 col-form-label">Email</label>
+        <div class="col-sm-10">
+          <input type="email" class="form-control" id="input-email-3" />
+        </div>
+      </div>
+      <div class="row mb-3">
+        <label for="input-password-3" class="col-sm-2 col-form-label"
+          >Password</label
+        >
+        <div class="col-sm-10">
+          <input type="password" class="form-control" id="input-password-3" />
+        </div>
+      </div>
+      <fieldset class="row mb-3">
+        <legend class="col-form-label col-sm-2 pt-0">Radios</legend>
+        <div class="col-sm-10">
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="grid-radio-s"
+              id="grid-radio-s1"
+              value="option1"
+              checked="checked"
+            />
+            <label class="form-check-label" for="grid-radio-s1">
+              First radio
+            </label>
+          </div>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="grid-radio-s"
+              id="grid-radio-s2"
+              value="option2"
+            />
+            <label class="form-check-label" for="grid-radio-s2">
+              Second radio
+            </label>
+          </div>
+          <div class="form-check disabled">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="grid-radio-s"
+              id="grid-radio-s3"
+              value="option3"
+              disabled="disabled"
+            />
+            <label class="form-check-label" for="grid-radio-s3">
+              Third disabled radio
+            </label>
+          </div>
+        </div>
+      </fieldset>
+      <div class="row mb-3">
+        <div class="col-sm-10 offset-sm-2">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="grid-check-1" />
+            <label class="form-check-label" for="grid-check-1">
+              Example checkbox
+            </label>
+          </div>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary">Sign in</button>
+    </form>
     <script
       crossorigin="anonymous"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
