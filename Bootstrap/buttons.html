@@ -5,6 +5,7 @@
   xml:lang="en"
   xmlns="http://www.w3.org/1999/xhtml"
 >
+  <!-- [html-validate-disable no-inline-style] -->
   <head>
     <meta charset="utf-8" />
     <meta
@@ -277,6 +278,151 @@
     <button class="btn btn-outline-dark" type="button">Dark</button>
     <button class="btn btn-primary btn-lg" type="button">Large button</button>
     <button class="btn btn-secondary btn-lg" type="button">Large button</button>
+    <button class="btn btn-primary btn-sm" type="button">Small button</button>
+    <button class="btn btn-secondary btn-sm" type="button">Small button</button>
+    <button
+      class="btn btn-primary"
+      style="
+        --bs-btn-padding-y: 0.25rem;
+        --bs-btn-padding-x: 0.5rem;
+        --bs-btn-font-size: 0.75rem;
+      "
+      type="button"
+    >
+      Custom button
+    </button>
+    <button class="btn btn-primary" disabled="disabled" type="button">
+      Primary button
+    </button>
+    <button class="btn btn-secondary" disabled="disabled" type="button">
+      Button
+    </button>
+    <button class="btn btn-outline-primary" disabled="disabled" type="button">
+      Primary button
+    </button>
+    <button class="btn btn-outline-secondary" disabled="disabled" type="button">
+      Button
+    </button>
+    <a aria-disabled="true" class="btn btn-primary disabled" role="button"
+      >Primary link</a
+    >
+    <a aria-disabled="true" class="btn btn-secondary disabled" role="button"
+      >Link</a
+    >
+    <a
+      aria-disabled="true"
+      class="btn btn-primary disabled"
+      href="#"
+      role="button"
+      tabindex="-1"
+      >Primary link</a
+    >
+    <a
+      aria-disabled="true"
+      class="btn btn-secondary disabled"
+      href="#"
+      role="button"
+      tabindex="-1"
+      >Link</a
+    >
+    <div class="d-grid gap-2 mb-3">
+      <button class="btn btn-primary" type="button">Button</button>
+      <button class="btn btn-primary" type="button">Button</button>
+    </div>
+    <div class="d-grid gap-2 d-md-block mb-3">
+      <button class="btn btn-primary" type="button">Button</button>
+      <button class="btn btn-primary" type="button">Button</button>
+    </div>
+    <div class="d-grid gap-2 col-6 mx-auto mb-3">
+      <button class="btn btn-primary" type="button">Button</button>
+      <button class="btn btn-primary" type="button">Button</button>
+    </div>
+    <div class="d-grid gap-2 d-md-flex justify-content-md-end mb-3">
+      <button class="btn btn-primary me-md-2" type="button">Button</button>
+      <button class="btn btn-primary" type="button">Button</button>
+    </div>
+    <p class="d-inline-flex gap-1">
+      <button class="btn" data-bs-toggle="button" type="button">
+        Toggle button
+      </button>
+      <button
+        aria-pressed="true"
+        class="btn active"
+        data-bs-toggle="button"
+        type="button"
+      >
+        Active toggle button
+      </button>
+      <button
+        class="btn"
+        data-bs-toggle="button"
+        disabled="disabled"
+        type="button"
+      >
+        Disabled toggle button
+      </button>
+    </p>
+    <p class="d-inline-flex gap-1">
+      <button class="btn btn-primary" data-bs-toggle="button" type="button">
+        Toggle button
+      </button>
+      <button
+        aria-pressed="true"
+        class="btn btn-primary active"
+        data-bs-toggle="button"
+        type="button"
+      >
+        Active toggle button
+      </button>
+      <button
+        class="btn btn-primary"
+        data-bs-toggle="button"
+        disabled="disabled"
+        type="button"
+      >
+        Disabled toggle button
+      </button>
+    </p>
+    <p class="d-inline-flex gap-1">
+      <a class="btn" data-bs-toggle="button" href="#" role="button"
+        >Toggle link</a
+      >
+      <a
+        aria-pressed="true"
+        class="btn active"
+        data-bs-toggle="button"
+        href="#"
+        role="button"
+        >Active toggle link</a
+      >
+      <a
+        aria-disabled="true"
+        class="btn disabled"
+        data-bs-toggle="button"
+        role="button"
+        >Disabled toggle link</a
+      >
+    </p>
+    <p class="d-inline-flex gap-1">
+      <a class="btn btn-primary" data-bs-toggle="button" href="#" role="button"
+        >Toggle link</a
+      >
+      <a
+        aria-pressed="true"
+        class="btn btn-primary active"
+        data-bs-toggle="button"
+        href="#"
+        role="button"
+        >Active toggle link</a
+      >
+      <a
+        aria-disabled="true"
+        class="btn btn-primary disabled"
+        data-bs-toggle="button"
+        role="button"
+        >Disabled toggle link</a
+      >
+    </p>
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
