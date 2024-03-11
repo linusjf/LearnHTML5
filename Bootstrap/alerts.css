@@ -54,6 +54,7 @@ table {
   border-spacing: 0;
 }
 
-div svg {
-  transform: scale(0.3);
+svg {
+  height: 1rem;
+  width: 1rem;
 }
