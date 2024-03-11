@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <!-- [html-validate-disable input-attributes] -->
   <head>
     <meta
       content="HTML Tidy for HTML5 for Linux version 5.9.14"
@@ -41,6 +42,153 @@
     <div
       aria-label="Basic outlined example"
       class="btn-group mb-3"
+      role="group"
+    >
+      <button class="btn btn-outline-primary" type="button">Left</button>
+      <button class="btn btn-outline-primary" type="button">Middle</button>
+      <button class="btn btn-outline-primary" type="button">Right</button>
+    </div>
+    <div
+      aria-label="Basic checkbox toggle button group"
+      class="btn-group mb-3"
+      role="group"
+    >
+      <input
+        autocomplete="off"
+        class="btn-check"
+        id="btncheck1"
+        type="checkbox"
+      />
+      <label class="btn btn-outline-primary" for="btncheck1">Checkbox 1</label>
+      <input
+        autocomplete="off"
+        class="btn-check"
+        id="btncheck2"
+        type="checkbox"
+      />
+      <label class="btn btn-outline-primary" for="btncheck2">Checkbox 2</label>
+      <input
+        autocomplete="off"
+        class="btn-check"
+        id="btncheck3"
+        type="checkbox"
+      />
+      <label class="btn btn-outline-primary" for="btncheck3">Checkbox 3</label>
+    </div>
+    <div
+      aria-label="Basic radio toggle button group"
+      class="btn-group mb-3"
+      role="group"
+    >
+      <input
+        autocomplete="off"
+        checked="checked"
+        class="btn-check"
+        id="btnradio1"
+        name="btnradio"
+        type="radio"
+      />
+      <label class="btn btn-outline-primary" for="btnradio1">Radio 1</label>
+      <input
+        autocomplete="off"
+        class="btn-check"
+        id="btnradio2"
+        name="btnradio"
+        type="radio"
+      />
+      <label class="btn btn-outline-primary" for="btnradio2">Radio 2</label>
+      <input
+        autocomplete="off"
+        class="btn-check"
+        id="btnradio3"
+        name="btnradio"
+        type="radio"
+      />
+      <label class="btn btn-outline-primary" for="btnradio3">Radio 3</label>
+    </div>
+    <div
+      aria-label="Toolbar with button groups"
+      class="btn-toolbar mb-3"
+      role="toolbar"
+    >
+      <div aria-label="First group" class="btn-group me-2" role="group">
+        <button class="btn btn-primary" type="button">1</button>
+        <button class="btn btn-primary" type="button">2</button>
+        <button class="btn btn-primary" type="button">3</button>
+        <button class="btn btn-primary" type="button">4</button>
+      </div>
+      <div aria-label="Second group" class="btn-group me-2" role="group">
+        <button class="btn btn-secondary" type="button">5</button>
+        <button class="btn btn-secondary" type="button">6</button>
+        <button class="btn btn-secondary" type="button">7</button>
+      </div>
+      <div aria-label="Third group" class="btn-group" role="group">
+        <button class="btn btn-info" type="button">8</button>
+      </div>
+    </div>
+    <div
+      aria-label="Toolbar with button groups"
+      class="btn-toolbar mb-3"
+      role="toolbar"
+    >
+      <div aria-label="First group" class="btn-group me-2" role="group">
+        <button class="btn btn-outline-secondary" type="button">1</button>
+        <button class="btn btn-outline-secondary" type="button">2</button>
+        <button class="btn btn-outline-secondary" type="button">3</button>
+        <button class="btn btn-outline-secondary" type="button">4</button>
+      </div>
+      <div class="input-group">
+        <div class="input-group-text" id="btn-group-addon-">@</div>
+        <input
+          aria-describedby="btn-group-addon-"
+          aria-label="Input group example"
+          class="form-control"
+          placeholder="Input group example"
+          type="text"
+        />
+      </div>
+    </div>
+    <div
+      aria-label="Toolbar with button groups"
+      class="btn-toolbar mb-3 justify-content-between"
+      role="toolbar"
+    >
+      <div aria-label="First group" class="btn-group" role="group">
+        <button class="btn btn-outline-secondary" type="button">1</button>
+        <button class="btn btn-outline-secondary" type="button">2</button>
+        <button class="btn btn-outline-secondary" type="button">3</button>
+        <button class="btn btn-outline-secondary" type="button">4</button>
+      </div>
+      <div class="input-group">
+        <div class="input-group-text" id="btn-group-addon-2">@</div>
+        <input
+          aria-describedby="btn-group-addon-2"
+          aria-label="Input group example"
+          class="form-control"
+          placeholder="Input group example"
+          type="text"
+        />
+      </div>
+    </div>
+    <div
+      aria-label="Large button group"
+      class="btn-group mb-3 btn-group-lg"
+      role="group"
+    >
+      <button class="btn btn-outline-primary" type="button">Left</button>
+      <button class="btn btn-outline-primary" type="button">Middle</button>
+      <button class="btn btn-outline-primary" type="button">Right</button>
+    </div>
+    <br />
+    <div aria-label="Default button group" class="btn-group mb-3" role="group">
+      <button class="btn btn-outline-primary" type="button">Left</button>
+      <button class="btn btn-outline-primary" type="button">Middle</button>
+      <button class="btn btn-outline-primary" type="button">Right</button>
+    </div>
+    <br />
+    <div
+      aria-label="Small button group"
+      class="btn-group mb-3 btn-group-sm"
       role="group"
     >
       <button class="btn btn-outline-primary" type="button">Left</button>
