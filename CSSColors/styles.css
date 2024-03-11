@@ -7,29 +7,29 @@ h1 {
 }
 
 .container {
-  background-color: white;
   padding: 0.625rem 0;
+  background-color: white;
 }
 
 .marker {
+  width: 12.5rem;
   height: 1.5625rem;
   margin: 0.625rem auto;
-  width: 12.5rem;
 }
 
 .cap {
-  height: 1.5625rem;
   width: 3.75rem;
+  height: 1.5625rem;
 }
 
 .sleeve {
+  box-sizing: border-box;
+  width: 6.875rem;
+  height: 1.5625rem;
   background-color: white /* fallback color */;
   background-color: rgb(255 255 255 / 50%);
   border-left: 0.625rem double black;
   border-left: 0.625rem double rgb(0 0 0 / 75%);
-  box-sizing: border-box;
-  height: 1.5625rem;
-  width: 6.875rem;
 }
 
 .cap,

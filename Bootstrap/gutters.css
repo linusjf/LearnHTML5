@@ -7,8 +7,8 @@
 
 body {
   width: 100%;
-  background-color: black;
   color: white;
+  background-color: black;
 }
 
 section {
@@ -26,6 +26,6 @@ div {
 }
 
 div[class*="p-"] {
-  border: 1px solid pink;
   background-color: darkslategray;
+  border: 1px solid pink;
 }

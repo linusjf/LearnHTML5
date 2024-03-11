@@ -35,8 +35,8 @@
 
 .bd-placeholder-img {
   font-size: 0.125rem;
-  text-anchor: middle;
   user-select: none;
+  text-anchor: middle;
 }
 
 @media (min-width: 767px) {

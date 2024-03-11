@@ -1,38 +1,38 @@
 /*  csslint box-model:false  */
 
 .canvas {
-  background-color: #4d0f00;
-  filter: blur(0.125rem);
+  width: 31.25rem;
   height: 37.5rem;
   overflow: hidden;
-  width: 31.25rem;
+  background-color: #4d0f00;
+  filter: blur(0.125rem);
 }
 
 .frame {
-  border: 3.125rem solid black;
-  margin: 1.25rem auto;
-  padding: 3.125rem;
   width: 31.25rem;
+  padding: 3.125rem;
+  margin: 1.25rem auto;
+  border: 3.125rem solid black;
 }
 
 .one {
+  width: 26.5625rem;
+  height: 9.375rem;
+  margin: 1.25rem auto;
   background-color: #efb762;
   border-radius: 0.5625rem;
   box-shadow: 0 0 0.1875rem 0.1875rem #efb762;
-  height: 9.375rem;
-  margin: 1.25rem auto;
   transform: rotate(-0.6deg);
-  width: 26.5625rem;
 }
 
 .two {
+  width: 29.6875rem;
+  height: 12.5rem;
+  margin: 0 auto 1.25rem;
   background-color: #8f0401;
   border-radius: 0.5rem 0.625rem;
   box-shadow: 0 0 0.1875rem 0.1875rem #8f0401;
-  height: 12.5rem;
-  margin: 0 auto 1.25rem;
   transform: rotate(0.4deg);
-  width: 29.6875rem;
 }
 
 .one,
@@ -41,12 +41,12 @@
 }
 
 .three {
-  background-color: #b20403;
-  border-radius: 1.875rem 1.5625rem 3.75rem 0.75rem;
-  box-shadow: 0 0 0.3125rem 0.3125rem #b20403;
-  filter: blur(0.125rem);
+  width: 91%;
   height: 28%;
   margin: auto;
+  background-color: #b20403;
+  filter: blur(0.125rem);
+  border-radius: 1.875rem 1.5625rem 3.75rem 0.75rem;
+  box-shadow: 0 0 0.3125rem 0.3125rem #b20403;
   transform: rotate(-0.2deg);
-  width: 91%;
 }

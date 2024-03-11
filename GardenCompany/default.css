@@ -14,13 +14,13 @@ h2 {
 }
 
 dt {
-  font-weight: bold;
+  font-weight: 700;
 }
 
 hr {
-  background-color: green;
-  color: green;
   height: 0.1875rem;
+  color: green;
+  background-color: green;
 }
 
 ul {
@@ -62,15 +62,15 @@ li {
 }
 
 .copyright {
-  background-color: green;
-  color: white;
   font-family: "Times New Roman", Times, serif;
+  color: white;
+  background-color: green;
 }
 
 .company {
-  color: red;
   font-style: italic;
-  font-weight: bold;
+  font-weight: 700;
+  color: red;
 }
 
 .appleton {
@@ -82,41 +82,41 @@ li {
 }
 
 .pagetitle {
-  font-size: 1.875rem;
   margin: 0;
+  font-size: 1.875rem;
 }
 
 nav {
   float: left;
-  padding-top: 0.9375rem;
   width: 9.375rem;
+  padding-top: 0.9375rem;
 }
 
 /* csslint ignore:start */
 #bottomnav {
-  background-color: khaki;
   clear: left;
+  background-color: khaki;
 }
 
 #header {
-  background-image: url("images/leaf-green.jpg");
-  color: white;
   padding: 0.625rem;
+  color: white;
+  background-image: url("images/leaf-green.jpg");
 }
 
 /* csslint ignore:end */
 .tagline {
   margin: 0.125rem;
-  font-weight: bold;
   font-size: 1.125rem;
   font-style: italic;
+  font-weight: 700;
 }
 
 .logo {
-  border: none;
   float: left;
   height: 3.4375rem;
   margin: 0.3125rem;
+  border: none;
 }
 
 .italics {

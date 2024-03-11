@@ -13,41 +13,41 @@ html {
 }
 
 .piano {
-  background-color: #00471b;
-  border-radius: 0.625rem;
-  height: 18.125rem;
-  margin: 5rem auto;
-  padding: 5.625rem 1.25rem 0;
   position: relative;
   width: 62rem;
+  height: 18.125rem;
+  padding: 5.625rem 1.25rem 0;
+  margin: 5rem auto;
+  background-color: #00471b;
+  border-radius: 0.625rem;
 }
 
 .keys {
-  background-color: #040404;
-  height: 11.25rem;
-  overflow: hidden;
-  padding-left: 0.125rem;
   width: 59.3125rem;
+  height: 11.25rem;
+  padding-left: 0.125rem;
+  overflow: hidden;
+  background-color: #040404;
 }
 
 .key {
-  background-color: #fff;
-  border-radius: 0 0 0.1875rem 0.1875rem;
+  position: relative;
   float: left;
+  width: 2.5625rem;
   height: 10.9375rem;
   margin: 0.125rem;
-  position: relative;
-  width: 2.5625rem;
+  background-color: #fff;
+  border-radius: 0 0 0.1875rem 0.1875rem;
 }
 
 .key.black-key::after {
+  position: absolute;
+  left: -1.125rem;
+  width: 2rem;
+  height: 6.25rem;
+  content: "";
   background-color: #1d1e22;
   border-radius: 0 0 0.1875rem 0.1875rem;
-  content: "";
-  height: 6.25rem;
-  left: -1.125rem;
-  position: absolute;
-  width: 2rem;
 }
 
 .logo {

@@ -2,8 +2,8 @@
 *::before,
 *::after {
   box-sizing: border-box;
-  margin: 0;
   padding: 0;
+  margin: 0;
   text-align: center;
 }
 
@@ -14,52 +14,52 @@ body {
 
 header,
 footer {
-  background: white;
-  display: grid;
-  font-size: 0.75rem;
+  position: sticky;
   left: 0;
-  margin: 0 auto;
+  z-index: 999;
+  display: grid;
+  width: 100%;
   max-width: 100%;
   padding: 0;
-  position: sticky;
-  width: 100%;
-  z-index: 999;
+  margin: 0 auto;
+  font-size: 0.75rem;
+  background: white;
 }
 
 header {
-  border-bottom: 0.125rem double black;
-  grid-template-columns: auto auto;
   top: 0;
+  grid-template-columns: auto auto;
+  border-bottom: 0.125rem double black;
 }
 
 section {
-  margin: 0 auto 2vh;
   padding: 0;
+  margin: 0 auto 2vh;
 }
 
 section[id="how-it-works"] {
   position: relative;
-  overflow: hidden;
-  height: 18.75rem;
   width: 50%;
+  height: 18.75rem;
   padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+  overflow: hidden;
 }
 
 iframe {
-  display: block;
   position: absolute;
   inset: 0;
+  display: block;
   width: 100%;
   height: 100%;
 }
 
 footer {
-  display: grid;
-  border-top: 0.125rem double black;
   bottom: 0;
+  display: grid;
   grid-template-areas: "copyright nav-bar";
   grid-template-columns: 50% 50%;
   margin-top: 2vh;
+  border-top: 0.125rem double black;
 }
 
 footer nav {
@@ -86,24 +86,24 @@ div[class="nav-bar"] {
 
 .header-img {
   align-self: start;
-  margin-left: 0;
   padding-left: 1vw;
-  object-fit: scale-down;
+  margin-left: 0;
   text-align: left;
+  object-fit: scale-down;
 }
 
 .nav-bar {
+  display: flex;
   align-items: center;
   justify-content: end;
-  display: flex;
-  margin: 0;
-  padding: 0;
   width: 100%;
+  padding: 0;
+  margin: 0;
 }
 
 .nav-bar a {
-  margin: 0 5vw;
   padding: 0;
+  margin: 0 5vw;
   text-align: right;
 }
 
@@ -113,36 +113,36 @@ div[class="nav-bar"] {
 
 .email {
   display: block;
-  margin: 0.625rem auto;
-  padding: 0.3125rem;
   width: 30%;
+  padding: 0.3125rem;
+  margin: 0.625rem auto;
 }
 
 .submit {
-  background-color: green;
   display: block;
+  width: 20%;
+  padding: 0.625rem;
+  margin: 0.625rem auto 0.3125rem;
   font-style: italic;
   font-weight: bolder;
-  margin: 0.625rem auto 0.3125rem;
-  padding: 0.625rem;
-  width: 20%;
+  background-color: green;
 }
 
 .features {
   display: grid;
-  grid-gap: 0;
-  margin: 0 auto;
-  padding: 0;
   grid-template-columns: repeat(2, 1fr);
+  grid-gap: 0;
   width: 50%;
+  padding: 0;
+  margin: 0 auto;
 }
 
 .area {
-  border-bottom: 0.125rem solid gray;
   display: flex;
-  margin: auto;
-  width: 50%;
   justify-content: space-evenly;
+  width: 50%;
+  margin: auto;
+  border-bottom: 0.125rem solid gray;
 }
 
 .area:last-of-type {
@@ -150,13 +150,13 @@ div[class="nav-bar"] {
 }
 
 .price {
-  background-color: red;
+  padding: 0 1em;
   font-size: 2em;
   font-style: italic;
-  padding: 0 1em;
+  background-color: red;
 }
 
 .heading5 {
   font-size: 1.125rem;
-  font-weight: bold;
+  font-weight: 700;
 }

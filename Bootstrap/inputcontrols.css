@@ -2,18 +2,18 @@
 *::before,
 *::after {
   box-sizing: border-box;
-  margin: 0;
   padding: 0;
-  border: none;
+  margin: 0;
   font: inherit;
   font-size: 100%;
   vertical-align: baseline;
+  border: none;
 }
 
 body {
-  background-color: slategrey;
-  color: white;
   line-height: 1;
+  color: white;
+  background-color: slategrey;
 }
 
 /* HTML5 display-role reset for older browsers */
@@ -50,8 +50,8 @@ q::after {
 }
 
 table {
-  border-collapse: collapse;
   border-spacing: 0;
+  border-collapse: collapse;
 }
 
 input,

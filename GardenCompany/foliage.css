@@ -1,12 +1,12 @@
 /** @format */
 
 ol {
+  font-weight: 700;
   list-style-type: decimal;
-  font-weight: bold;
 }
 
 ul {
-  font-weight: normal;
+  font-weight: 400;
 }
 
 ul ul {
@@ -19,9 +19,9 @@ figcaption {
 }
 
 hr {
-  background-color: green;
-  color: green;
   height: 0.1875rem;
+  color: green;
+  background-color: green;
 }
 
 .nomargin {
