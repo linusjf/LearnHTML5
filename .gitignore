@@ -2,3 +2,4 @@ commit.txt
 *.out
 *.wsout
 *.bak
+**/build/**
