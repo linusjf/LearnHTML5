@@ -3,7 +3,7 @@ h1 {
 }
 
 %info {
-  width: 12.5rem;
+  width: 31.25rem;
   border: 1px solid black;
   margin: 0 auto;
 }
@@ -50,4 +50,23 @@ div.info-important {
   @extend %message-shared;
 
   border-color: yellow;
+}
+
+%panel {
+  background-color: black;
+  color: white;
+  height: 4.375rem;
+  border: 0.125rem solid green;
+  overflow: auto;
+}
+
+div.panel {
+  @extend %panel;
+}
+
+div.big-panel {
+  @extend %panel;
+
+  width: 37.5rem;
+  font-size: 2em;
 }
