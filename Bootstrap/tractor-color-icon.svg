@@ -1,10 +1,10 @@
 <svg
   xmlns="http://www.w3.org/2000/svg"
-  fill-rule="evenodd"
-  clip-rule="evenodd"
-  image-rendering="optimizeQuality"
   shape-rendering="geometricPrecision"
   text-rendering="geometricPrecision"
+  image-rendering="optimizeQuality"
+  fill-rule="evenodd"
+  clip-rule="evenodd"
   viewBox="0 0 512 399.025"
 >
   <path
@@ -45,28 +45,28 @@
     fill="#D2D8D3"
     d="M112.972 206.315c37.66 0 68.188 30.53 68.188 68.19 0 37.659-30.528 68.189-68.188 68.189-37.66 0-68.189-30.53-68.189-68.189 0-37.66 30.529-68.19 68.189-68.19z"
   />
-  <circle cx="112.972" cy="274.505" r="33.51" fill="#fff" />
-  <circle cx="445.944" cy="332.969" r="16.126" fill="#fff" />
+  <circle fill="#fff" cx="112.972" cy="274.505" r="33.51" />
+  <circle fill="#fff" cx="445.944" cy="332.969" r="16.126" />
   <circle cx="112.972" cy="274.506" r="13.695" />
   <circle cx="112.973" cy="228.497" r="2.385" />
-  <circle r=".435" transform="rotate(30 -369.895 371.065) scale(5.47662)" />
-  <circle r=".435" transform="rotate(60 -141.398 258.093) scale(5.47662)" />
-  <circle r=".435" transform="rotate(90 -57.763 216.743) scale(5.47662)" />
-  <circle r=".435" transform="rotate(120 -9.475 192.869) scale(5.47662)" />
-  <circle r=".435" transform="rotate(150 25.873 175.391) scale(5.47662)" />
+  <circle transform="rotate(30 -369.895 371.065) scale(5.47662)" r=".435" />
+  <circle transform="rotate(60 -141.398 258.093) scale(5.47662)" r=".435" />
+  <circle transform="rotate(90 -57.763 216.743) scale(5.47662)" r=".435" />
+  <circle transform="rotate(120 -9.475 192.869) scale(5.47662)" r=".435" />
+  <circle transform="rotate(150 25.873 175.391) scale(5.47662)" r=".435" />
   <circle cx="112.973" cy="320.513" r="2.385" />
-  <circle r=".435" transform="rotate(-150 87.099 145.12) scale(5.47662)" />
-  <circle r=".435" transform="rotate(-120 122.448 127.644) scale(5.47662)" />
-  <circle r=".435" transform="rotate(-90 170.735 103.77) scale(5.47662)" />
-  <circle r=".435" transform="rotate(-60 254.37 62.419) scale(5.47662)" />
-  <circle r=".435" transform="rotate(-30 482.868 -50.553) scale(5.47662)" />
+  <circle transform="rotate(-150 87.099 145.12) scale(5.47662)" r=".435" />
+  <circle transform="rotate(-120 122.448 127.644) scale(5.47662)" r=".435" />
+  <circle transform="rotate(-90 170.735 103.77) scale(5.47662)" r=".435" />
+  <circle transform="rotate(-60 254.37 62.419) scale(5.47662)" r=".435" />
+  <circle transform="rotate(-30 482.868 -50.553) scale(5.47662)" r=".435" />
   <circle cx="445.944" cy="332.968" r="5.873" />
   <circle cx="445.944" cy="308.229" r="1.772" />
-  <circle r=".435" transform="rotate(45 -149.093 717.157) scale(4.06872)" />
-  <circle r=".435" transform="rotate(90 68.858 401.826) scale(4.06872)" />
-  <circle r=".435" transform="rotate(135 159.136 271.212) scale(4.06872)" />
+  <circle transform="rotate(45 -149.093 717.157) scale(4.06872)" r=".435" />
+  <circle transform="rotate(90 68.858 401.826) scale(4.06872)" r=".435" />
+  <circle transform="rotate(135 159.136 271.212) scale(4.06872)" r=".435" />
   <circle cx="445.944" cy="357.708" r="1.772" />
-  <circle r=".435" transform="rotate(-135 286.809 86.496) scale(4.06872)" />
-  <circle r=".435" transform="rotate(-90 377.086 -44.118) scale(4.06872)" />
-  <circle r=".435" transform="rotate(-45 595.037 -359.449) scale(4.06872)" />
+  <circle transform="rotate(-135 286.809 86.496) scale(4.06872)" r=".435" />
+  <circle transform="rotate(-90 377.086 -44.118) scale(4.06872)" r=".435" />
+  <circle transform="rotate(-45 595.037 -359.449) scale(4.06872)" r=".435" />
 </svg>
