@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <!-- [html-validate-disable no-inline-style] -->
   <head>
     <meta
       content="HTML Tidy for HTML5 for Linux version 5.9.14"
@@ -170,6 +171,18 @@
           </dl>
         </dd>
       </dl>
+    </section>
+    <section>
+      <!-- Block level -->
+      <div class="row">
+        <div class="col-2 text-truncate">
+          This text is quite long, and will be truncated once displayed.
+        </div>
+      </div>
+      <!-- Inline level -->
+      <span class="d-inline-block text-truncate" style="max-width: 150px"
+        >This text is quite long, and will be truncated once displayed.</span
+      >
     </section>
     <script
       crossorigin="anonymous"
