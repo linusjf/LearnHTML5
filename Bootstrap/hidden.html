@@ -15,6 +15,10 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       rel="stylesheet"
     />
+    <link
+      href="https://getbootstrap.com/docs/5.3/assets/css/docs.css"
+      rel="stylesheet"
+    />
     <link href="/hidden.css" rel="stylesheet" />
   </head>
   <body>
@@ -45,6 +49,36 @@
       <div class="d-none d-lg-block d-print-block">
         Hide up to large on screen, but always show on print
       </div>
+    </section>
+    <section class="mb-3">
+      <div class="visible">Visible</div>
+      <div class="invisible">Invisible</div>
+    </section>
+    <section
+      class="p-3 m-0 border-0 bd-example bd-example-zindex-levels position-relative"
+    >
+      <div class="z-3 position-absolute p-5 rounded-3">
+        <span>z-3</span>
+      </div>
+      <div class="z-2 position-absolute p-5 rounded-3">
+        <span>z-2</span>
+      </div>
+      <div class="z-1 position-absolute p-5 rounded-3">
+        <span>z-1</span>
+      </div>
+      <div class="z-0 position-absolute p-5 rounded-3">
+        <span>z-0</span>
+      </div>
+      <div class="z-n1 position-absolute p-5 rounded-3">
+        <span>z-n1</span>
+      </div>
+    </section>
+    <section
+      class="p-3 m-0 border-0 bd-example bd-example-zindex-levels position-relative"
+    >
+      <div class="z-3 position-absolute bg-light p-5 rounded-3"></div>
+      <div class="z-2 position-absolute bg-info p-5 rounded-3"></div>
+      <div class="z-1 position-absolute bg-error p-5 rounded-3"></div>
     </section>
     <script
       crossorigin="anonymous"
