@@ -1,4 +1,8 @@
 #!/usr/bin/env bash
-# run http server to view html code in 
+# run http server to view html code in
 # same directory
-python -m http.server 8011
+require() {
+  hash "$@" || exit
+}
+require http-server
+http-server -p 8011 -i -a localhost
