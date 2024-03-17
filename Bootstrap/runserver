@@ -5,4 +5,4 @@ require() {
   hash "$@" || exit
 }
 require http-server
-http-server -p 8011 -i -a localhost
+http-server -c-1 -p 8011 -i -a localhost
