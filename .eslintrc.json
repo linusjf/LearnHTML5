@@ -1,0 +1,36 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": [
+    "google",
+    "eslint:recommended",
+    "plugin:react/recommended"
+  ],
+  "globals": {
+    "JSX": true,
+    "PropTypes": true,
+    "React": true,
+    "ReactDOM": true,
+    "ReactDOMServer": true
+  },
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "plugins": [
+    "react"
+  ],
+  "rules": {
+    "require-jsdoc": "off"
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  }
+}
