@@ -79,6 +79,11 @@ if ! test -z "$files"; then
     parallel -X --bar -j "$PROCS" -I% \
       js-beautify --type js --quiet -r %
   SUCCESS=$((SUCCESS + $?))
+  echo -e "${GREEN}Executing eslint for js...${ENDCOLOR}"
+  echo "$files" |
+    parallel -X --bar -j "$PROCS" -I% \
+      eslint --fix --color %
+  SUCCESS=$((SUCCESS + $?))
 fi
 files=$(find . -type f -name "*.scss" ! -name "_*.scss" \
   ! -path "**/.git/**" ! -path "**/node_modules/**" ! -path "**/*tailwind.css")

@@ -9,11 +9,14 @@
     "plugin:react/recommended"
   ],
   "globals": {
+    "$": true,
     "JSX": true,
     "PropTypes": true,
     "React": true,
     "ReactDOM": true,
-    "ReactDOMServer": true
+    "ReactDOMServer": true,
+    "bootstrap": true,
+    "module": true
   },
   "parserOptions": {
     "ecmaFeatures": {
@@ -26,6 +29,7 @@
     "react"
   ],
   "rules": {
+    "max-len": "off",
     "require-jsdoc": "off"
   },
   "settings": {

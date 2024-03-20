@@ -1,29 +1,29 @@
-const alertPlaceholder = document.getElementById("live-alert-placeholder");
+const alertPlaceholder = document.getElementById('live-alert-placeholder');
 const appendAlert = (message, type) => {
-  const wrapper = document.createElement("div");
+  const wrapper = document.createElement('div');
   wrapper.innerHTML = [
     `<div class="alert alert-${type} alert-dismissible" role="alert">`,
     `   <div>${message}</div>`,
     '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
-    "</div>",
-  ].join("");
+    '</div>',
+  ].join('');
 
   alertPlaceholder.append(wrapper);
 };
 
-const alertTrigger = document.getElementById("live-alert-btn");
+const alertTrigger = document.getElementById('live-alert-btn');
 if (alertTrigger) {
-  alertTrigger.addEventListener("click", () => {
-    appendAlert("Nice, you triggered this alert message!", "success");
+  alertTrigger.addEventListener('click', () => {
+    appendAlert('Nice, you triggered this alert message!', 'success');
   });
 }
 
-const toastTrigger = document.getElementById("liveToastBtn");
-const toastLiveExample = document.getElementById("liveToast");
+const toastTrigger = document.getElementById('liveToastBtn');
+const toastLiveExample = document.getElementById('liveToast');
 
 if (toastTrigger) {
   const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample);
-  toastTrigger.addEventListener("click", () => {
+  toastTrigger.addEventListener('click', () => {
     toastBootstrap.show();
   });
 }

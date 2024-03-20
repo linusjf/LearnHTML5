@@ -3,3 +3,4 @@ commit.txt
 *.wsout
 *.bak
 **/build/**
+**/node_modules/**
